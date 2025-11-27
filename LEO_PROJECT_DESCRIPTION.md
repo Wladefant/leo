@@ -1,6 +1,6 @@
 # LEO - AI Financial Assistant for ING
 ## Comprehensive Project Documentation
-### Single Source of Truth for DFC2025 Challenge
+#### Single Source of Truth for DFC2025 Challenge
 
 ---
 
@@ -1378,7 +1378,7 @@ From Q&A transcript:
 - **Account Balances**: Real-time access
 - **User Preferences**: Goals, risk tolerance, learning progress
 - **Market Data**: Real-time stock prices, news
-- **NOT Accessible**: Location data (unless explicitly enabled), biometric data
+- **NOT Available to Leo**: Location data (unless explicitly enabled), biometric data
 
 ### Q7: How do we handle duplicate subscriptions detection?
 **Issues**: [#42](https://github.com/Wladefant/leo/issues/42), [#6](https://github.com/Wladefant/leo/issues/6)
@@ -2605,7 +2605,6 @@ financial rewards - WITHOUT physical merchandise (per ING policy).
 │                                     │
 └─────────────────────────────────────┘
 ```
-```
 
 ---
 
@@ -2771,7 +2770,6 @@ Your biggest expense was €22 at Restaurant XYZ."
 │  🏠 Rent            -€800.00       │
 │                                     │
 └─────────────────────────────────────┘
-```
 ```
 
 ---
