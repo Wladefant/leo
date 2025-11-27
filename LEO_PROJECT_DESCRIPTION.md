@@ -1,21 +1,26 @@
 # LEO - AI Financial Assistant for ING
 ## Comprehensive Project Documentation
+### Single Source of Truth for DFC2025 Challenge
 
 ---
 
 ## Table of Contents
 1. [Executive Summary](#executive-summary)
-2. [Project Context & Challenge](#project-context--challenge)
-3. [Target User Profiles](#target-user-profiles)
-4. [Core Features Overview](#core-features-overview)
-5. [Detailed Screen Descriptions](#detailed-screen-descriptions)
-6. [AI Agent "Leo" Specifications](#ai-agent-leo-specifications)
-7. [Design System & UI Guidelines](#design-system--ui-guidelines)
-8. [Legal & Compliance Considerations](#legal--compliance-considerations)
-9. [Technical Architecture](#technical-architecture)
-10. [Mockups & Visual References](#mockups--visual-references)
-11. [Roadmap & Implementation Phases](#roadmap--implementation-phases)
-12. [Issue References](#issue-references)
+2. [AI-First Philosophy](#ai-first-philosophy)
+3. [Project Context & Challenge](#project-context--challenge)
+4. [Target User Profiles](#target-user-profiles)
+5. [Core Features Overview](#core-features-overview)
+6. [UI Creator Specifications](#ui-creator-specifications)
+7. [Detailed Screen Descriptions](#detailed-screen-descriptions)
+8. [AI Agent "Leo" Specifications](#ai-agent-leo-specifications)
+9. [Design System & UI Guidelines](#design-system--ui-guidelines)
+10. [Legal & Compliance Considerations](#legal--compliance-considerations)
+11. [Technical Architecture](#technical-architecture)
+12. [Answered Questions & Decisions](#answered-questions--decisions)
+13. [Mockups & Visual References](#mockups--visual-references)
+14. [Roadmap & Implementation Phases](#roadmap--implementation-phases)
+15. [Presentation Strategy](#presentation-strategy)
+16. [Issue References](#issue-references)
 
 ---
 
@@ -32,6 +37,38 @@
 
 ### Project Competition
 This is a submission for the **DFC2025 (Digital Future Challenge)** competition, focusing on creating innovative digital solutions for banking.
+
+---
+
+## AI-First Philosophy
+
+> **Core Principle**: Every interaction in the LEO ecosystem starts and ends with AI. Leo is not a feature—it is THE interface.
+
+### What "AI-First" Means for LEO
+
+| Traditional Banking App | LEO AI-First Approach |
+|------------------------|----------------------|
+| User navigates menus to find features | User asks Leo, Leo navigates for them |
+| Static screens with fixed information | Dynamic screens generated based on context |
+| User must learn app structure | App learns user's habits and preferences |
+| Reactive (user initiates actions) | Proactive (AI suggests actions before user thinks of them) |
+| One-size-fits-all UI | Personalized UI based on user profile and behavior |
+
+### AI-First for ING Junior Profile (Ages 13-17)
+- **Learning is Primary**: Every screen is a learning opportunity
+- **Leo Guides Everything**: No dead-ends; Leo is always available to explain
+- **Proactive Education**: Leo notices when user is confused and offers help
+- **Gamified AI**: Leo turns financial concepts into challenges
+- **Safe Exploration**: Virtual money + real AI guidance = risk-free learning
+- **Natural Language First**: Teens can type/speak naturally; no banking jargon required
+
+### AI-First for ING Adult Profile (Ages 18-29)
+- **Intelligent Automation**: Leo predicts and suggests recurring transactions
+- **Contextual Insights**: Real-time analysis appears when relevant (not hidden in reports)
+- **Document Intelligence**: Scan any financial document, Leo explains it instantly
+- **Conversational Banking**: Complete banking tasks through natural conversation
+- **Proactive Financial Health**: Leo alerts about unusual spending, opportunities, risks
+- **Smart Notifications**: Not just alerts—actionable AI-powered suggestions
 
 ---
 
@@ -208,7 +245,656 @@ AI-assisted goal setting and tracking:
 
 ---
 
-## Detailed Screen Descriptions
+## UI Creator Specifications
+
+> **Purpose**: This section provides copy-paste ready specifications for app builders and UI tools. Each screen is described with exact elements, behaviors, and AI integrations.
+
+### Global UI Components
+
+#### 1. Leo Floating Action Button (FAB)
+**Present on ALL screens**
+
+```
+Component: LeoFAB
+Position: Bottom-right corner, 16dp margin
+Size: 56dp diameter
+Icon: Leo lion mascot (animated idle state)
+Background: #ff6200 (ING Orange)
+Shadow: Elevation 6dp
+Animation: 
+  - Idle: Subtle breathing animation
+  - Attention: Gentle bounce when Leo has suggestion
+  - Active: Scales to 1.1x when pressed
+Behavior:
+  - Tap: Opens Leo Chat Overlay
+  - Long press: Shows quick actions menu
+  - Badge: Shows notification dot when Leo has proactive suggestion
+```
+
+#### 2. Leo Chat Overlay
+**Modal that appears over any screen**
+
+```
+Component: LeoChatOverlay
+Type: Bottom sheet (expandable to full screen)
+Initial height: 60% of screen
+Max height: 95% of screen (drag to expand)
+Background: White with rounded top corners (16dp radius)
+
+Header:
+  - Leo avatar (40dp)
+  - "Leo" text label
+  - Mode toggle: [General] [Quiz] (pill buttons)
+  - Close button (X icon)
+
+Chat Area:
+  - ScrollView with message bubbles
+  - User messages: Right-aligned, #f4f4f4 background
+  - Leo messages: Left-aligned, white background with #e0e0e0 border
+  - Typing indicator: Three animated dots
+
+Input Bar:
+  - Text field (rounded, placeholder: "Ask Leo anything...")
+  - Voice button (microphone icon)
+  - Camera button (opens document scanner)
+  - Attachment button (file picker)
+  - Send button (#ff6200 when active)
+
+Inline Widgets (appear in chat):
+  - StockWidget: Mini stock chart + price + change%
+  - GraphWidget: Line/bar chart visualization
+  - DiagramWidget: Pie chart for spending
+  - TransferPrompt: Quick send money card
+  - QuizCard: Multiple choice question card
+```
+
+#### 3. Smart Notification Cards
+**AI-triggered notifications**
+
+```
+Component: SmartNotificationCard
+Type: Push notification + In-app card
+Background: White
+Border-left: 4dp #ff6200 accent
+
+Structure:
+  - Leo icon (24dp)
+  - Title (bold, 16sp): "Leo suggests..."
+  - Message (14sp): AI-generated suggestion
+  - Action buttons (0-2 buttons):
+    - Primary: #ff6200 background, white text
+    - Secondary: Outlined, #ff6200 border
+  - Dismiss button (X)
+
+Examples:
+  - "Rent is due today. Send €800 to Landlord?" [Send Now] [Later]
+  - "You spent €50 more on dining this week. Want to see the breakdown?" [Show Me]
+  - "Your Netflix trial ends tomorrow. Cancel subscription?" [Yes] [Keep It]
+```
+
+---
+
+### Screen Specifications for ING Junior Profile
+
+#### Screen J1: Junior Home Dashboard
+**First screen after login for Junior users**
+
+```
+Screen: JuniorHomeDashboard
+Navigation: Bottom tab "Home" (house icon)
+
+Header Section:
+  - Greeting: "Hey [Name]! 👋" (dynamic, time-based)
+  - Leo speech bubble: AI-generated daily tip or challenge
+  - Streak counter: "🔥 5 day streak!" (gamification)
+
+Virtual Balance Card:
+  - Background: Gradient #ff6200 to #ff8533
+  - Virtual balance: "€2,450.00" (large, white)
+  - Label: "Virtual Money" with info tooltip
+  - Subtext: "Next salary: Monday (+€200)"
+  - Leo mini-avatar corner badge
+
+Quick Stats Row:
+  - Portfolio value: "€1,200" with trend arrow
+  - This week's gains: "+€45.20" (green) or "-€12.50" (red)
+  - Points earned: "🏆 340 pts"
+
+AI Insights Card:
+  - Title: "Leo's Insight"
+  - Dynamic content: AI-generated observation about user's activity
+  - Example: "You've been researching tech stocks. Want a quiz about ETFs?"
+  - Action button: [Take Quiz] or [Learn More]
+
+Recent Activity Section:
+  - List of last 5 virtual transactions
+  - Each row: Icon, description, amount, time
+  - Tap to expand with Leo explanation
+
+Bottom Navigation:
+  - Home (active)
+  - Invest
+  - Learn
+  - Profile
+```
+
+#### Screen J2: Junior Investment Simulator
+**Virtual stock trading interface**
+
+```
+Screen: JuniorInvestmentSimulator
+Navigation: Bottom tab "Invest" (chart icon)
+
+Tab Bar (top):
+  - [Portfolio] [Watchlist] [News] [Discover]
+
+Portfolio View (default tab):
+  Header:
+    - "My Portfolio"
+    - Total value: "€1,234.56"
+    - Daily change: "+€23.45 (+1.9%)" with color coding
+    - Leo FAB shows "?" when user hovers over unfamiliar term
+
+  Holdings List:
+    - Each stock card:
+      - Company logo (48dp)
+      - Company name + ticker
+      - Shares owned: "5 shares"
+      - Current value + change %
+      - Mini sparkline chart (7 days)
+      - Tap to open Stock Detail Screen
+
+  Cash Available Card:
+    - "💰 Cash: €500.00"
+    - "Available to invest"
+    - [+ Add Funds] button (simulated)
+
+  Leo Integration:
+    - FAB pulsates when portfolio drops >5%
+    - Tap shows: "Your tech stocks dropped. This is normal! Want to learn why?"
+
+Discover Tab:
+  - AI-curated stock suggestions
+  - "Leo's Picks for You" section
+  - Categories: Tech, Green Energy, Gaming, etc.
+  - Each with Leo's explanation of why it fits user's profile
+```
+
+#### Screen J3: Junior Quiz Mode
+**Gamified learning interface**
+
+```
+Screen: JuniorQuizMode
+Navigation: From Leo FAB → Quiz Mode OR Learn tab
+
+Quiz Selection:
+  - Topic cards (swipeable):
+    - 📈 Investing Basics (completion %)
+    - 💼 Taxes 101 (completion %)
+    - 🏠 Insurance Explained (completion %)
+    - 💳 Smart Spending (completion %)
+  - Each shows: Icon, title, progress bar, points available
+
+Active Quiz View:
+  Header:
+    - Topic name
+    - Progress: "Question 3/10"
+    - Points at stake: "+15 pts"
+    - Streak multiplier: "2x"
+
+  Question Card:
+    - AI-generated question text
+    - Optional: Generated scenario image
+    - Answer options (A, B, C, D) - large tap targets
+    - 60-second timer (visual countdown ring)
+
+  Answer Feedback:
+    - Correct: Confetti animation + "+15 pts" toast
+    - Wrong: Leo explanation appears
+    - "Leo explains:" card with simple breakdown
+    - [Got it!] button to continue
+
+  Quiz Complete Screen:
+    - Score summary
+    - Points earned
+    - Streak update
+    - Leo message: "Great job! You now know more about..."
+    - [Share Result] [Play Again] [Back to Learning]
+```
+
+#### Screen J4: Junior Leaderboard
+**Social competition interface**
+
+```
+Screen: JuniorLeaderboard
+Navigation: Profile tab → Leaderboards
+
+Tab Bar:
+  - [Weekly] [All-Time] [My School]
+
+Leaderboard List:
+  - Current user highlighted in #ff6200 background
+  - Each row:
+    - Rank (#1, #2, #3 have medal icons 🥇🥈🥉)
+    - Avatar
+    - Username (or anonymous option)
+    - Points
+    - Trend arrow (up/down from last week)
+
+Weekly Prize Card (top):
+  - "🏆 This Week's Prize"
+  - Prize description: "€25 bonus to your real ING account at 18!"
+  - Time remaining: "3 days 14 hours"
+  - Current leader preview
+
+My Stats Card:
+  - Your rank: #42
+  - Points: 1,240
+  - "Need 60 more points to reach #40"
+  - Leo tip: "Complete 2 more quizzes to climb 5 spots!"
+
+School Championship Section:
+  - School name + logo
+  - School rank among all schools
+  - [Invite classmates] button
+```
+
+#### Screen J5: Junior Salary/Taxes View
+**Educational salary breakdown**
+
+```
+Screen: JuniorSalaryView
+Trigger: Automatic popup when weekly "salary" arrives
+
+Initial Popup:
+  - "💰 Your Weekly Salary Arrived!"
+  - Amount: "€200.00"
+  - [See Breakdown] [Later]
+
+Full View:
+  Receipt-style card:
+    - "SALARY RECEIPT" header
+    - Gross salary: €200.00
+    - Deductions section:
+      - Income tax: -€30.00 (tap for Leo explanation)
+      - Social security: -€15.00 (tap for Leo explanation)
+      - Health insurance: -€10.00 (tap for Leo explanation)
+    - Net salary: €145.00 (highlighted, green)
+    
+  Leo Education Card:
+    - "This is how real salaries work!"
+    - Animated infographic showing money flow
+    - "In real life, these taxes pay for..."
+    - [Take the Tax Quiz] button
+
+  Historical View:
+    - Chart showing weekly salary over time
+    - "Your total earned: €2,400"
+    - "Taxes paid: €440"
+```
+
+---
+
+### Screen Specifications for ING Adult Profile
+
+#### Screen A1: Adult Home Dashboard
+**Main banking screen for adult users**
+
+```
+Screen: AdultHomeDashboard
+Navigation: Bottom tab "Konten" (wallet icon)
+
+Header:
+  - "Good morning, [Name]" (time-based greeting)
+  - Leo icon with notification badge if suggestion available
+
+Accounts Overview:
+  - Girokonto card:
+    - Balance: €3,456.78 (large)
+    - Account number (masked): •••• 4523
+    - Quick actions: [Transfer] [Cards]
+  - Extra-Konto card (savings):
+    - Balance: €12,340.00
+    - Interest rate badge: "1.5% p.a."
+  - Depot card (investments):
+    - Portfolio value: €8,234.56
+    - Daily change indicator
+
+Leo AI Insights Widget:
+  - Position: Below accounts, above transactions
+  - Background: Light blue (#e3f2fd)
+  - Content: AI-generated insight
+  - Examples:
+    - "You have 3 subscriptions you haven't used this month"
+    - "Your spending on dining increased 23% this week"
+    - "You could save €200/month by refinancing your..."
+  - [Tell Me More] button → Opens Leo chat with context
+
+Recent Transactions:
+  - Smart categorization (AI-assigned icons)
+  - Each row: Merchant logo, name, amount, category
+  - Tap transaction → Leo explains category + similar past transactions
+
+Smart Actions Bar (AI-triggered):
+  - Appears when Leo detects action opportunity
+  - Example: "Rent due tomorrow → [Pay €800 now]"
+  - Dismiss with swipe
+```
+
+#### Screen A2: Adult Leo Chat (Full Feature)
+**Comprehensive AI assistant interface**
+
+```
+Screen: AdultLeoChat
+Navigation: Leo FAB from any screen
+
+Chat Interface:
+  Header:
+    - Leo avatar + name
+    - Online status indicator
+    - [Voice Mode] toggle
+    - Settings gear icon
+
+  Pre-populated Suggestions:
+    - "How much did I spend on food this month?"
+    - "Explain my last electricity bill"
+    - "Should I invest in ETFs?"
+    - "Analyze my subscriptions"
+
+  Conversation Features:
+    - Inline stock charts when discussing investments
+    - Inline pie charts for spending breakdowns
+    - Transaction cards with "Pay Now" buttons
+    - Document preview cards (when scanning)
+
+  Voice Mode:
+    - Full screen takeover
+    - Large Leo avatar (animated speaking)
+    - Voice waveform visualization
+    - "Listening..." / "Thinking..." / "Speaking..." states
+    - Tap to interrupt
+
+  Document Analysis Mode:
+    - Camera opens with document frame guide
+    - Auto-capture when document detected
+    - Processing animation
+    - Results in chat with highlighted key terms
+    - Follow-up: "This insurance costs €50/month. Want me to find cheaper options?"
+```
+
+#### Screen A3: Adult Smart Statistics
+**AI-powered financial analytics**
+
+```
+Screen: AdultSmartStatistics
+Navigation: Konten → Statistics OR Ask Leo "Show my statistics"
+
+Overview Card:
+  - "Your Financial Health"
+  - Score (1-100) with colored ring (red→yellow→green)
+  - Leo-generated summary: "You're doing well! Spending is 5% under budget"
+
+Spending Breakdown:
+  - Animated pie chart
+  - Categories: Housing, Food, Transport, Shopping, Subscriptions, Other
+  - Tap category to drill down
+  - Compare to: Last month / Last year / Average user
+
+Income vs Expenses Graph:
+  - Line chart with dual axis
+  - Income line (green)
+  - Expenses line (red)
+  - Net savings area (blue fill)
+  - Toggle: Weekly / Monthly / Yearly
+
+AI Insights Section:
+  - "🔍 Leo Found..."
+  - List of discoveries:
+    - "You paid for Spotify twice in November"
+    - "Your grocery spending drops on weekends"
+    - "You have €500 sitting idle - consider investing?"
+  - Each with [Fix It] or [Learn More] action
+
+Natural Language Query:
+  - Search bar at top
+  - "Ask about your finances..."
+  - Voice input option
+  - Example queries shown as chips
+```
+
+#### Screen A4: Adult Subscription Manager
+**AI-powered subscription tracking**
+
+```
+Screen: AdultSubscriptionManager
+Navigation: Konten → Subscriptions OR Ask Leo "Show my subscriptions"
+
+Summary Card:
+  - Total monthly: €89.99
+  - Active subscriptions: 8
+  - Leo flag: "2 potential issues found"
+
+Subscription List:
+  - Each card:
+    - Service logo
+    - Name
+    - Monthly cost
+    - Last charged date
+    - AI flag (if unused/duplicate detected)
+
+  AI Flags:
+    - 🟡 "Not used in 30 days" (Netflix)
+    - 🔴 "Duplicate service" (Spotify + Apple Music)
+    - 🟢 "Good value" (no action needed)
+
+  Tap subscription for detail:
+    - Usage analysis (if detectable)
+    - Total spent lifetime
+    - Leo recommendation
+    - [Cancel via Leo] [Keep]
+
+Optimization Card:
+  - "💡 Leo's Suggestions"
+  - "Cancel these to save €35/month:"
+  - List with one-tap cancel buttons
+  - Total savings calculator
+```
+
+#### Screen A5: Adult Investment View
+**Real investment portfolio with AI guidance**
+
+```
+Screen: AdultInvestmentView
+Navigation: Bottom tab "Investieren"
+
+Portfolio Summary:
+  - Total value: €15,234.56
+  - Daily change: +€123.45 (+0.82%)
+  - Performance chart (1D/1W/1M/1Y/ALL)
+
+Holdings List:
+  - Each holding:
+    - Logo + Name + Ticker
+    - Shares × Price = Value
+    - Gain/Loss (% and €)
+    - Allocation percentage bar
+
+Leo Investment Advisor:
+  - Persistent card at bottom
+  - "Based on your profile:"
+  - Suggestions like:
+    - "Your portfolio is tech-heavy. Diversify?"
+    - "This ETF matches your sustainability preference"
+  - [Ask Leo More] expands to full chat
+
+Trade Actions:
+  - [Buy] → Opens order flow with Leo guidance
+  - [Sell] → Shows tax implications via Leo
+  - Leo explains each step if user hesitates
+
+News Integration:
+  - "News affecting your portfolio"
+  - AI-summarized articles
+  - Relevance explained: "This news is about Apple (10% of your portfolio)"
+```
+
+---
+
+### Shared Screen Specifications (Both Profiles)
+
+#### Screen S1: Stock Detail View
+**Individual stock information**
+
+```
+Screen: StockDetailView
+Navigation: Tap any stock from portfolio/watchlist/search
+
+Header:
+  - Company logo (large, 64dp)
+  - Company name
+  - Ticker symbol
+  - Current price (large)
+  - Change: +€2.34 (+1.5%) with color
+
+Price Chart:
+  - Interactive line chart
+  - Time range selector: [1D] [1W] [1M] [3M] [1Y] [ALL]
+  - Touch to see price at point in time
+  - Volume bars below
+
+Key Metrics Grid:
+  - Market cap
+  - P/E ratio
+  - 52-week high/low
+  - Dividend yield
+  - Each with (?) icon → Leo explains on tap
+
+Leo Integration (Corner Overlay):
+  - Leo avatar (small)
+  - Expandable panel
+  - Default text: "Want me to explain this stock?"
+  - Junior: "Take a quiz about [Company]?"
+  - Adult: "How does this fit your portfolio?"
+
+Action Buttons:
+  - Junior: [Add to Watchlist] [Practice Trade]
+  - Adult: [Buy] [Sell] [Add to Watchlist]
+
+News Section:
+  - "Latest News about [Company]"
+  - AI-summarized headlines
+  - Sentiment indicator (positive/neutral/negative)
+```
+
+#### Screen S2: Onboarding Flow
+**First-time user experience**
+
+```
+Flow: OnboardingFlow
+Screens: 5-step wizard
+
+Step 1: Welcome
+  - Leo animation (friendly wave)
+  - "Hi! I'm Leo, your AI financial assistant"
+  - "I'll help you learn and manage money"
+  - [Let's Start] button
+
+Step 2: Profile Type
+  - "Tell me about yourself"
+  - Options:
+    - "I'm new to finance" → Junior path emphasis
+    - "I want to manage my money better" → Adult path emphasis
+    - "I want to learn investing" → Both
+  - Leo adapts future content based on selection
+
+Step 3: Goals
+  - "What are your financial goals?"
+  - Multi-select cards:
+    - 🎓 Save for education
+    - 🏠 Save for a home
+    - 🚗 Buy a car
+    - 💼 Build emergency fund
+    - 📈 Grow wealth
+    - 🎮 Just explore
+  - Leo: "Great choices! I'll remember these"
+
+Step 4: Risk Preference
+  - "How do you feel about risk?"
+  - Visual slider with descriptions:
+    - Conservative: "I prefer safety over high returns"
+    - Moderate: "Balance of safety and growth"
+    - Aggressive: "I'm okay with ups and downs for higher potential"
+  - Leo shows example scenarios for each level
+
+Step 5: Notifications
+  - "How should I reach you?"
+  - Toggles:
+    - Daily tip from Leo
+    - Weekly financial summary
+    - Smart action suggestions
+    - Quiz reminders (Junior only)
+    - Market alerts (if invested)
+  - [Complete Setup] button
+
+Completion:
+  - Confetti animation
+  - "You're all set!"
+  - "Your first tip: [AI-generated based on profile]"
+  - [Go to Home]
+```
+
+#### Screen S3: Settings & Privacy
+**User preferences and data control**
+
+```
+Screen: SettingsPrivacy
+Navigation: Profile tab → Settings
+
+Profile Section:
+  - Photo
+  - Name
+  - Email
+  - Phone
+  - [Edit Profile]
+
+Leo Preferences:
+  - Personality: [Friendly] [Professional] slider
+  - Proactivity: [More suggestions] ← → [Less suggestions]
+  - Voice: Male/Female/Off
+  - Language: German/English
+
+Privacy & Data:
+  - "What Leo can access:"
+    - ✅ Transaction history
+    - ✅ Account balances
+    - ⬜ Location data
+    - ✅ Document scans (temporary)
+  - [View my data] → Export option
+  - [Delete my data] → Confirmation flow
+
+Notifications:
+  - Master toggle
+  - Individual toggles for each type
+  - Quiet hours setting
+
+Accessibility:
+  - High contrast mode
+  - Font size slider
+  - Screen reader optimization
+  - Reduce animations
+
+Security:
+  - Biometric login toggle
+  - Change PIN
+  - Login history
+  - Active sessions
+
+Legal:
+  - Terms of service
+  - Privacy policy
+  - AI transparency information
+  - "How Leo works" explainer
+```
 
 ### 1. Login Screen
 **Issue**: [#32](https://github.com/Wladefant/leo/issues/32)
@@ -632,6 +1318,230 @@ From Q&A transcript:
 
 ---
 
+## Answered Questions & Decisions
+
+> This section documents all major design decisions and answers to questions raised in issues.
+
+### Q1: Why two profiles in one app instead of separate apps?
+**Issue**: [#31](https://github.com/Wladefant/leo/issues/31)
+
+**Answer**: 
+- **Cost Efficiency**: One codebase, one maintenance team, one infrastructure
+- **Seamless Transition**: When Junior users turn 18, they upgrade within the same app
+- **Familiarity**: Leo remains their trusted assistant across life stages
+- **Technical Simplicity**: Profile-based feature toggling is simpler than app switching
+- **ING Requirement**: Must integrate into existing ING app (from Q&A session)
+
+### Q2: How do we verify age for Junior users?
+**Issue**: [#50](https://github.com/Wladefant/leo/issues/50)
+
+**Answer**:
+- **Initial**: Parental consent flow during Girokonto Junior account creation
+- **Verification**: Connected to ING's existing KYC (Know Your Customer) process
+- **Not a simple Y/N**: Requires parental email/phone verification
+- **Compliance**: Meets GDPR Article 8 requirements for minors in Germany (under 16)
+
+### Q3: What happens if Leo is asked non-financial questions?
+**Issue**: [#35](https://github.com/Wladefant/leo/issues/35)
+
+**Answer**:
+- Leo politely redirects: "I'm your financial assistant, so I focus on money topics. But I'd love to help with questions about saving, investing, or managing your finances!"
+- Leo can make the connection: "That's not quite my area, but if you're thinking about buying that car, want to see how it fits your budget?"
+- Never abruptly refuses—always offers a financial angle
+
+### Q4: How does the gamification work without physical rewards?
+**Issues**: [#15](https://github.com/Wladefant/leo/issues/15), ING Q&A
+
+**Answer**:
+- **Points**: Earned for quizzes, streaks, achievements
+- **Digital Badges**: Duolingo-style ("Quiz Master", "Saver Starter")
+- **Financial Rewards**: Interest rate bonuses on real accounts when turning 18
+- **Leaderboards**: Social competition without material prizes
+- **School Championships**: Bragging rights, school-level recognition
+- **No Merchandise**: ING policy prohibits physical gifts
+
+### Q5: How does Leo generate quizzes dynamically?
+**Issues**: [#17](https://github.com/Wladefant/leo/issues/17), [#18](https://github.com/Wladefant/leo/issues/18)
+
+**Answer**:
+- **Context Awareness**: If user just viewed Apple stock, quiz might ask about tech sector
+- **Adaptive Difficulty**: Algorithm tracks correct/wrong answers, adjusts complexity
+- **Image Generation**: Scenario-based questions can include AI-generated illustrations
+- **Knowledge Gaps**: Leo identifies weak areas and creates targeted questions
+- **Real-World Relevance**: Questions tied to user's actual virtual portfolio/transactions
+
+### Q6: What data does Leo have access to?
+**Issues**: [#19](https://github.com/Wladefant/leo/issues/19), [#50](https://github.com/Wladefant/leo/issues/50)
+
+**Answer**:
+- **Transaction History**: Full access with user consent
+- **Account Balances**: Real-time access
+- **User Preferences**: Goals, risk tolerance, learning progress
+- **Market Data**: Real-time stock prices, news
+- **NOT Accessible**: Location data (unless explicitly enabled), biometric data
+
+### Q7: How do we handle duplicate subscriptions detection?
+**Issues**: [#42](https://github.com/Wladefant/leo/issues/42), [#6](https://github.com/Wladefant/leo/issues/6)
+
+**Answer**:
+- **Pattern Recognition**: AI identifies similar services (Spotify + Apple Music)
+- **Usage Analysis**: Cross-reference with app usage data (if permitted)
+- **Timing Analysis**: Subscriptions not used for 30+ days flagged
+- **User Control**: All suggestions are recommendations, not automatic actions
+- **Transparency**: Leo explains why a subscription was flagged
+
+### Q8: How does the Investment Simulator prevent "gambling" behavior?
+**Issue**: [#5](https://github.com/Wladefant/leo/issues/5)
+
+**Answer**:
+- **No Reset**: Cannot reset virtual money to avoid consequence-free gambling
+- **Weekly Salary**: Controlled income stream, like real life
+- **Leo Warnings**: Alerts when behavior is risky ("You're putting all money in one stock")
+- **Educational Friction**: Before any trade, Leo offers a brief explanation
+- **Loss Limits**: If portfolio drops >50%, Leo intervenes with educational content
+
+### Q9: What is the EU AI Act classification for Leo?
+**Issue**: [#50](https://github.com/Wladefant/leo/issues/50)
+
+**Answer**:
+- **Classification**: Limited Risk (not High-Risk)
+- **Why Not High-Risk**: Does not evaluate creditworthiness, insurance pricing, or essential benefits
+- **Primary Obligation**: Transparency (users must know they're talking to AI)
+- **Implementation**: Clear "AI Assistant" label, "How Leo Works" explainer in settings
+
+### Q10: How do we ensure Leo doesn't manipulate users?
+**Issue**: [#50](https://github.com/Wladefant/leo/issues/50), ING Leo Considerations PDF
+
+**Answer**:
+- **No Pressure Tactics**: Leo never urges immediate action
+- **No Hidden Upselling**: Leo doesn't secretly promote ING products
+- **Balanced Information**: Always presents pros and cons
+- **Human Escalation**: Option to speak to human advisor available
+- **Audit Trail**: All Leo recommendations logged for review
+- **Ethical Review**: Content reviewed by ethics board before deployment
+
+### Q11: How do Smart Notifications work?
+**Issues**: [#52](https://github.com/Wladefant/leo/issues/52), [#53](https://github.com/Wladefant/leo/issues/53)
+
+**Answer**:
+- **Pattern Learning**: AI learns recurring transactions (rent, subscriptions)
+- **Proactive Suggestions**: "Rent due tomorrow. Send €800?" (pre-filled)
+- **One-Tap Actions**: Reduce friction for routine tasks
+- **Timing Intelligence**: Sends reminders at optimal times
+- **Dismissable**: Never forced; always can be snoozed/dismissed
+- **Learning**: If user always dismisses, Leo stops suggesting that action
+
+### Q12: What makes Leo different from ChatGPT or generic AI?
+**Issue**: [#26](https://github.com/Wladefant/leo/issues/26) (USP)
+
+**Answer**:
+- **Financial Focus**: Can't be distracted, always brings back to money topics
+- **Bank Integration**: Has access to actual transaction data
+- **Verified Knowledge**: No hallucinations about financial facts
+- **Compliance Built-In**: EU AI Act, GDPR, minors protection from day one
+- **Action Capability**: Can actually execute transactions (with confirmation)
+- **Personalized Learning**: Adapts to user's actual financial behavior
+
+### Q13: How do we handle accessibility and inclusion?
+**Issue**: [#23](https://github.com/Wladefant/leo/issues/23)
+
+**Answer**:
+- **Visual**: High contrast mode, adjustable font sizes
+- **Auditory**: Voice mode for all interactions
+- **Cognitive**: Simple language, no jargon, step-by-step guidance
+- **Motor**: Large tap targets, voice control option
+- **Language**: German and English support
+- **Dyslexia-Friendly**: OpenDyslexic font option
+- **Screen Readers**: Full VoiceOver/TalkBack compatibility
+
+### Q14: What is the knowledge base source?
+**Issue**: [#29](https://github.com/Wladefant/leo/issues/29)
+
+**Answer**:
+- **Recommended**: Purchase API from financial education provider
+- **Content Types**: German tax laws, investment basics, insurance explanations
+- **Quality Control**: All content human-reviewed before deployment
+- **Updates**: Regular updates when regulations change
+- **No Internet Scraping**: Closed environment prevents misinformation
+
+---
+
+## Presentation Strategy
+
+> **Issue**: [#27](https://github.com/Wladefant/leo/issues/27)
+
+### Slide Deck Structure (Max 8 Slides)
+
+**Slide 1: Title**
+- "LEO: Your AI Financial Companion"
+- Team name and members
+- DFC2025 + ING logos
+
+**Slide 2: The Problem**
+- Pain points of young users (anxiety, confusion, lack of knowledge)
+- Statistics: Only 25% of Germans feel financially literate
+- Quote from target user research
+
+**Slide 3: Our Solution - LEO**
+- AI-First approach (everything starts with Leo)
+- Two profiles: Junior (learn) + Adult (manage)
+- Key differentiator: Integrated, not another app
+
+**Slide 4: How It Works**
+- User journey visualization
+- Junior: Virtual money → Quiz → Real skills
+- Adult: Transaction insight → Smart suggestions → Action
+
+**Slide 5: Live Demo Mockup**
+- Interactive prototype link
+- 3-4 key screens showing Leo in action
+- Show AI-generated quiz example
+
+**Slide 6: Why This Matters**
+- Social relevance (financial literacy gap)
+- Future viability (AI is the future of banking)
+- Inclusion (accessible to all)
+
+**Slide 7: Feasibility**
+- Technical: Built on existing ING infrastructure
+- Legal: EU AI Act compliant (Limited Risk)
+- Timeline: Realistic 18-24 month rollout
+- ING fit: Matches risk-averse culture
+
+**Slide 8: Call to Action + Sources**
+- "Ready to meet Leo?"
+- MVP/Prototype link
+- Academic and industry sources
+- Team contact information
+
+### Key Talking Points
+
+1. **AI-First, Not AI-Added**: Leo isn't a feature—it's THE interface
+2. **Two Profiles, One App**: Grow with users from teen to adult
+3. **Safe Learning**: Virtual money with real consequences (no reset)
+4. **Smart Insights**: AI that actually knows your finances
+5. **Compliance by Design**: GDPR, EU AI Act, minors protection
+
+### Anticipated Jury Questions
+
+| Question | Prepared Answer |
+|----------|----------------|
+| "Why not a separate app for teens?" | Cost efficiency, seamless transition at 18, ING app integration requirement |
+| "How do you prevent AI manipulation?" | Transparency, no hidden upselling, human escalation, audit trails |
+| "Is this technically feasible?" | Yes, uses existing LLM technology + ING APIs; no quantum computing |
+| "How do you handle privacy for minors?" | GDPR Article 8 compliance, parental consent flow, highest privacy defaults |
+| "What's the business model?" | Builds loyalty—teens become adult customers; subscription optimization saves money |
+
+### Prototype Requirements
+
+- [ ] Working Leo chat interface (can be mock responses)
+- [ ] At least 3 complete screens (Home, Chat, Quiz)
+- [ ] One user flow end-to-end (e.g., Take a Quiz)
+- [ ] Visual consistency with ING design system
+- [ ] Leo personality demonstration
+
+---
+
 ## Mockups & Visual References
 
 ### Repository Mockups
@@ -816,6 +1726,248 @@ Step 5: Expansion
 | [#16](https://github.com/Wladefant/leo/issues/16) | News | feature, ING APP, ING Junior |
 | [#9](https://github.com/Wladefant/leo/issues/9) | Insurance Scenarios | feature, ING APP, ING Junior |
 | [#4](https://github.com/Wladefant/leo/issues/4) | Access login with card | ING APP |
+
+---
+
+## Proposed New Issues
+
+> These are new features and improvements identified during documentation that should be created as GitHub issues.
+
+### AI-First Features (Priority: High)
+
+#### NEW: Leo Proactive Conversation Starters
+**Labels**: feature, ING APP, ING Junior, AiChat
+```
+Description: Leo shouldn't wait for users to ask questions. Based on user behavior and context, 
+Leo should proactively start conversations.
+
+Examples:
+- "I noticed you viewed Apple stock 3 times this week. Want me to explain what's happening?"
+- "You've been saving consistently! Have you thought about where this money could grow?"
+- "Your rent payment bounced last month. Want help setting up a buffer fund?"
+
+AI-First Principle: Leo is proactive, not reactive.
+```
+
+#### NEW: Leo Voice Personality Settings
+**Labels**: feature, ING APP, ING Junior, AiChat
+```
+Description: Users should be able to customize Leo's voice and personality.
+
+Options:
+- Voice: Male / Female / Non-binary
+- Tone: Friendly / Professional / Casual
+- Emoji usage: On / Off / Minimal
+- Verbosity: Detailed / Concise
+- Language: German / English
+
+Junior-specific: More playful tone, more emojis, simpler vocabulary
+Adult-specific: More professional options, business terminology available
+```
+
+#### NEW: Leo Learning Mode Detection
+**Labels**: feature, ING Junior, AiChat
+```
+Description: Leo detects when user is confused or struggling and automatically offers help.
+
+Signals:
+- User scrolling back and forth on same screen
+- User opening and closing same feature repeatedly
+- User typing questions but deleting them
+- Long pauses during quiz
+
+Response: Leo gently appears: "Looks like you might have questions. Can I help explain something?"
+```
+
+#### NEW: Leo Context Memory Across Sessions
+**Labels**: feature, ING APP, ING Junior, AiChat
+```
+Description: Leo remembers conversations across sessions and references previous discussions.
+
+Examples:
+- "Last week you asked about ETFs. Ready to take the next step?"
+- "Remember when you set that savings goal? You're 60% there!"
+- "You were curious about Tesla. It's up 5% since we talked."
+
+Privacy: User can clear conversation history anytime.
+```
+
+### Junior Profile Features (Priority: High)
+
+#### NEW: Parent Dashboard
+**Labels**: feature, ING Junior, Screens/View
+```
+Description: Parents of Junior users need visibility into their child's learning progress.
+
+Features:
+- View child's quiz scores and topics covered
+- See virtual portfolio performance
+- Approve/deny simulated purchases over certain amounts
+- Set weekly screen time limits
+- Receive weekly progress reports via email
+
+NOT included:
+- Cannot see chat conversations (privacy for teens)
+- Cannot make investment decisions for child
+```
+
+#### NEW: Teen-to-Adult Transition Flow
+**Labels**: feature, ING Junior, ING APP, Screens/View
+```
+Description: When Junior user turns 18, they transition to adult profile with celebration.
+
+Flow:
+1. On 18th birthday: Special Leo message + animation
+2. "You're officially an adult now! Let's unlock your full account."
+3. Show earned achievements and points
+4. Convert virtual portfolio learnings to real suggestions
+5. Optionally convert accumulated points to welcome bonus
+6. Full ING features unlock
+
+No data loss: All learning progress, quiz history preserved
+```
+
+#### NEW: School Registration Portal
+**Labels**: feature, ING Junior, Screens/View
+```
+Description: Schools can register for Leo Education Program.
+
+Features:
+- School admin creates class groups
+- Teachers track class progress
+- Inter-class competitions
+- School leaderboard
+- Curriculum alignment tools
+- Parent consent management
+
+Partnership opportunity for ING.
+```
+
+### Adult Profile Features (Priority: Medium)
+
+#### NEW: Bill Negotiation Assistant
+**Labels**: feature, ING APP, AiChat
+```
+Description: Leo helps users negotiate bills and subscriptions.
+
+Features:
+- Identify bills that could be reduced (electricity, internet, insurance)
+- Generate negotiation scripts
+- Track negotiation outcomes
+- Suggest competitors with better rates
+- (Future) Actually negotiate on user's behalf via API
+
+Example: "Your electricity bill is €50/month higher than average. Want me to draft a 
+message to your provider asking for a better rate?"
+```
+
+#### NEW: Financial Goal Collaboration
+**Labels**: feature, ING APP, Screens/View
+```
+Description: Couples/families can set shared savings goals.
+
+Features:
+- Invite partner to shared goal
+- Combined progress tracking
+- Split contributions automatically
+- Leo celebrates joint milestones
+- Individual contribution visibility
+
+Example: "House fund: €12,000 / €50,000 (Lisa: €7,000, Max: €5,000)"
+```
+
+#### NEW: Investment Decision Explainer
+**Labels**: feature, ING APP, AiChat
+```
+Description: Before any trade, Leo explains the decision in simple terms.
+
+Features:
+- Tax implications: "If you sell now, you'll owe €X in taxes"
+- Portfolio impact: "This will make Apple 30% of your portfolio"
+- Risk assessment: "This stock is more volatile than average"
+- Alternative suggestions: "Have you considered this similar ETF?"
+- Historical context: "The last time you sold during a dip, you regretted it"
+```
+
+### Technical Features (Priority: Medium)
+
+#### NEW: Leo Offline Mode
+**Labels**: feature, ING APP, ING Junior
+```
+Description: Basic Leo functionality when internet unavailable.
+
+Available offline:
+- View cached account balances
+- See recent transactions
+- Access downloaded quiz content
+- Read saved financial tips
+
+Not available offline:
+- New AI conversations
+- Real-time stock prices
+- Send money
+
+Sync: Automatically syncs when connection restored
+```
+
+#### NEW: Leo Widget for Home Screen
+**Labels**: feature, ING APP, ING Junior
+```
+Description: iOS/Android home screen widget showing Leo insights.
+
+Widget sizes:
+- Small: Daily tip from Leo
+- Medium: Account balance + tip
+- Large: Balance + recent transactions + AI insight
+
+Tap to expand: Opens app to relevant screen
+Privacy: Can hide balance on widget
+```
+
+#### NEW: Leo API for Third-Party Integration
+**Labels**: feature, ING APP, documentation
+```
+Description: Allow approved third-party apps to query Leo (with user consent).
+
+Use cases:
+- Budgeting apps asking "What's my spending category breakdown?"
+- Tax software asking "What's my investment income this year?"
+- Financial planning apps getting personalized insights
+
+Security: OAuth 2.0, user explicit consent, audit logs
+```
+
+### Accessibility Features (Priority: High)
+
+#### NEW: Leo Sign Language Mode
+**Labels**: feature, ING APP, ING Junior, accessibility
+```
+Description: Leo avatar can communicate using sign language animations.
+
+Implementation:
+- Pre-rendered sign language animations for common phrases
+- Real-time generation for custom responses
+- German Sign Language (DGS) primary
+- Optional subtitles alongside
+
+Inclusive design: Makes Leo accessible to deaf/hard-of-hearing users
+```
+
+#### NEW: Simplified Language Mode
+**Labels**: feature, ING APP, ING Junior, accessibility
+```
+Description: Ultra-simplified language for users with cognitive disabilities.
+
+Features:
+- Maximum 10 words per sentence
+- Common words only (no financial jargon)
+- Large, clear fonts
+- Pictographic support
+- Slower animations
+- Repetition options
+
+WCAG compliance: AAA level support
+```
 
 ---
 
