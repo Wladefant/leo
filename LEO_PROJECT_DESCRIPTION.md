@@ -1971,6 +1971,956 @@ WCAG compliance: AAA level support
 
 ---
 
+## Existing Issue Expansion Details
+
+> **Purpose**: Copy-paste these detailed descriptions as comments to existing issues to expand them with full specifications.
+
+---
+
+### Issue #44: General Chatbot View - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Leo AI Chat Interface
+
+### Overview
+The Leo Chat View is the central AI interaction point for both ING Junior and ING Adult profiles. 
+This is an AI-FIRST interface - users should be able to accomplish any banking task through conversation.
+
+### Visual Design Specification
+
+#### Chat Container
+- **Type**: Bottom sheet overlay (expandable to fullscreen)
+- **Initial Height**: 60% of screen
+- **Max Height**: 95% of screen (drag handle to expand)
+- **Background**: White with 16dp rounded top corners
+- **Animation**: Smooth spring animation on open/close
+
+#### Header Bar
+- Leo avatar: 40dp circular, animated idle state
+- Title: "Leo" (16sp, bold)
+- Mode toggle: Pill buttons [General] [Quiz]
+- Close button: X icon, top-right
+
+#### Message Area
+- ScrollView with smooth scrolling
+- User messages: Right-aligned, #f4f4f4 background, 12dp rounded corners
+- Leo messages: Left-aligned, white with #e0e0e0 border, Leo avatar beside
+- Typing indicator: Three animated dots when Leo is "thinking"
+- Timestamp: Small, grey, below message groups
+
+#### Inline Widgets
+Widgets appear within the chat flow when Leo needs to display rich content:
+
+1. **Stock Widget**
+   - Mini chart (sparkline, 7-day default)
+   - Current price + change %
+   - Company logo + ticker
+   - Tap to open full Stock View
+
+2. **Graph Widget**
+   - Line or bar chart for financial data
+   - Labeled axes
+   - Touch to see exact values
+
+3. **Diagram Widget**
+   - Pie chart for spending/portfolio breakdown
+   - Labeled segments with %
+   - Tap segment for details
+
+4. **Transfer Prompt Widget**
+   - Recipient avatar + name
+   - Amount input (pre-filled if contextual)
+   - [Send Now] primary button
+   - [Cancel] secondary button
+
+5. **Quiz Card Widget**
+   - Question text
+   - 4 answer options (A, B, C, D)
+   - 60-second countdown timer
+   - Tap answer to submit
+
+#### Input Bar
+- Text field: Rounded, full width
+- Placeholder: "Ask Leo anything about money..."
+- Left icons: 📎 (attach) | 📷 (camera) | 🎤 (voice)
+- Right icon: Send arrow (orange when text present)
+- Voice mode: Hold microphone for voice input
+
+### AI-First Capabilities
+
+#### Natural Language Understanding
+Leo understands and responds to:
+- "How much did I spend on food last week?"
+- "Transfer €50 to Mom"
+- "What is an ETF?"
+- "Should I buy Apple stock?"
+- "Cancel my Netflix subscription"
+- "Take a quiz about taxes"
+
+#### Contextual Actions
+Leo can perform actions directly from chat:
+- Execute transfers (with confirmation)
+- Toggle dark mode
+- Open specific screens
+- Generate quizzes on any topic
+- Analyze uploaded documents
+
+#### Document Analysis Mode
+- User taps camera icon
+- Camera opens with document frame guide
+- Auto-capture when document aligned
+- OCR processing (1-2 seconds)
+- Leo explains document in plain language
+- Follow-up questions supported
+
+#### Voice Mode
+- User holds microphone or taps voice toggle
+- Full-screen voice interface
+- Large animated Leo avatar
+- Voice waveform visualization
+- "Listening..." → "Thinking..." → "Speaking..." states
+- Text transcript appears below
+
+### Differences by Profile
+
+| Feature | ING Junior | ING Adult |
+|---------|------------|-----------|
+| Default tone | Playful, more emojis | Professional, concise |
+| Quiz prompts | Frequent, encouraged | Optional, suggested |
+| Trade actions | Virtual only | Real with confirmation |
+| Document scan | Explain only | Explain + suggest action |
+| Voice | Available | Available |
+
+### Related Issues
+- #45 (Emotional access points)
+- #28 (Files/camera/voice)
+- #48 (Widgets)
+- #35 (Finance-only constraint)
+```
+
+---
+
+### Issue #5: Investment Simulator - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Investment Simulator ("Beat the Market")
+
+### Overview
+The Investment Simulator allows ING Junior users to learn investing using virtual money 
+with real-time market data. This creates a safe, consequence-aware learning environment.
+
+### Core Mechanics
+
+#### Virtual Money System
+- **Starting Balance**: €1,000 virtual
+- **Weekly Salary**: €200 added every Monday (simulates income)
+- **No Reset Option**: Once spent/lost, money is gone until next salary
+- **Tax Deductions**: 15% withheld from virtual salary (teaches netto/brutto)
+- **Net Weekly Income**: €170 after taxes
+
+#### Why No Reset?
+The lack of reset is intentional to prevent:
+- Gambling mentality (no consequences = bad learning)
+- Unrealistic risk-taking
+- Disconnection from real financial behavior
+
+Instead, users learn:
+- Money is finite
+- Losses hurt
+- Recovery takes time
+- Patience is rewarded
+
+### Trading Features
+
+#### Buy Flow
+1. User selects stock from search/watchlist
+2. Sees current price + mini chart
+3. Leo appears: "Before you buy, let me explain this stock..."
+4. User enters quantity or € amount
+5. Order preview shows total cost + remaining cash
+6. Leo note: "This will be 25% of your portfolio"
+7. Confirm button executes "purchase"
+8. Celebration animation + points earned
+
+#### Sell Flow
+1. User selects owned stock
+2. Sees purchase price vs current price (P/L)
+3. Leo appears: "If you sell now, here's what happens..."
+4. Shows gain/loss calculation
+5. Simulated tax calculation (Kapitalertragssteuer)
+6. Confirm button executes "sale"
+7. Cash added to balance
+
+### Leo AI Integration
+
+#### Pre-Trade Education
+Before every trade, Leo offers context:
+- "Apple is a tech company that makes iPhones..."
+- "This stock went up 50% last year but also dropped 30% once"
+- "Based on your quiz results, you understand risk levels"
+
+#### Risk Warnings
+Leo intervenes when detecting risky behavior:
+- "You're putting 80% in one stock. Diversification tip: ..."
+- "This stock is very volatile. Are you sure?"
+- "You've been checking prices every hour. Try setting alerts instead."
+
+#### Learning Opportunities
+Leo turns every event into education:
+- Stock drops: "Markets go up and down. Here's why this happened..."
+- Dividend received: "Congratulations! This is called a dividend. Quiz time?"
+- Portfolio milestone: "Your portfolio hit €2,000! You've learned..."
+
+### Portfolio Dashboard
+
+#### Header
+- Total portfolio value (large)
+- Daily/weekly change (% and €)
+- Cash available to invest
+
+#### Holdings List
+Each stock shows:
+- Company logo (48dp)
+- Company name + ticker
+- Shares owned
+- Current value
+- Gain/loss (color-coded)
+- Mini sparkline chart
+
+#### Performance Chart
+- Line graph of portfolio value over time
+- Benchmark comparison option (DAX, S&P 500)
+- Time range selector: 1W, 1M, 3M, 6M, ALL
+
+### Gamification Elements
+
+#### Points for Actions
+- First purchase: +50 pts
+- Correct quiz about owned stock: +25 pts
+- Holding through volatility: +10 pts/week
+- Portfolio diversification bonus: +100 pts
+
+#### Achievements
+- "First Trade" - Complete first purchase
+- "Diamond Hands" - Hold through 20% drop
+- "Diversifier" - Own 5+ different stocks
+- "Tax Expert" - Complete tax quiz with 100%
+
+#### Leaderboard Integration
+- Compare virtual portfolio performance with peers
+- Weekly competitions (who gains most %)
+- School rankings
+
+### UI Screens
+
+#### Main Portfolio View
+Navigation: Bottom tab "Invest"
+
+```
+┌─────────────────────────────────────┐
+│  My Virtual Portfolio               │
+│  €1,847.23  ▲ +€123.45 (+7.2%)     │
+│  ───────────────────────────────── │
+│  Cash: €423.00                     │
+│                                     │
+│  📈 Holdings                        │
+│  ┌─────────────────────────────┐   │
+│  │ 🍎 Apple        5 shares    │   │
+│  │    €847.50     +€47.50      │   │
+│  └─────────────────────────────┘   │
+│  ┌─────────────────────────────┐   │
+│  │ 🚗 Tesla        2 shares    │   │
+│  │    €576.73     -€23.27      │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  [+ Buy More]                       │
+│                                     │
+│  💡 Leo says: "Good diversification!│
+│     Ready for a portfolio quiz?"   │
+│                     [Take Quiz]     │
+└─────────────────────────────────────┘
+```
+
+#### Stock Search
+- Search bar at top
+- Categories: Popular, Tech, Green, Local
+- AI suggestions: "Based on your interests..."
+
+### API Requirements
+- Real-time stock prices (15-min delay acceptable)
+- Historical price data (5 years)
+- Company information (name, logo, sector)
+- News API for stock-specific news
+
+### Compliance Notes
+- Clearly labeled as "VIRTUAL" / "SIMULATION"
+- Cannot be converted to real money
+- Educational purpose disclaimer
+- Parental visibility into activity
+```
+
+---
+
+### Issue #33: QuizzesView - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Interactive Quiz System
+
+### Overview
+The Quiz System is Leo's primary teaching tool, accessible from any screen via the Leo button.
+Quizzes are AI-generated, adaptive, and deeply integrated with user activity.
+
+### Access Points
+
+#### Primary Access
+1. Tap Leo FAB → Select "Quiz Mode"
+2. Quiz topic selection appears
+
+#### Contextual Access (AI-Triggered)
+- After viewing stock: "Want to test your knowledge about this company?"
+- After salary arrives: "Quiz time! What did you learn about taxes?"
+- After reading news: "Quick quiz: What does this news mean for investors?"
+
+### Quiz Categories
+
+#### 1. Investment Quizzes
+- What is a stock?
+- ETFs vs individual stocks
+- Risk and return relationship
+- Portfolio diversification
+- Bull vs bear markets
+- Reading stock charts
+- Dividend basics
+- Market capitalization
+
+#### 2. Insurance Quizzes
+- Types of insurance (health, liability, car)
+- Why insurance matters
+- Deductibles explained
+- Reading insurance contracts
+- When to file a claim
+- Insurance vs savings
+
+#### 3. Tax Quizzes
+- Income tax basics
+- Gross vs net salary
+- Tax deductions for students
+- Capital gains tax
+- Tax filing basics
+- Social security contributions
+
+#### 4. Smart Spending Quizzes
+- Budgeting basics
+- Needs vs wants
+- Subscription management
+- Comparison shopping
+- Emergency fund importance
+- Debt awareness
+
+### Quiz Interface
+
+#### Topic Selection Screen
+```
+┌─────────────────────────────────────┐
+│  Choose a Topic                     │
+│                                     │
+│  ┌──────────┐  ┌──────────┐        │
+│  │ 📈       │  │ 🛡️       │        │
+│  │Investing │  │Insurance │        │
+│  │ ████░░░░ │  │ ██░░░░░░ │        │
+│  │ 65%      │  │ 20%      │        │
+│  └──────────┘  └──────────┘        │
+│                                     │
+│  ┌──────────┐  ┌──────────┐        │
+│  │ 💰       │  │ 💳       │        │
+│  │ Taxes    │  │ Spending │        │
+│  │ ░░░░░░░░ │  │ ███░░░░░ │        │
+│  │ 0%       │  │ 35%      │        │
+│  └──────────┘  └──────────┘        │
+│                                     │
+│  🔥 5-day streak! Keep it up!      │
+└─────────────────────────────────────┘
+```
+
+#### Active Quiz Screen
+```
+┌─────────────────────────────────────┐
+│  Investing Quiz      Q3/10    ⏱️45s │
+│  ─────────────────────────────────  │
+│  +15 pts at stake    🔥 2x streak   │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ What happens when you buy   │   │
+│  │ a stock?                    │   │
+│  │                             │   │
+│  │ [AI-generated illustration] │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  A) You own part of the company    │
+│                                     │
+│  B) You lend money to the company  │
+│                                     │
+│  C) You become an employee         │
+│                                     │
+│  D) Nothing, it's just a number    │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+#### Correct Answer Feedback
+```
+┌─────────────────────────────────────┐
+│  ✅ Correct!              +15 pts   │
+│  🎉 [confetti animation]           │
+│                                     │
+│  Leo explains:                      │
+│  "When you buy a stock, you        │
+│   literally own a tiny piece of    │
+│   that company! If Apple has       │
+│   1 billion shares and you own 1,  │
+│   you own 0.0000001% of Apple."    │
+│                                     │
+│              [Got it! Next →]       │
+└─────────────────────────────────────┘
+```
+
+#### Wrong Answer Feedback
+```
+┌─────────────────────────────────────┐
+│  ❌ Not quite!             +0 pts   │
+│                                     │
+│  The correct answer is A.          │
+│                                     │
+│  Leo explains:                      │
+│  "Buying a stock is different from │
+│   lending money (that's a bond).   │
+│   When you buy stock, you become   │
+│   a shareholder - an actual owner  │
+│   of a piece of the company!"      │
+│                                     │
+│  💡 Tip: Think "stock = share =    │
+│     ownership"                      │
+│                                     │
+│              [Got it! Next →]       │
+└─────────────────────────────────────┘
+```
+
+### AI-Generated Questions
+
+#### Adaptive Difficulty
+Leo tracks performance and adjusts:
+- Below 50% correct → Easier questions, more explanation
+- 50-80% correct → Standard difficulty
+- Above 80% correct → Advanced questions, less hints
+
+#### Contextual Questions
+Leo generates questions based on user activity:
+- User just bought Tesla: "What sector is Tesla in?"
+- User looking at dividends: "How often does Apple pay dividends?"
+- User's portfolio dropped: "When markets drop, what's usually the best action?"
+
+#### Image Generation
+For scenario-based questions, Leo can generate illustrations:
+- Car accident scenario (insurance)
+- Salary paycheck visualization (taxes)
+- Stock chart patterns (investing)
+
+### Gamification
+
+#### Points System
+- Correct answer (easy): +10 pts
+- Correct answer (medium): +15 pts
+- Correct answer (hard): +25 pts
+- Perfect quiz (10/10): +50 bonus pts
+- Streak bonus: 2x multiplier after 5 days
+
+#### Achievements
+- "Quiz Newbie" - Complete first quiz
+- "Tax Whiz" - 100% on tax quiz
+- "Investor Brain" - Complete all investing quizzes
+- "Streak Master" - 30-day quiz streak
+- "Know-It-All" - 90% overall accuracy
+
+### Integration with Other Features
+
+#### Stock View
+- "Quiz about [Company]" button on every stock page
+
+#### Salary View
+- Quiz prompt when salary arrives
+
+#### News Feed
+- "Test your understanding" button on articles
+
+#### Leaderboard
+- Quiz performance contributes to ranking
+```
+
+---
+
+### Issue #15: Gamification System - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Gamification & Rewards System
+
+### Overview
+The gamification system motivates users through points, achievements, leaderboards, and 
+financial rewards - WITHOUT physical merchandise (per ING policy).
+
+### Points Economy
+
+#### Earning Points
+| Action | Points | Profile |
+|--------|--------|---------|
+| Complete first quiz | +50 | Both |
+| Correct answer (easy) | +10 | Both |
+| Correct answer (medium) | +15 | Both |
+| Correct answer (hard) | +25 | Both |
+| Perfect quiz (10/10) | +50 bonus | Both |
+| Daily login streak | +5/day | Both |
+| First virtual trade | +50 | Junior |
+| Portfolio diversification | +100 | Junior |
+| Hold through volatility | +10/week | Junior |
+| Complete onboarding | +100 | Both |
+| Refer a friend | +200 | Both |
+
+#### Streak System (Duolingo-style)
+- Day 1-7: 1x multiplier
+- Day 8-14: 1.5x multiplier
+- Day 15-30: 2x multiplier
+- Day 31+: 2.5x multiplier
+- Freeze available: 1 free freeze per week
+
+### Achievement Badges
+
+#### Learning Achievements
+- 🎓 "First Steps" - Complete first quiz
+- 📚 "Bookworm" - Complete 10 quizzes
+- 🧠 "Finance Brain" - Complete all quiz categories
+- 💯 "Perfectionist" - Get 100% on any quiz
+- 🔥 "On Fire" - 7-day streak
+- ⚡ "Unstoppable" - 30-day streak
+
+#### Trading Achievements (Junior)
+- 📈 "First Trade" - Execute first virtual trade
+- 💎 "Diamond Hands" - Hold through 20% drop
+- 🎯 "Diversifier" - Own 5+ different stocks
+- 🏆 "Beat the Market" - Outperform DAX for 1 month
+- 💰 "Virtual Millionaire" - Reach €10,000 virtual
+
+#### Community Achievements
+- 👥 "Social Butterfly" - Join school leaderboard
+- 🏅 "Top 10" - Rank in top 10 weekly
+- 👑 "Weekly Champion" - #1 for the week
+- 🏫 "School Pride" - Help school reach top 100
+
+### Leaderboard System
+
+#### Individual Leaderboard
+- Weekly reset (Sunday midnight)
+- Shows: Rank, Avatar, Username, Points, Trend
+- Top 3 get special badges
+- Own rank always visible
+
+#### School Leaderboard
+- Schools registered in system
+- Aggregate points of all students
+- Inter-school competition
+- Monthly school champion announcement
+
+#### Privacy Options
+- Display real name vs anonymous
+- Opt-out of leaderboard entirely
+- Show to friends only
+
+### Financial Rewards (No Physical Gifts!)
+
+#### Junior Rewards
+- At 1,000 pts: €5 bonus to real account at 18
+- At 5,000 pts: €15 bonus
+- At 10,000 pts: €25 bonus
+- At 25,000 pts: 0.1% extra interest rate for first year
+
+#### Adult Rewards
+- At 5,000 pts: €10 account credit
+- At 10,000 pts: 0.1% interest bonus for 3 months
+- At 25,000 pts: Free premium feature access
+
+### School Championship Program
+
+#### Registration
+- Teacher/admin creates school account
+- Students join via school code
+- Parental consent required for minors
+
+#### Competition Structure
+- Weekly mini-competitions
+- Monthly championship
+- Annual grand championship
+
+#### School Prizes (for school, not individuals)
+- #1 School: €1,000 to school's financial literacy program
+- Top 10 Schools: Recognition on ING website
+- All participants: Certificate of participation
+
+### UI Screens
+
+#### Achievement Gallery
+```
+┌─────────────────────────────────────┐
+│  🏆 My Achievements                 │
+│                                     │
+│  ──── Earned (12/36) ────          │
+│                                     │
+│  🎓  📚  💯  🔥  📈  💎            │
+│                                     │
+│  ──── Locked (24/36) ────          │
+│                                     │
+│  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜            │
+│  ⬜  ⬜  ⬜  ⬜  ⬜  ⬜            │
+│                                     │
+│  🎯 Next achievement:               │
+│  "Diversifier" - Own 2 more stocks │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+#### Weekly Leaderboard
+```
+┌─────────────────────────────────────┐
+│  🏆 This Week's Leaders             │
+│  Resets in: 2d 14h                  │
+│                                     │
+│  🥇 MaxMustermann    2,450 pts  ▲   │
+│  🥈 FinanceQueen     2,230 pts  ▼   │
+│  🥉 InvestorKid      2,100 pts  ▲   │
+│  4. TaxExpert        1,980 pts  ─   │
+│  5. StockNerd        1,875 pts  ▲   │
+│  ...                                │
+│  ─────────────────────────────────  │
+│  42. You (MoneyLearner) 840 pts    │
+│      ▲ 15 spots since yesterday    │
+│                                     │
+│  🎁 Weekly Prize: €25 bonus at 18  │
+│                                     │
+└─────────────────────────────────────┘
+```
+```
+
+---
+
+### Issue #47: Smart AI Statistics (Konten View) - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Smart AI Statistics
+
+### Overview
+The Smart AI Statistics feature transforms the boring "Konten" (Accounts) view into an 
+intelligent financial insights dashboard. Leo proactively analyzes transactions and 
+surfaces actionable insights.
+
+### AI Insights Widget
+
+#### Widget Design
+- Position: Between accounts list and transactions
+- Background: Light blue (#e3f2fd) or gradient
+- Icon: Leo avatar with lightbulb
+- Height: Auto-expanding based on content
+
+#### Insight Types
+
+1. **Spending Alerts**
+   - "Your dining spending is up 34% this week (€87 → €117)"
+   - "You spent €45 on Starbucks this month - that's €540/year!"
+   
+2. **Subscription Warnings**
+   - "You have Netflix AND Disney+ - do you need both?"
+   - "Gym membership unused for 45 days - €39/month"
+   
+3. **Savings Opportunities**
+   - "Move €500 from Girokonto to Extra-Konto for 1.5% interest"
+   - "You have €1,200 sitting idle - consider investing?"
+   
+4. **Positive Reinforcement**
+   - "Great job! You spent 12% less than last month"
+   - "You've saved €340 towards your vacation goal"
+
+5. **Actionable Suggestions**
+   - "Rent due tomorrow - send €800 to Landlord?" [Send Now]
+   - "You paid for Spotify twice - want me to investigate?"
+
+### Transaction Categorization
+
+#### AI-Powered Categories
+Leo automatically categorizes every transaction:
+- 🏠 Housing (rent, utilities, insurance)
+- 🍔 Food & Dining (groceries, restaurants)
+- 🚗 Transportation (fuel, public transit, car)
+- 🛒 Shopping (clothing, electronics, general)
+- 🎬 Entertainment (streaming, events, hobbies)
+- 💊 Health (pharmacy, doctor, gym)
+- 📱 Subscriptions (recurring charges)
+- 💼 Income (salary, freelance, transfers in)
+- ❓ Uncategorized (user can manually assign)
+
+#### Category Accuracy
+- 90%+ accuracy for known merchants
+- User can correct → Leo learns
+- Shared learning across all users (anonymized)
+
+### Natural Language Queries
+
+Users can ask Leo anything about their finances:
+
+| Query | Leo Response |
+|-------|--------------|
+| "How much did I spend last month?" | €2,340.56 - here's the breakdown... |
+| "What's my average grocery spending?" | €287/month over the last 6 months |
+| "Show me all Amazon purchases" | [List with dates and amounts] |
+| "When did I pay rent last?" | October 1st, €800 to Max Mustermann |
+| "How much do I spend on subscriptions?" | €89.97/month across 8 services |
+
+### Spending Analytics Dashboard
+
+#### Overview Card
+```
+┌─────────────────────────────────────┐
+│  November 2025 Spending             │
+│                                     │
+│  €2,145.67 spent                    │
+│  ████████████░░░░░ 78% of budget   │
+│                                     │
+│  vs October: ▼ €234 (-9.8%)        │
+│                                     │
+│  🎯 On track to meet your goal!    │
+└─────────────────────────────────────┘
+```
+
+#### Category Breakdown (Pie Chart)
+```
+        Housing 42%
+           🏠
+     ┌─────────────┐
+   🍔│             │🚗
+Food │             │ Transport
+ 23% │             │ 12%
+     │             │
+     └─────────────┘
+    Shopping  Entertainment
+      15%         8%
+       🛒          🎬
+```
+
+#### Trend Graph
+- Line chart showing spending over time
+- Compare to previous periods
+- Highlight anomalies (sudden spikes)
+- Forecast based on current trajectory
+
+### Proactive Notifications
+
+Leo doesn't wait for users to check - it pushes insights:
+
+#### Morning Summary (Optional)
+"Good morning! Yesterday you spent €45.20. 
+Your biggest expense was €22 at Restaurant XYZ."
+
+#### Weekly Report (Sunday)
+"📊 Your week in review:
+- Total spent: €312.45
+- Top category: Food (€98)
+- Saved vs last week: €45
+- 🌟 You stayed under budget!"
+
+#### Real-Time Alerts
+- Large transaction detected (>€200)
+- Unusual merchant (first time)
+- Duplicate charge suspected
+- Budget threshold approaching
+
+### Screen Layout
+
+```
+┌─────────────────────────────────────┐
+│  Good morning, Max! 👋              │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ Girokonto         €3,456.78 │   │
+│  │ •••• 4523                   │   │
+│  │ [Transfer] [Cards] [More]   │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ 💡 Leo's Insight            │   │
+│  │                             │   │
+│  │ You've spent €145 on dining │   │
+│  │ this week - 28% more than   │   │
+│  │ usual. Want to see details? │   │
+│  │                             │   │
+│  │         [Show Me]           │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  Recent Transactions               │
+│                                     │
+│  Today                             │
+│  🛒 Amazon          -€34.99        │
+│  🍔 Lieferando      -€22.50        │
+│                                     │
+│  Yesterday                         │
+│  💼 Salary          +€2,800.00     │
+│  🏠 Rent            -€800.00       │
+│                                     │
+└─────────────────────────────────────┘
+```
+```
+
+---
+
+### Issue #52: Smart Action Transfer Widget - EXPANDED DESCRIPTION
+
+```markdown
+## Complete Feature Specification: Smart Action Transfers
+
+### Overview
+Smart Action Transfers use AI to predict and suggest recurring transactions, 
+reducing friction for routine payments to a single tap.
+
+### AI Pattern Learning
+
+#### What Leo Learns
+- Recurring payments (rent, subscriptions, allowances)
+- Typical amounts for each recipient
+- Usual timing (1st of month, every Friday, etc.)
+- Successful vs declined patterns
+
+#### Triggers
+1. **Calendar-Based**: "It's the 1st - rent usually due"
+2. **Behavior-Based**: "You usually transfer to Mom on Fridays"
+3. **Balance-Based**: "Salary arrived - time for savings transfer?"
+4. **Event-Based**: "Birthday coming up - gift for Dad?"
+
+### Notification Flow
+
+#### Push Notification
+```
+┌─────────────────────────────────────┐
+│ 🦁 Leo Suggestion                   │
+│                                     │
+│ Rent is usually due today.         │
+│ Send €800 to Max Mustermann?       │
+│                                     │
+│ [Send Now]  [Not Today]  [Dismiss] │
+└─────────────────────────────────────┘
+```
+
+#### In-App Card
+When user opens app after notification:
+```
+┌─────────────────────────────────────┐
+│  💡 Leo Suggests                    │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │  👤 Max Mustermann          │   │
+│  │     Rent - December         │   │
+│  │                             │   │
+│  │     €800.00                 │   │
+│  │                             │   │
+│  │  ┌─────────────────────┐   │   │
+│  │  │   Send €800 now     │   │   │
+│  │  │   ══════════════▶   │   │   │
+│  │  └─────────────────────┘   │   │
+│  │                             │   │
+│  │  [Change Amount] [Not Now] │   │
+│  └─────────────────────────────┘   │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+### Widget Interactions
+
+#### Slide-to-Send
+- Inspired by iPhone "slide to unlock"
+- Prevents accidental sends
+- Satisfying animation on complete
+- Haptic feedback
+
+#### Quick Modifications
+- Tap amount to edit
+- Change recipient (dropdown of frequents)
+- Add note/reference
+- Schedule for later
+
+#### Confirmation
+After send:
+```
+┌─────────────────────────────────────┐
+│           ✅ Sent!                   │
+│                                     │
+│  €800.00 to Max Mustermann         │
+│  Reference: Rent December          │
+│                                     │
+│  Leo: "I'll remind you again       │
+│        next month. 👍"              │
+│                                     │
+│           [Done]                    │
+└─────────────────────────────────────┘
+```
+
+### Learning & Adaptation
+
+#### Positive Signals
+- User accepts suggestion → Strengthen pattern
+- User sends same amount → Confirm prediction
+- User sends on suggested day → Confirm timing
+
+#### Negative Signals
+- User dismisses repeatedly → Stop suggesting
+- User changes amount often → Offer range
+- User sends different day → Adjust timing
+
+#### User Controls
+- "Never suggest this payment"
+- "Remind me every [X] instead"
+- "Don't use smart suggestions" (global off)
+
+### Example Scenarios
+
+#### Scenario 1: Monthly Rent
+- Pattern: €800 to "Landlord" on 1st of month
+- Trigger: December 1st arrives
+- Action: Push notification + in-app card
+- After 3 successful months: High confidence suggestion
+
+#### Scenario 2: Weekly Allowance (Parent)
+- Pattern: €50 to "Son" every Friday
+- Trigger: Friday 6pm (detected usual time)
+- Action: "Weekly allowance to Tim?"
+- Personalization: "Your son might be waiting! 😊"
+
+#### Scenario 3: Savings Transfer
+- Pattern: €200 to Extra-Konto after salary
+- Trigger: Salary detected (€2,800 deposit)
+- Action: "Move €200 to savings like usual?"
+- Smart suggestion: "You have €300 extra this month - save more?"
+
+### Privacy & Control
+
+#### User Controls
+- See all learned patterns
+- Delete specific patterns
+- Pause learning temporarily
+- Export pattern data
+- Full opt-out option
+
+#### Data Handling
+- Patterns stored locally first
+- Encrypted sync to ING servers
+- No sharing with third parties
+- Auto-delete after 2 years of inactivity
+```
+
+---
+
 ## Unique Selling Points (USP)
 **Issue**: [#26](https://github.com/Wladefant/leo/issues/26)
 
