@@ -164,6 +164,84 @@ Er macht *keine* Kauf- oder Verkaufsvorschläge.
 Er bietet Lernmodule oder Erklärungen an, damit Nutzer:innen verstehen,
 wie Märkte miteinander verknüpft sind.
 
+##### Sentiment-basierte Marktstimmung (neutral & erklärend)
+
+Leo liefert eine kurze, faktenbasierte Einordnung der Marktstimmung,
+ohne Empfehlungen oder Interpretationen für Anlageentscheidungen.
+
+- „Markt heute überwiegend negativ aufgrund Makro-Daten.“
+- „Tech-Sektor zeigt leichte Erholung nach gestrigen Verlusten.“
+- „Banken stabil, da EZB keine Änderungen signalisiert.“
+
+Jeder Satz erklärt **nur**, was gerade passiert – nicht, was Nutzer:innen tun sollen.
+
+---
+
+##### Risk-Signals (reine Kontextwarnungen, keine Handlungsempfehlungen)
+
+Leo weist auf potenziell erhöhte Marktbewegungen hin,
+wenn relevante News auf der Watchlist oder im Portfolio erscheinen.
+
+- „Hohe Volatilität möglich: Unternehmen X veröffentlicht heute Quartalszahlen.“
+- „Chip-Lieferkette unter Druck – kurzfristige Preisschwankungen üblich.“
+- „Branchenrotation wahrscheinlich: Inflation höher als erwartet.“
+
+Wichtig:  
+Diese Hinweise dienen ausschließlich der Orientierung,
+nicht der Ableitung von Anlage-Strategien.
+
+---
+
+##### Event-getriebene Alerts (faktenbasiert)
+
+Leo erkennt wichtige Markttermine und liefert kurze Ein-Satz-Updates:
+
+- **Earnings:** „Apple veröffentlicht heute Ergebnisse – Markt erwartet hohe Spannung.“  
+- **Dividenden:** „Firma Y erhöht die Dividende um 4 %.“  
+- **Zinsentscheidungen:** „EZB gibt Zinsentscheidung um 14:30 Uhr bekannt.“  
+- **Makro-Daten:** „US-Inflationsrate steigt leicht – Markt reagiert gemischt.“
+
+Alles wird neutral erklärt, ohne Bewertung oder Empfehlung.
+
+---
+
+##### Beginner-Modus Erklärungen („Was bedeutet das?“)
+
+Für Nutzer:innen mit wenig Finanzwissen erklärt Leo
+komplexe Begriffe in einfacher Sprache.
+
+Beispiele:
+- „Zinsentscheidung: Die Zentralbank entscheidet, wie teuer Kredite werden.“
+- „Earnings: Quartalsberichte, die zeigen, wie viel eine Firma verdient hat.“
+- „Volatilität: Wenn Kurse schnell steigen oder fallen.“
+
+Leo bietet optional ein **2-Minuten-Lernmodul** an.
+
+---
+
+##### Smart Ranking & Noise Reduction
+
+Der News-Feed nutzt ein KI-basiertes Relevanzmodell, das:
+
+- unwichtige Artikel herausfiltert  
+- dubiose Quellen ignoriert  
+- Trends erkennt, die für das Portfolio relevant sein *könnten*  
+- Meldungen priorisiert, die Kontext, Risiko oder Bildung fördern
+
+Ziel: **Nur wirklich relevante News. Keine Informationsüberflutung.**
+
+---
+
+##### Deep-Dive Erklärungen („Erklär mir warum das wichtig ist“)
+
+Auf Wunsch liefert Leo eine kurze, neutrale Tiefenanalyse:
+
+- „Warum könnte diese News Auswirkungen auf Lieferketten haben?“  
+- „Welche typischen Reaktionen zeigt der Markt bei solchen Ereignissen?“  
+- „Welche Branchen sind normalerweise betroffen?“
+
+Das ist reine Bildung – **keine Handlungsempfehlung**.
+
 
 **Beispiel - Echtzeit-Ausgabenalarm:**
 ```
