@@ -4,6 +4,22 @@
 
 ---
 
+## 📁 Modular Documentation
+
+This project uses modular documentation. For detailed specifications, see the `/docs` folder:
+
+| Document | Description |
+|----------|-------------|
+| [docs/01-AI-FIRST-PHILOSOPHY.md](./docs/01-AI-FIRST-PHILOSOPHY.md) | Core AI-first principles, demo user stories |
+| [docs/02-GAMIFICATION-SYSTEM.md](./docs/02-GAMIFICATION-SYSTEM.md) | Points, badges, leaderboards, Kahoot-style challenges |
+| [docs/03-NEWS-INSIGHTS-FEED.md](./docs/03-NEWS-INSIGHTS-FEED.md) | Perplexity-style personalized news feed |
+| [docs/04-WIDGETS-SYSTEM.md](./docs/04-WIDGETS-SYSTEM.md) | All interactive widgets with specifications |
+| [docs/05-JUNIOR-MONEY-SYSTEM.md](./docs/05-JUNIOR-MONEY-SYSTEM.md) | Real vs virtual money, card rules, parent controls |
+| [docs/06-FUTURE-VISION.md](./docs/06-FUTURE-VISION.md) | Roadmap, future features, personalized UI vision |
+| [docs/07-IMPLEMENTATION-GUIDE.md](./docs/07-IMPLEMENTATION-GUIDE.md) | Specific changes for the ing-app codebase |
+
+---
+
 ## Table of Contents
 1. [Executive Summary](#executive-summary)
 2. [AI-First Philosophy](#ai-first-philosophy)
@@ -43,6 +59,8 @@ This is a submission for the **DFC2025 (Digital Future Challenge)** competition,
 ## AI-First Philosophy
 
 > **Core Principle**: Every interaction in the LEO ecosystem starts and ends with AI. Leo is not a feature—it is THE interface.
+
+> 📖 **Detailed Documentation**: See [docs/01-AI-FIRST-PHILOSOPHY.md](./docs/01-AI-FIRST-PHILOSOPHY.md) for complete AI-first specifications and demo user stories.
 
 ### What "AI-First" Means for LEO
 
@@ -141,6 +159,12 @@ Key insights from the [ING Q&A Transcript](https://github.com/Wladefant/leo/issu
 ---
 
 ## Core Features Overview
+
+> 📖 **Detailed Documentation**: 
+> - Gamification: [docs/02-GAMIFICATION-SYSTEM.md](./docs/02-GAMIFICATION-SYSTEM.md)
+> - News Feed: [docs/03-NEWS-INSIGHTS-FEED.md](./docs/03-NEWS-INSIGHTS-FEED.md)
+> - Widgets: [docs/04-WIDGETS-SYSTEM.md](./docs/04-WIDGETS-SYSTEM.md)
+> - Junior Money: [docs/05-JUNIOR-MONEY-SYSTEM.md](./docs/05-JUNIOR-MONEY-SYSTEM.md)
 
 ### 1. Leo AI Agent Chatbot
 **Issues**: [#44](https://github.com/Wladefant/leo/issues/44), [#45](https://github.com/Wladefant/leo/issues/45), [#28](https://github.com/Wladefant/leo/issues/28), [#35](https://github.com/Wladefant/leo/issues/35)
@@ -1609,6 +1633,10 @@ Many mockups are attached directly in GitHub issues:
 ---
 
 ## Roadmap & Implementation Phases
+
+> 📖 **Detailed Documentation**: 
+> - Future Vision: [docs/06-FUTURE-VISION.md](./docs/06-FUTURE-VISION.md)
+> - Implementation Guide: [docs/07-IMPLEMENTATION-GUIDE.md](./docs/07-IMPLEMENTATION-GUIDE.md)
 
 ### Phase Overview
 **Issue**: [#49](https://github.com/Wladefant/leo/issues/49)
