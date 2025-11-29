@@ -111,6 +111,72 @@ Beim Ansehen einer Aktie zeige dedizierte News-Sektion:
 
 ---
 
+##### Watchlist-basierte Micro-News (1-Satz-News)
+
+Leo überwacht die persönliche Watchlist der Nutzer:innen und liefert extrem kurze,
+leicht konsumierbare News-Updates zu relevanten Assets.
+
+- Quellen ausschließlich große, vertrauenswürdige Medien
+- Sehr aktuelle Meldungen (Minuten–Stunden alt)
+- Jede News wird auf einen Satz reduziert
+- Präsentation als dezente Push-Benachrichtigung oder Insight-Card
+- Keine Empfehlungen, nur faktenbasierte Information
+
+**Beispiele**
+• "Apple kündigt neues Produkt an – Aktie reagiert leicht positiv."  
+• "EZB signalisiert mögliche Zinssenkung – Bankensektor steigt."  
+• "Tesla meldet Lieferengpass bei Batterien – betrifft mehrere Zulieferer."
+
+##### News → Lernmodul (Micro-Learning Fusion)
+
+Wenn Leo eine News zusammenfasst, bietet er optional eine passende
+Lerneinheit an, damit Nutzer:innen den Kontext besser verstehen.
+
+**Beispiele**
+• News: "Tech-Aktien fallen heute stark."  
+  Lernmodul: "Warum reagiert der Markt stark auf Zinsänderungen? (2 Minuten)"
+
+• News: "Pharmaunternehmen A genehmigt neues Medikament."  
+  Lernmodul: "Wie funktionieren regulatorische Freigaben?"
+
+• News: "Halbleiter-Lieferketten unter Druck."  
+  Lernmodul: "Was sind die wichtigsten Rohstoffe für Chips?"
+
+
+##### Branchen- & Lieferketten-Kontext (kein Investment-Ratschlag)
+
+Leo erklärt wirtschaftliche Zusammenhänge, ohne Empfehlungen auszusprechen.
+Wenn eine Firma ein neues Produkt, Medikament oder einen Chip entwickelt,
+erklärt Leo, welche Branchen typischerweise davon beeinflusst werden könnten.
+
+Beispiele:
+• "Unternehmen X hat einen neuen KI-Chip vorgestellt. Solche Chips benötigen
+  seltene Metalle wie Y oder Z. Deshalb reagieren oft auch Unternehmen aus der
+  Rohstoff- oder Halbleiter-Lieferkette."
+• "Ein neues Medikament von Firma A könnte die Nachfrage nach bestimmten
+  Chemikalien oder Biotech-Zulieferern erhöhen."
+• "Wenn Autohersteller verstärkt auf Batterien setzen, profitieren oft
+  Lithium- oder Recycling-Unternehmen in der Lieferkette."
+
+Wichtig:
+Leo erklärt nur Zusammenhänge.  
+Er macht *keine* Kauf- oder Verkaufsvorschläge.
+Er bietet Lernmodule oder Erklärungen an, damit Nutzer:innen verstehen,
+wie Märkte miteinander verknüpft sind.
+
+
+**Beispiel - Echtzeit-Ausgabenalarm:**
+```
+[Nutzer hat gerade €45 in einem Restaurant bezahlt]
+
+Leo erscheint dezent am unteren Bildschirmrand:
+"Essen gehen diese Woche: €127 💸
+Das sind 40% mehr als üblich.
+
+Soll ich das genauer verfolgen?
+[Ja, Alarm setzen] [Nein, genieße das Leben!]"
+```
+
 ## Benachrichtigungssystem
 
 ### News Benachrichtigungstypen
