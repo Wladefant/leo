@@ -1,0 +1,493 @@
+# Widgets System - Vollständige Spezifikation
+
+> Dieses Dokument beschreibt alle interaktiven Widgets die in Leos Chat-Interface und in der gesamten App erscheinen.
+
+---
+
+## Inhaltsverzeichnis
+1. [Widget-Architektur](#widget-architektur)
+2. [Kern-Widgets](#kern-widgets)
+3. [Finanz-Widgets](#finanz-widgets)
+4. [Bildungs-Widgets](#bildungs-widgets)
+5. [Aktions-Widgets](#aktions-widgets)
+6. [Zukünftige Widget-Ideen](#zukünftige-widget-ideen)
+
+---
+
+## Widget-Architektur
+
+### Widget-Typen
+
+Widgets in LEO dienen vier Zwecken:
+1. **Information anzeigen**: Daten in visuellem Format zeigen (Charts, Karten)
+2. **Aktionen ermöglichen**: Schnelle Transaktionen ohne Chat zu verlassen
+3. **Nutzer bilden**: Interaktive Lernkomponenten
+4. **Achievements feiern**: Gamification-Feedback
+
+---
+
+## Kern-Widgets
+
+### 1. Aktien-Widget
+
+**Zweck**: Aktieninformationen inline im Chat anzeigen
+
+```
+┌─────────────────────────────────────┐
+│ ┌────┐  AAPL                       │
+│ │ 📈 │  Apple Inc.                  │
+│ └────┘                              │
+│                                     │
+│ €178,50        ▲ +2,3% (+€4,02)    │
+│                                     │
+│ ┌─────────────────────────────┐    │
+│ │ [Sparkline Chart - 7 Tage]   │    │
+│ └─────────────────────────────┘    │
+│                                     │
+│ Leo: "Starke Woche für Apple.      │
+│ Das iPhone 15 verkauft sich gut."  │
+│                                     │
+│ [Kaufen]  [Zur Watchlist]          │
+└─────────────────────────────────────┘
+```
+
+### 2. Überweisungs-Widget
+
+**Zweck**: Schnelle Geldüberweisung direkt aus dem Chat
+
+```
+┌─────────────────────────────────────┐
+│ 💸 Überweisung                      │
+│                                     │
+│ ┌────┐  Max Mustermann             │
+│ │ 👤 │  DE89 3704 •••• 0130 00     │
+│ └────┘                              │
+│                                     │
+│           €800,00                   │
+│       ─────────────────            │
+│       Verwendungszweck:             │
+│       Miete Dezember 🏠             │
+│                                     │
+│ ┌─────────────────────────────┐    │
+│ │    ══════ Senden ══════►    │    │
+│ └─────────────────────────────┘    │
+│                                     │
+│ [Betrag ändern]  [Abbrechen]       │
+└─────────────────────────────────────┘
+```
+
+### 3. Quiz-Widget (Vorschau-Karte)
+
+**Zweck**: Quiz-Einladung vor dem Start zeigen
+
+```
+┌─────────────────────────────────────┐
+│  ⚡ Quiz Challenge                  │
+│                                     │
+│  🎯 ETFs verstehen                  │
+│                                     │
+│  • 5 Fragen                         │
+│  • ~3 Minuten                       │
+│  • Schwierigkeit: Mittel            │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │  +75 XP möglich 🏆          │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  [Quiz starten]                     │
+│                                     │
+│  Leo: "ETFs sind super für den     │
+│  Einstieg. Bereit zu lernen?"      │
+└─────────────────────────────────────┘
+```
+
+### 4. Quiz-Frage Widget (Aktives Quiz)
+
+**Zweck**: Interaktive Quiz-Frage anzeigen
+
+```
+┌─────────────────────────────────────┐
+│  ETFs verstehen         Frage 2/5  │
+│  ████████░░░░░░░░░░░░░░    40%    │
+│                                     │
+│  ⏱️ 0:15                           │
+│                                     │
+│  Was ist ein Vorteil von ETFs      │
+│  gegenüber Einzelaktien?           │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ A) Höhere Rendite garantiert │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ B) Automatische Streuung    │   │ ← ausgewählt
+│  └─────────────────────────────┘   │
+│                                     │
+│  🏆 Aktuell: 15 Punkte             │
+└─────────────────────────────────────┘
+```
+
+### 5. Achievement-Widget
+
+**Zweck**: Badge-Freischaltungen und Meilensteine feiern
+
+```
+┌─────────────────────────────────────┐
+│         🎉 BADGE FREIGESCHALTET!   │
+│                                     │
+│           ┌─────────┐              │
+│           │   💎    │              │
+│           │ Diamant │              │
+│           │  Hände  │              │
+│           └─────────┘              │
+│                                     │
+│  Du hast durch einen 20% Rückgang  │
+│  gehalten! Das zeigt echte         │
+│  Investoren-Mentalität.            │
+│                                     │
+│         +300 XP erhalten           │
+│                                     │
+│  [Badge ausrüsten]  [Später]       │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Finanz-Widgets
+
+### 6. Portfolio-Zusammenfassung Widget
+
+```
+┌─────────────────────────────────────┐
+│  📊 Dein Portfolio                  │
+│                                     │
+│  Gesamtwert:     €12.450,67        │
+│  Heute:          +€234,50 (+1,9%)  │
+│  Diese Woche:    +€567,80 (+4,7%)  │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ [Kreisdiagramm Verteilung]  │   │
+│  │  Tech: 45% ████████░░       │   │
+│  │  ETFs: 30% ██████░░░░       │   │
+│  │  Bank: 15% ███░░░░░░░       │   │
+│  │  Andere: 10% ██░░░░░░░      │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  Top Performer: AAPL (+5,2%)       │
+│  Schlechtester: TSLA (-2,1%)       │
+│                                     │
+│  [Portfolio öffnen]                │
+└─────────────────────────────────────┘
+```
+
+### 7. Ausgaben-Chart Widget
+
+```
+┌─────────────────────────────────────┐
+│  💳 Ausgabenanalyse                 │
+│  November 2025                      │
+│                                     │
+│  Gesamt: €2.145,67                 │
+│  vs. Oktober: ▼ -€234 (-9,8%)      │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ [Horizontales Balkendiagramm]│   │
+│  │                             │   │
+│  │ Wohnen  ████████████ €850  │   │
+│  │ Essen   ██████░░░░░ €420   │   │
+│  │ Transport ████░░░░░ €280   │   │
+│  │ Freizeit ███░░░░░░ €230    │   │
+│  │ Shopping ██░░░░░░░ €180    │   │
+│  │ Sonstiges █░░░░░░░ €185    │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  Leo: "Du hast €67 weniger für     │
+│  Essen ausgegeben als letzten      │
+│  Monat. Weiter so! 🎉"             │
+│                                     │
+│  [Details ansehen]                  │
+└─────────────────────────────────────┘
+```
+
+### 8. Sparziel-Widget
+
+```
+┌─────────────────────────────────────┐
+│  🎯 Sparziel: Urlaub 2026          │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ 🏖️ [Zielbild]               │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  €850 / €2.000                     │
+│  ████████░░░░░░░░░░░░░░░   42,5%  │
+│                                     │
+│  📅 Zieldatum: August 2026         │
+│  💰 Empfohlen: €115/Monat          │
+│  📈 Aktuell sparst du: €100/Monat  │
+│                                     │
+│  Leo: "Du brauchst €15 mehr pro    │
+│  Monat um dein Ziel zu erreichen.  │
+│  Soll ich dir Spartipps zeigen?"   │
+│                                     │
+│  [Sparrate erhöhen]  [Tipps]       │
+└─────────────────────────────────────┘
+```
+
+### 9. Abo-Karte Widget
+
+> **Hinweis**: Nutzungsverfolgung (z.B. "nicht genutzt seit X Tagen") ist technisch **nicht möglich**, da wir keine Daten über externe App-Nutzung haben. Das Widget zeigt nur **zahlungsbasierte** Informationen.
+
+**Aktuelle Version (MVP):**
+```
+┌─────────────────────────────────────┐
+│  📋 Abo-Übersicht                   │
+│                                     │
+│  ┌────┐  Netflix                   │
+│  │ 🎬 │  Premium                    │
+│  └────┘  €17,99/Monat              │
+│                                     │
+│  Letzte Zahlung: 15.11.2025        │
+│  Nächste Zahlung: 15.12.2025       │
+│                                     │
+│  Bisherige Kosten (2025): €179,90  │
+│                                     │
+│  Leo: "Du zahlst jährlich €215,88  │
+│  für Netflix. Möchtest du das      │
+│  behalten oder kündigen?"          │
+│                                     │
+│  [Behalten]  [Kündigen helfen]     │
+└─────────────────────────────────────┘
+```
+
+**Zukunftsversion (wenn Nutzungsdaten verfügbar):**
+```
+┌─────────────────────────────────────┐
+│  🔴 Abo-Warnung                     │
+│                                     │
+│  ┌────┐  Netflix                   │
+│  │ 🎬 │  Premium                    │
+│  └────┘  €17,99/Monat              │
+│                                     │
+│  ⚠️ Nicht genutzt seit 45 Tagen   │
+│  (Zukunfts-Feature)                │
+│                                     │
+│  Bisherige Kosten: €215,88         │
+│  Bei Kündigung sparst du:          │
+│  €215,88/Jahr                       │
+│                                     │
+│  Leo: "Du zahlst für Netflix, aber │
+│  schaust nichts. Soll ich für dich │
+│  kündigen?"                         │
+│                                     │
+│  [Jetzt kündigen]  [Behalten]      │
+└─────────────────────────────────────┘
+```
+
+### 10. Budget-Tracker Widget
+
+```
+┌─────────────────────────────────────┐
+│  📊 Wochenbudget                    │
+│                                     │
+│  Essen & Trinken                    │
+│  ████████████░░░░░░░░  €67 / €100 │
+│  ▲ 67% verbraucht                   │
+│                                     │
+│  Shopping                           │
+│  ████████████████████  €150 / €150│
+│  ⚠️ Budget erreicht!               │
+│                                     │
+│  Freizeit                           │
+│  ████████░░░░░░░░░░░░  €40 / €100 │
+│  ✓ Im Rahmen                        │
+│                                     │
+│  Leo: "Dein Shopping-Budget ist    │
+│  aufgebraucht. Noch 3 Tage bis     │
+│  zur nächsten Woche!"              │
+│                                     │
+│  [Budgets anpassen]                 │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Bildungs-Widgets
+
+### 11. Tipp-Karte Widget
+
+```
+┌─────────────────────────────────────┐
+│  💡 Leos Tipp                       │
+│                                     │
+│  Wusstest du?                       │
+│                                     │
+│  Die 72er-Regel hilft dir zu       │
+│  berechnen, wann sich dein Geld    │
+│  verdoppelt:                        │
+│                                     │
+│  72 ÷ Zinssatz = Jahre             │
+│                                     │
+│  Bei 3% Zinsen:                     │
+│  72 ÷ 3 = 24 Jahre                 │
+│                                     │
+│  [Das verstehe ich ✓]              │
+│  [Mehr erklären]                    │
+│  [Quiz dazu +25 XP]                │
+└─────────────────────────────────────┘
+```
+
+### 12. Vergleichstabelle Widget
+
+```
+┌─────────────────────────────────────┐
+│  📋 Vergleich: ETFs vs Aktien      │
+│                                     │
+│          │ ETF     │ Einzelaktie  │
+│  ────────┼─────────┼──────────────│
+│  Risiko  │ ⚠️ Mittel│ ⚠️⚠️ Höher   │
+│  Kosten  │ 💰 Gering│ 💰💰 Höher   │
+│  Streuung│ ✅ Ja    │ ❌ Nein      │
+│  Aufwand │ 📉 Gering│ 📈 Mehr      │
+│  Rendite │ 📊 Markt │ 📊 Variabel │
+│                                     │
+│  Leos Empfehlung für Anfänger:    │
+│  "Starte mit einem ETF auf den     │
+│  MSCI World. Das ist wie ein       │
+│  Obstkorb statt nur ein Apfel!"    │
+│                                     │
+│  [ETFs erkunden]  [Mehr lernen]    │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Aktions-Widgets
+
+### 13. Umfrage-Widget
+
+```
+┌─────────────────────────────────────┐
+│  📊 Kurze Frage                     │
+│                                     │
+│  Wie viel sparst du monatlich?     │
+│                                     │
+│  [  ] Unter €50                    │
+│  [✓] €50 - €200                    │ ← ausgewählt
+│  [  ] €200 - €500                  │
+│  [  ] Über €500                    │
+│  [  ] Ich spare (noch) nicht       │
+│                                     │
+│  12.847 haben abgestimmt           │
+│                                     │
+│  [Ergebnisse anzeigen]             │
+└─────────────────────────────────────┘
+```
+
+### 14. Kalender-Event Widget
+
+```
+┌─────────────────────────────────────┐
+│  📅 Erinnerung erstellt            │
+│                                     │
+│  🏠 Mietüberweisung                │
+│                                     │
+│  Datum: Jeden 1. des Monats        │
+│  Zeit: 9:00 Uhr                    │
+│  Betrag: €800                       │
+│  An: Max Mustermann                 │
+│                                     │
+│  Nächste: 1. Dezember 2025         │
+│                                     │
+│  [Bearbeiten]  [Löschen]           │
+└─────────────────────────────────────┘
+```
+
+### 15. Dokument-Vorschau Widget
+
+```
+┌─────────────────────────────────────┐
+│  📄 Dokument analysiert            │
+│                                     │
+│  ┌─────────────────────────────┐   │
+│  │ [Dokument Thumbnail]         │   │
+│  │ Stromrechnung_Nov.pdf       │   │
+│  └─────────────────────────────┘   │
+│                                     │
+│  Erkannt: Stromrechnung            │
+│  Anbieter: Stadtwerke München      │
+│  Betrag: €127,50                    │
+│  Fällig: 15.12.2025                │
+│                                     │
+│  Leo: "€127,50 ist 15% mehr als    │
+│  letzten Monat. Heizung an? ❄️"    │
+│                                     │
+│  [Überweisung vorbereiten]         │
+│  [Anbieter vergleichen]            │
+│  [Dokument speichern]              │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Zukünftige Widget-Ideen
+
+### 16. Sprachspieler Widget (Zukunft)
+```
+┌─────────────────────────────────────┐
+│  🔊 Leo spricht...                  │
+│                                     │
+│  ▶️ ═══════════●══════════ 1:24   │
+│                                     │
+│  [Transkript anzeigen]             │
+└─────────────────────────────────────┘
+```
+
+### 17. AR Portfolio Widget (Zukunft)
+```
+Konzept: Augmented Reality Ansicht des Portfolios
+- Handy auf Tisch richten
+- 3D Kreisdiagramm der Anlagen sehen
+- Aktien antippen für Details
+```
+
+### 18. Sozialer Vergleich Widget (Zukunft - mit Einwilligung)
+```
+┌─────────────────────────────────────┐
+│  👥 Vergleich (anonym)             │
+│                                     │
+│  Du sparst mehr als 65% der        │
+│  Nutzer in deinem Alter!           │
+│                                     │
+│  [█████████████████░░░] 65%       │
+│                                     │
+│  Du investierst mehr als 78%!      │
+│  [████████████████████░] 78%      │
+│                                     │
+│  Leo: "Super Arbeit! Du bist       │
+│  deinen Altersgenossen voraus."    │
+└─────────────────────────────────────┘
+```
+
+### 19. Rechnungsteilen Widget (Zukunft)
+```
+┌─────────────────────────────────────┐
+│  🧾 Rechnung teilen                │
+│                                     │
+│  Restaurant Le Petit               │
+│  Gesamt: €120,00                   │
+│                                     │
+│  Teilen mit:                        │
+│  ┌──────────────────────────┐      │
+│  │ 👤 Du        €40,00     │      │
+│  │ 👤 Anna      €40,00     │      │
+│  │ 👤 Max       €40,00     │      │
+│  └──────────────────────────┘      │
+│                                     │
+│  [Anfrage senden]                   │
+└─────────────────────────────────────┘
+```
+
+---
+
+*Zuletzt aktualisiert: November 2025*
