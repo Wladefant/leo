@@ -14,7 +14,7 @@
 | Statische Screens mit festen Infos | Dynamische Screens basierend auf Kontext |
 | Nutzer muss App-Struktur lernen | App lernt die Gewohnheiten des Nutzers |
 | Reaktiv (Nutzer startet Aktionen) | Proaktiv (KI schlägt Aktionen vor) |
-| Einheits-UI für alle | Personalisierte UI basierend auf Profil |
+| Einheits-UI für alle | Gleiche Kern-UI, aber personalisierte Inhalte & Prioritäten (Widgets, Insights).|
 | Informationen in Menüs versteckt | Informationen erscheinen wenn relevant |
 | Nutzer sucht nach Antworten | Leo antizipiert Fragen und liefert Antworten |
 | Manuelle Dateneingabe | KI vervollständigt automatisch |
@@ -196,6 +196,28 @@ Oder sag mir, wenn sich diesen Monat etwas geändert hat."
 - Ausgabenalarme während sie passieren, nicht am Monatsende
 - Investment-News verbunden mit eigenen Aktien
 - Steuerauswirkungen vor Transaktionen, nicht danach
+
+##### Branchen- & Lieferketten-Kontext (kein Investment-Ratschlag)
+
+Leo erklärt wirtschaftliche Zusammenhänge, ohne Empfehlungen auszusprechen.
+Wenn eine Firma ein neues Produkt, Medikament oder einen Chip entwickelt,
+erklärt Leo, welche Branchen typischerweise davon beeinflusst werden könnten.
+
+Beispiele:
+• "Unternehmen X hat einen neuen KI-Chip vorgestellt. Solche Chips benötigen
+  seltene Metalle wie Y oder Z. Deshalb reagieren oft auch Unternehmen aus der
+  Rohstoff- oder Halbleiter-Lieferkette."
+• "Ein neues Medikament von Firma A könnte die Nachfrage nach bestimmten
+  Chemikalien oder Biotech-Zulieferern erhöhen."
+• "Wenn Autohersteller verstärkt auf Batterien setzen, profitieren oft
+  Lithium- oder Recycling-Unternehmen in der Lieferkette."
+
+Wichtig:
+Leo erklärt nur Zusammenhänge.  
+Er macht *keine* Kauf- oder Verkaufsvorschläge.
+Er bietet Lernmodule oder Erklärungen an, damit Nutzer:innen verstehen,
+wie Märkte miteinander verknüpft sind.
+
 
 **Beispiel - Echtzeit-Ausgabenalarm:**
 ```
