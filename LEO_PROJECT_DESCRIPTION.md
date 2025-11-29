@@ -130,7 +130,7 @@ Key insights from the [ING Q&A Transcript](https://github.com/Wladefant/leo/issu
 |-----------|-------------|
 | **Age Range** | 13-17 years old |
 | **Account Type** | Girokonto Junior (requires parental consent) |
-| **Key Features** | Investment simulator, financial quizzes, virtual money |
+| **Key Features** | Real-Life Financial Simulator, financial quizzes, virtual money |
 | **Access Model** | 1 month free trial → requires parent-approved card |
 | **UI Treatment** | Simplified interface with gamified elements |
 
