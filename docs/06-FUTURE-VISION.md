@@ -15,7 +15,17 @@
 
 ## Implementierungsphasen
 
-### Phase 1: MVP (Monat 0-6)
+> **🎯 MVP-Anforderung**: Für die Challenge-Präsentation müssen **alle Features bis einschließlich Phase 3** implementiert werden. Phase 4 ist Zukunftsvision und wird NICHT im MVP benötigt.
+
+### Was ist im MVP enthalten?
+- ✅ Phase 1: Kern-Funktionalität
+- ✅ Phase 2: Erweitertes Lernen
+- ✅ Phase 3: Smart Finance
+- ❌ Phase 4: Zukunfts-Features (NICHT im MVP)
+
+---
+
+### Phase 1: MVP Grundlagen (Monat 0-6)
 **Fokus**: Kern-Funktionalität und Basic KI-Chat
 
 | Feature | Priorität | Status |
@@ -29,7 +39,7 @@
 | Aktien-Ansicht | Mittel | ✅ Fertig |
 | Demo Sidebar | Mittel | ✅ Fertig |
 
-### Phase 2: Erweitertes Lernen (Monat 6-12)
+### Phase 2: Erweitertes Lernen (Monat 6-12) - **IM MVP**
 **Fokus**: KI-gestütztes Lernen und Gamification
 
 | Feature | Priorität | Status |
@@ -42,7 +52,7 @@
 | Punkte & XP Tracking | Mittel | 🔴 Nicht begonnen |
 | Schul-Registrierung | Niedrig | 🔴 Nicht begonnen |
 
-### Phase 3: Smart Finance (Monat 12-18)
+### Phase 3: Smart Finance (Monat 12-18) - **IM MVP**
 **Fokus**: Intelligente Finanzassistenz
 
 | Feature | Priorität | Status |
@@ -54,17 +64,17 @@
 | Budget-Tracking | Mittel | 🔴 Nicht begonnen |
 | Vertragsverhandlungs-Tipps | Niedrig | 🔴 Nicht begonnen |
 
-### Phase 4: Fortgeschrittene Features (Monat 18-24)
-**Fokus**: Premium Features und Feinschliff
+### Phase 4: Fortgeschrittene Features (Monat 18-24) - **NICHT IM MVP**
+**Fokus**: Premium Features und Feinschliff - Diese Features werden erst NACH dem MVP implementiert
 
-| Feature | Priorität | Status |
-|---------|-----------|--------|
-| Sprachmodus | Mittel | 🔴 Nicht begonnen |
-| Eltern-Dashboard | Mittel | 🔴 Nicht begonnen |
-| Kauf/Verkauf Flow | Hoch | 🔴 Nicht begonnen |
-| Personalisierte UI | Niedrig | 🔴 Nicht begonnen |
-| Offline-Modus | Niedrig | 🔴 Nicht begonnen |
-| Drittanbieter-API | Niedrig | 🔴 Nicht begonnen |
+| Feature | Priorität | Status | Hinweis |
+|---------|-----------|--------|---------|
+| Sprachmodus | Mittel | 🔴 Nicht begonnen | Zukunft |
+| Eltern-Dashboard (vollständig) | Mittel | 🔴 Nicht begonnen | Zukunft |
+| Kauf/Verkauf Flow (echt) | Hoch | 🔴 Nicht begonnen | Zukunft |
+| Personalisierte UI | Niedrig | 🔴 Nicht begonnen | Zukunft |
+| Offline-Modus | Niedrig | 🔴 Nicht begonnen | Zukunft |
+| Drittanbieter-API | Niedrig | 🔴 Nicht begonnen | Zukunft |
 
 ---
 
@@ -138,22 +148,36 @@
 
 ---
 
-### Smarte Abo-Verfolgung (Phase 3)
+### Smarte Abo-Erkennung (Phase 2-3)
 
-**Beschreibung**: KI-gestützte Abo-Erkennung und Optimierung
+**Beschreibung**: KI-gestützte Abo-Erkennung und -Verwaltung
 
-**Erkennungsmethode**:
-- Mustererkennung in Transaktionen
+> **Wichtig**: Abo-**Erkennung** ist MVP (Phase 2). Ungenutzte Abos erkennen via Transaktionsabwesenheit ist **nicht möglich** und wird nicht implementiert.
+
+**Was im MVP möglich ist:**
+- Mustererkennung in Transaktionen (regelmäßige Abbuchungen)
+- Neue Abos automatisch erkennen
+- Preiserhöhungs-Alerts
+- Kündigungshilfe
+- Abo-Übersicht anzeigen
+
+**Was NICHT möglich ist:**
+- Erkennen ob Netflix geschaut wird
+- Erkennen ob Fitnessstudio besucht wird
+- Jede Art von Nutzungsverfolgung außerhalb der ING App
+
+**Erkennungsmethode:**
 - Regelmäßige Beträge in regelmäßigen Intervallen
 - Händler-Kategorie-Codes (MCC)
 - Bekannte Abo-Dienste Datenbank
+- Pattern: €X.99 jeden Monat = wahrscheinlich Abo
 
-**Features**:
+**Features (MVP):**
 - Neue Abos automatisch erkennen
-- Ungenutzte Abos verfolgen (via Transaktionsabwesenheit)
 - Preiserhöhungs-Alerts
-- Kündigungshilfe
+- Kündigungserinnerungen
 - Alternative Vorschläge
+- Abo-Jahreskosten-Übersicht
 
 ---
 

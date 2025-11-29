@@ -236,6 +236,31 @@ Widgets in LEO dienen vier Zwecken:
 
 ### 9. Abo-Karte Widget
 
+> **Hinweis**: Nutzungsverfolgung (z.B. "nicht genutzt seit X Tagen") ist technisch **nicht möglich**, da wir keine Daten über externe App-Nutzung haben. Das Widget zeigt nur **zahlungsbasierte** Informationen.
+
+**Aktuelle Version (MVP):**
+```
+┌─────────────────────────────────────┐
+│  📋 Abo-Übersicht                   │
+│                                     │
+│  ┌────┐  Netflix                   │
+│  │ 🎬 │  Premium                    │
+│  └────┘  €17,99/Monat              │
+│                                     │
+│  Letzte Zahlung: 15.11.2025        │
+│  Nächste Zahlung: 15.12.2025       │
+│                                     │
+│  Bisherige Kosten (2025): €179,90  │
+│                                     │
+│  Leo: "Du zahlst jährlich €215,88  │
+│  für Netflix. Möchtest du das      │
+│  behalten oder kündigen?"          │
+│                                     │
+│  [Behalten]  [Kündigen helfen]     │
+└─────────────────────────────────────┘
+```
+
+**Zukunftsversion (wenn Nutzungsdaten verfügbar):**
 ```
 ┌─────────────────────────────────────┐
 │  🔴 Abo-Warnung                     │
@@ -245,6 +270,7 @@ Widgets in LEO dienen vier Zwecken:
 │  └────┘  €17,99/Monat              │
 │                                     │
 │  ⚠️ Nicht genutzt seit 45 Tagen   │
+│  (Zukunfts-Feature)                │
 │                                     │
 │  Bisherige Kosten: €215,88         │
 │  Bei Kündigung sparst du:          │

@@ -202,6 +202,65 @@ Oder sag mir, wenn sich diesen Monat etwas geändert hat."
 - Vertragsbedingungen hervorgehoben und erklärt
 - Vergleich mit Marktpreisen
 - Handlungspunkte automatisch extrahiert
+- **Automatische Transaktionsverknüpfung**: Gescannte Verträge werden mit bestehenden Transaktionen verknüpft
+- **Halbautomatische Zuordnung**: Leo schlägt passende Transaktionen vor, Nutzer bestätigt
+
+**Vertrags-zu-Transaktions-Verknüpfung:**
+```
+┌─────────────────────────────────────┐
+│  📄 Vertrag erkannt                 │
+│                                     │
+│  Stromvertrag - EnBW               │
+│  Monatlich: €95,00                  │
+│                                     │
+│  🔗 Passende Transaktion gefunden:  │
+│  "EnBW Energie" - €95,00            │
+│  Jeden 15. des Monats              │
+│                                     │
+│  [✅ Verknüpfen] [Andere wählen]    │
+│                                     │
+│  Bei Verknüpfung:                   │
+│  • Automatische Preisüberwachung    │
+│  • Alert bei Preiserhöhung         │
+│  • Kündigungserinnerung            │
+│  • Vertragsende-Warnung            │
+└─────────────────────────────────────┘
+```
+
+**Unterstützte Dokumenttypen mit Verknüpfung:**
+
+| Dokumenttyp | Erkannte Daten | Verknüpfung mit |
+|-------------|----------------|-----------------|
+| **Stromvertrag** | Anbieter, Preis/kWh, Laufzeit | Monatliche Stromzahlung |
+| **Internetvertrag** | Anbieter, Speed, Kosten | Provider-Abbuchung |
+| **Mietvertrag** | Vermieter, Kaltmiete, Nebenkosten | Mietüberweisung |
+| **Versicherung** | Gesellschaft, Deckung, Prämie | Versicherungszahlung |
+| **Handyvertrag** | Anbieter, Daten, Kosten | Mobilfunk-Abbuchung |
+| **Fitnessstudio** | Studio, Mitgliedsbeitrag, Laufzeit | Fitnesszahlung |
+| **Gehaltsabrechnung** | Brutto, Netto, Abzüge | Gehaltseingang |
+
+**Beispiel - Vertrags-Scan mit Auto-Verknüpfung:**
+```
+Nutzer scannt Stromvertrag:
+
+Leo: "Ich habe deinen neuen Vertrag analysiert 📄
+
+Wichtige Bedingungen:
+✅ Festpreis: €0,32/kWh (Marktdurchschnitt: €0,35) - Guter Deal!
+⚠️ 24-Monats-Bindung
+⚠️ Preiserhöhungsklausel nach Jahr 1 (bis zu 8%)
+❌ €50 Kündigungsgebühr
+
+🔗 Ich habe eine passende Transaktion gefunden:
+'EnBW Strom' - €95,00 monatlich seit März 2024
+
+Soll ich den Vertrag damit verknüpfen? So kann ich:
+• Dich warnen wenn der Preis steigt
+• An das Vertragsende erinnern (März 2026)
+• Günstigere Alternativen vorschlagen
+
+[Ja, verknüpfen] [Nein danke]"
+```
 
 **Beispiel - Vertrags-Scan:**
 ```
@@ -290,9 +349,9 @@ Abend-Benachrichtigung: "Dein täglicher Finanz-Snapshot 📊"
 • Heute ausgegeben: €47,50 (Lebensmittel €32, Kaffee €5,50, Transport €10)
 • Budget-Status: 68% des Wochenbudgets verbraucht (auf Kurs ✓)
 • Portfolio: +0,8% heute 📈
-• Aktion nötig: Fitnessstudio-Mitgliedschaft bestätigen (€29,99)
+• Auffällig: Fitnessstudio-Abo €29,99/Monat (letzte Zahlung vor 45 Tagen)
 
-[Details ansehen] [Fitnessstudio bestätigen] [Schließen]"
+[Details ansehen] [Abo-Optionen] [Schließen]"
 ```
 
 ---

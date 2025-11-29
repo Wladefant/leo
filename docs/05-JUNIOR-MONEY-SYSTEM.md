@@ -216,18 +216,62 @@ Die physische Debitkarte ist nur für reale Käufe:
 | In-App-Käufe | ❌ | Gesperrt |
 | Gaming-Käufe | ❌ | Gesperrt |
 
-### Erster Monat Probezeitraum
+### Erster Monat: Nur Lernplattform
 
-Neue Junior-Konten bekommen 1-Monats-Test:
-- Alle Features freigeschaltet
-- Nach Test evtl. Abo nötig (ING-Richtlinie)
-- Eltern entscheiden über Fortsetzung
+Für den ersten Monat ist das Junior-Konto **nur eine Lernplattform** ohne echtes Geld:
+
+**Warum?**
+- Um ein echtes Taschengeld-Konto zu eröffnen, müssen Personalausweis und weitere Dokumente hochgeladen werden
+- Das dauert Zeit und erfordert Eltern-Verifikation
+- Juniors können aber sofort mit dem Lernen beginnen!
+
+**Was im ersten Monat verfügbar ist:**
+| Feature | Verfügbar | Hinweis |
+|---------|-----------|---------|
+| Leo Chat | ✅ | Vollständig |
+| Quizze & Lernen | ✅ | Alle Themen |
+| Virtuelles Geld (V€) | ✅ | V€200 Startguthaben |
+| Investment Simulator | ✅ | Mit V€ |
+| Ranglisten & Badges | ✅ | XP sammeln |
+| Echtes Konto | ❌ | Erst nach Verifizierung |
+| Echte Karte | ❌ | Erst nach Verifizierung |
+| Echtes Geld | ❌ | Erst nach Verifizierung |
+
+**Nach Verifizierung (wenn Eltern zustimmen):**
+- Echtes Taschengeld-Konto aktiviert
+- ING Visa Debitkarte bestellt
+- Eltern können Taschengeld senden
+- Kartenzahlungen in Geschäften möglich
 
 ---
 
 ## Elternkontrolle
 
-### Eltern-Dashboard Funktionen
+> **Hinweis**: Das vollständige Eltern-Dashboard ist ein **Zukunfts-Feature (Phase 4)**. Im MVP sind nur grundlegende Kontrollen verfügbar.
+
+### MVP: Grundlegende Elternfunktionen
+
+Im MVP können Eltern über ihr eigenes ING-Konto:
+
+```
+┌─────────────────────────────────────┐
+│  👨‍👩‍👧 Junior-Übersicht              │
+│  Kind: Max Mustermann (15 Jahre)   │
+│                                     │
+│  Kontostand: €45,20                 │
+│  Letzte Abbuchung: Rewe €12,50     │
+│                                     │
+│  [+ Taschengeld senden]            │
+│                                     │
+│  Tages-/Monatslimit: €50/€200      │
+│  [Limits ändern]                    │
+│                                     │
+│  ℹ️ Detailliertes Dashboard         │
+│  kommt in einem zukünftigen Update │
+└─────────────────────────────────────┘
+```
+
+### Zukunft: Vollständiges Eltern-Dashboard (Phase 4)
 
 Eltern haben eine dedizierte Ansicht zum Überwachen und Kontrollieren:
 
