@@ -197,6 +197,38 @@ Oder sag mir, wenn sich diesen Monat etwas geändert hat."
 - Investment-News verbunden mit eigenen Aktien
 - Steuerauswirkungen vor Transaktionen, nicht danach
 
+##### Watchlist-basierte Micro-News (1-Satz-News)
+
+Leo überwacht die persönliche Watchlist der Nutzer:innen und liefert extrem kurze,
+leicht konsumierbare News-Updates zu relevanten Assets.
+
+- Quellen ausschließlich große, vertrauenswürdige Medien
+- Sehr aktuelle Meldungen (Minuten–Stunden alt)
+- Jede News wird auf einen Satz reduziert
+- Präsentation als dezente Push-Benachrichtigung oder Insight-Card
+- Keine Empfehlungen, nur faktenbasierte Information
+
+**Beispiele**
+• "Apple kündigt neues Produkt an – Aktie reagiert leicht positiv."  
+• "EZB signalisiert mögliche Zinssenkung – Bankensektor steigt."  
+• "Tesla meldet Lieferengpass bei Batterien – betrifft mehrere Zulieferer."
+
+##### News → Lernmodul (Micro-Learning Fusion)
+
+Wenn Leo eine News zusammenfasst, bietet er optional eine passende
+Lerneinheit an, damit Nutzer:innen den Kontext besser verstehen.
+
+**Beispiele**
+• News: "Tech-Aktien fallen heute stark."  
+  Lernmodul: "Warum reagiert der Markt stark auf Zinsänderungen? (2 Minuten)"
+
+• News: "Pharmaunternehmen A genehmigt neues Medikament."  
+  Lernmodul: "Wie funktionieren regulatorische Freigaben?"
+
+• News: "Halbleiter-Lieferketten unter Druck."  
+  Lernmodul: "Was sind die wichtigsten Rohstoffe für Chips?"
+
+
 ##### Branchen- & Lieferketten-Kontext (kein Investment-Ratschlag)
 
 Leo erklärt wirtschaftliche Zusammenhänge, ohne Empfehlungen auszusprechen.
