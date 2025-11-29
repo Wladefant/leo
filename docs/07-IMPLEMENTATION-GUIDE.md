@@ -32,14 +32,17 @@ Basierend auf Analyse der ing-app Codebasis:
 - Aktien-Widgets (nur visuell)
 - Überweisungs-Flow (unvollständig)
 
-### ❌ Fehlende Features
+### ❌ Fehlende Features (MVP)
 - KI-generierte Quiz-Fragen
 - Echtes XP/Punkte-System
 - Kahoot-Style Multiplayer
 - Smart Notifications
 - Dokumenten-Scanning
+- Abo-Erkennung und -Verwaltung
+
+### 🔮 Zukunfts-Features (NICHT im MVP)
 - Sprachmodus
-- Eltern-Dashboard
+- Eltern-Dashboard (vollständig)
 
 ---
 
@@ -412,6 +415,8 @@ spending_deep_dive: {
 
 ## Zusammenfassung der Implementierungsaufgaben
 
+> **Hinweis**: Sprachmodus und vollständiges Eltern-Dashboard sind **Phase 4 Features** und gehören NICHT in den MVP.
+
 ### Sofort (Woche 1)
 1. `quiz-generator.ts` erstellen
 2. `gamification.ts` erstellen
@@ -424,11 +429,18 @@ spending_deep_dive: {
 3. Nicht-funktionale Buttons reparieren
 4. Demo Sidebar User Stories hinzufügen
 
-### Mittelfristig (Woche 4-6)
+### Mittelfristig (Woche 4-6) - Noch im MVP
 1. Echte Rangliste implementieren
 2. Streak-Tracking hinzufügen
-3. Eltern-Dashboard erstellen
-4. Benachrichtigungen implementieren
+3. Abo-Erkennung implementieren
+4. Dokumenten-Scanning (Basic)
+5. Smart Notifications
+
+### Zukunft (Phase 4) - NICHT im MVP
+1. Sprachmodus
+2. Vollständiges Eltern-Dashboard
+3. Personalisierte UI
+4. Offline-Modus
 
 ---
 
