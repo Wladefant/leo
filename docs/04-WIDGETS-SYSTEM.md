@@ -362,6 +362,8 @@ Widgets in LEO dienen vier Zwecken:
 
 ## Teen-Simulator-Widgets
 ### 13. Teen Career & Life Simulation-Widget
+
+```
 ┌─────────────────────────────────────┐
 │  🧑‍⚕️ Finanz-Leben-Simulator       │
 │                                     │
@@ -377,13 +379,13 @@ Widgets in LEO dienen vier Zwecken:
 │                                     │
 │  [Simulation starten]  [Beruf ändern] │
 └─────────────────────────────────────┘
-
+```
 
 ---
 
 ## Aktions-Widgets
 
-### 13. Umfrage-Widget
+### 14. Umfrage-Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -403,7 +405,7 @@ Widgets in LEO dienen vier Zwecken:
 └─────────────────────────────────────┘
 ```
 
-### 14. Kalender-Event Widget
+### 15. Kalender-Event Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -422,7 +424,7 @@ Widgets in LEO dienen vier Zwecken:
 └─────────────────────────────────────┘
 ```
 
-### 15. Dokument-Vorschau Widget
+### 16. Dokument-Vorschau Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -446,7 +448,7 @@ Widgets in LEO dienen vier Zwecken:
 │  [Dokument speichern]              │
 └─────────────────────────────────────┘
 ```
-### 16. Explain this Document Widget
+### 17. Explain this Document Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -472,7 +474,7 @@ Widgets in LEO dienen vier Zwecken:
 
 ## Zukünftige Widget-Ideen
 
-### 16. Sprachspieler Widget (Zukunft)
+### 18. Sprachspieler Widget (Zukunft)
 ```
 ┌─────────────────────────────────────┐
 │  🔊 Leo spricht...                  │
@@ -483,7 +485,7 @@ Widgets in LEO dienen vier Zwecken:
 └─────────────────────────────────────┘
 ```
 
-### 17. AR Portfolio Widget (Zukunft)
+### 19. AR Portfolio Widget (Zukunft)
 ```
 Konzept: Augmented Reality Ansicht des Portfolios
 - Handy auf Tisch richten
@@ -491,7 +493,7 @@ Konzept: Augmented Reality Ansicht des Portfolios
 - Aktien antippen für Details
 ```
 
-### 18. Sozialer Vergleich Widget (Zukunft - mit Einwilligung)
+### 20. Sozialer Vergleich Widget (Zukunft - mit Einwilligung)
 ```
 ┌─────────────────────────────────────┐
 │  👥 Vergleich (anonym)             │
@@ -509,7 +511,7 @@ Konzept: Augmented Reality Ansicht des Portfolios
 └─────────────────────────────────────┘
 ```
 
-### 19. Rechnungsteilen Widget (Zukunft)
+### 21. Rechnungsteilen Widget (Zukunft)
 ```
 ┌─────────────────────────────────────┐
 │  🧾 Rechnung teilen                │
@@ -528,7 +530,7 @@ Konzept: Augmented Reality Ansicht des Portfolios
 └─────────────────────────────────────┘
 ```
 
-### 20. Lernziele & Progress-Widget
+### 22. Lernziele & Progress-Widget
 ```
 ┌─────────────────────────────────────┐
 │  🎓 Deine Lernziele                │
