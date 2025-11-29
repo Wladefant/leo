@@ -275,13 +275,73 @@ Soll ich das genauer verfolgen?
 
 ## User Stories für Demo
 
-### Story 1: Portfolio-relevanter News Alert
+### Story 1: Watchlist-basiertes Micro-News Alert
+Trigger: Nutzer hat eine Aktie in der Watchlist (z. B. NVIDIA)
 
+Ablauf:
+1. Leo erkennt relevante News aus vertrauenswürdigen Quellen.
+2. Push: „TSMC meldet höhere Chip-Nachfrage – betrifft mehrere KI-Zulieferer.“
+3. Nutzer öffnet die App → Leo zeigt neutralen Kontext.
+4. Optionaler Button: „Lerne in 2 Minuten, wie Chip-Lieferketten funktionieren.“
 
-### Story 2: Tägliche News Zusammenfassung
+Demonstriert:
+• 1-Satz-News  
+• Watchlist-Personalisierung  
+• Micro-Learning Fusion  
+• Keine Handlungsempfehlungen  
+---
 
+### Story 2: Event-getriebener Alert (Earnings Day)
+Trigger: Heute Quartalszahlen für eine Aktie im Portfolio (z. B. Apple)
 
-### Story 3: Aus News lernen
+Ablauf:
+1. 08:00 — Leo sendet Hinweis:
+   „⚠️ Apple veröffentlicht heute Quartalszahlen. Marktbewegungen möglich.“
+2. Nutzer öffnet die App.
+3. Leo erklärt:
+   „Earnings sind Quartalsberichte, die zeigen, wie viel eine Firma verdient hat.“
+4. Optional: „Willst du verstehen, warum Earnings den Markt bewegen? (2 Minuten Modul)“
+
+Demonstriert:
+• Risk Signals  
+• Earnings-Events  
+• Beginner-Erklärungen  
+---
+
+### Story 3: Daily News Zusammenfassung (Für-Dich Feed)
+Trigger: Abends um 19:00
+
+Ablauf:
+1. Leo erstellt eine personalisierte Tageszusammenfassung:
+   • „Tech-Sektor zeigt leichte Erholung.“
+   • „EZB signalisiert stabile Zinsen.“
+   • „Deine Watchlist: Tesla +1,2 % nach Batterienews.“
+2. Nutzer kann auswählen:
+   [Mehr lesen] [Warum ist das relevant?] [2-Minuten-Modul starten]
+
+Demonstriert:
+• Sentiment-basierte Marktstimmung  
+• Aggregierte News („Für Dich“-Seite)  
+• Noise Reduction / Smart Ranking  
+---
+
+### Story 4: Lernmodul aus News heraus („Was bedeutet das?“)
+Trigger: Nutzer sieht News, versteht sie aber nicht
+
+Ablauf:
+1. Nutzer tippt auf „Was bedeutet das?“
+2. Leo erklärt:
+   „Volatilität bedeutet, dass Kurse sich schnell bewegen.“
+3. Optional:
+   „Willst du ein 2-Minuten-Lernmodul darüber?“
+
+Demonstriert:
+• Beginner-Modus  
+• Micro-Learning Fusion  
+• Konversationelle Erklärungen  
+---
+
+*Ende des Blocks*
 
 
 ---
