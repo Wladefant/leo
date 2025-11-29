@@ -339,12 +339,6 @@ Demonstriert:
 • Beginner-Modus  
 • Micro-Learning Fusion  
 • Konversationelle Erklärungen  
----
-
-*Ende des Blocks*
-
-
----
 
 ## Tracking-Limitierungen
 
