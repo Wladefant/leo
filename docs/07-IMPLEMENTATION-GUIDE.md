@@ -330,7 +330,10 @@ const handleNavigate = (screen: string, params?: any) => {
   switch (screen) {
     case 'stock-search':
       setCurrentScreen('invest');
-      // TODO: Open search modal
+      // Open search modal: Show a modal with search input field,
+      // display matching stocks as user types, allow selecting a stock
+      // to navigate to its detail view
+      setShowSearchModal(true);
       break;
     case 'savings-goals':
       setCurrentScreen('junior-savings');
@@ -341,7 +344,11 @@ const handleNavigate = (screen: string, params?: any) => {
     case 'buy-stock':
       setCurrentScreen('stock-detail');
       setSelectedStock(params?.symbol);
-      // TODO: Open buy modal
+      // Open buy modal: Display stock price, quantity input (shares or euros),
+      // calculate total cost, show portfolio impact, confirm with Leo explanation
+      // For Junior: virtual purchase with V€ currency
+      // For Adult: real purchase flow with confirmation
+      setShowBuyModal(true);
       break;
     // ... etc
   }
