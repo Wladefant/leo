@@ -360,6 +360,25 @@ Widgets in LEO dienen vier Zwecken:
 └─────────────────────────────────────┘
 ```
 
+## Teen-Simulator-Widgets
+### 13. Teen Career & Life Simulation-Widget
+┌─────────────────────────────────────┐
+│  🧑‍⚕️ Finanz-Leben-Simulator       │
+│                                     │
+│  Gewählter Beruf:  Ärztin          │
+│  Netto-Gehalt:      2.300 €/Monat  │
+│                                     │
+│  Fixkosten (Simuliert):             │
+│  • Miete & Nebenkosten  €950       │
+│  • Essen & Transport    €450       │
+│  • Freizeit & Handy     €150       │
+│                                     │
+│  Frei verfügbar:       €750        │
+│                                     │
+│  [Simulation starten]  [Beruf ändern] │
+└─────────────────────────────────────┘
+
+
 ---
 
 ## Aktions-Widgets
@@ -427,6 +446,27 @@ Widgets in LEO dienen vier Zwecken:
 │  [Dokument speichern]              │
 └─────────────────────────────────────┘
 ```
+### 16. Explain this Document Widget
+
+```
+┌─────────────────────────────────────┐
+│  🧐 Dokument erklärt               │
+│                                     │
+│  Typ: Mietvertrags-Erhöhung        │
+│  Wichtig bis: 31.03.2026           │
+│                                     │
+│  Kurz zusammengefasst:             │
+│  • Miete steigt um €45/Monat       │
+│  • Neue Mindestlaufzeit: 12 Monate │
+│  • Kündigungsfrist: 3 Monate       │
+│                                     │
+│  Leo: „Du musst bis 31.03. reagieren,
+│  sonst gilt die neue Miete automatisch.“│
+│                                     │
+│  [Fragen an Leo]  [Erinnerung setzen] │
+│  [Zahlung anpassen]                  │
+└─────────────────────────────────────┘
+```
 
 ---
 
@@ -486,6 +526,26 @@ Konzept: Augmented Reality Ansicht des Portfolios
 │                                     │
 │  [Anfrage senden]                   │
 └─────────────────────────────────────┘
+```
+
+### 20. Lernziele & Progress-Widget
+```
+┌─────────────────────────────────────┐
+│  🎓 Deine Lernziele                │
+│                                     │
+│  Level: Beginner → 63% zu Level 2  │
+│  Streak: 🔥 5 Tage in Folge         │
+│                                     │
+│  Budgetierung   ██████░░  60%       │
+│  Investieren    ███░░░░  35%        │
+│  Versicherungen █░░░░░░  10%        │
+│                                     │
+│  Nächstes Ziel:                      │
+│  „2 Quiz zu ETFs abschließen“       │
+│                                     │
+│  [Lernpfad öffnen]  [Quiz starten]  │
+└─────────────────────────────────────┘
+
 ```
 
 ---
