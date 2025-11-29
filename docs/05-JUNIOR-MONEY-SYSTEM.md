@@ -1,97 +1,97 @@
-# Junior Profile: Money System
+# Junior Profil: Geld-System
 
-> This document clarifies the distinction between real money and virtual money for ING Junior users, explaining what juniors can and cannot do.
-
----
-
-## Table of Contents
-1. [Money System Overview](#money-system-overview)
-2. [Real Money (Pocket Money)](#real-money-pocket-money)
-3. [Virtual Money (Learning Money)](#virtual-money-learning-money)
-4. [Card Usage Rules](#card-usage-rules)
-5. [Parent Controls](#parent-controls)
-6. [Transition to Adult](#transition-to-adult)
+> Dieses Dokument erklärt den Unterschied zwischen echtem Geld und virtuellem Geld für ING Junior Nutzer und was Juniors tun können und was nicht.
 
 ---
 
-## Money System Overview
-
-### The Two-Money System
-
-Junior users have TWO separate "pockets" of money:
-
-| Type | Purpose | Source | What Can Be Done |
-|------|---------|--------|------------------|
-| **Real Money (€)** | Pocket money for real purchases | Parents transfer | Card payments in stores only |
-| **Virtual Money (V€)** | Learning & simulation | System-generated "salary" | Virtual trading, no real spending |
-
-### Why This Separation?
-
-1. **Safety**: Minors shouldn't have unrestricted online banking
-2. **Learning**: Virtual money allows risk-free experimentation
-3. **Parental Peace of Mind**: Real money controlled by parents
-4. **Legal Compliance**: Minors have limited contract capacity
+## Inhaltsverzeichnis
+1. [Geld-System Übersicht](#geld-system-übersicht)
+2. [Echtes Geld (Taschengeld)](#echtes-geld-taschengeld)
+3. [Virtuelles Geld (Lerngeld)](#virtuelles-geld-lerngeld)
+4. [Kartennutzungs-Regeln](#kartennutzungs-regeln)
+5. [Elternkontrolle](#elternkontrolle)
+6. [Übergang zum Erwachsenen](#übergang-zum-erwachsenen)
 
 ---
 
-## Real Money (Pocket Money)
+## Geld-System Übersicht
 
-### What Is Real Money?
+### Das Zwei-Geld-System
 
-Real money is actual euros that parents transfer to the Junior account. This is essentially pocket money, digitized.
+Junior Nutzer haben ZWEI separate "Taschen" mit Geld:
 
-### How Juniors Receive Real Money
+| Typ | Zweck | Quelle | Was gemacht werden kann |
+|-----|-------|--------|------------------------|
+| **Echtes Geld (€)** | Taschengeld für echte Käufe | Eltern überweisen | Nur Kartenzahlungen im Laden |
+| **Virtuelles Geld (V€)** | Lernen & Simulation | System-generiertes "Gehalt" | Virtueller Handel, kein echtes Ausgeben |
 
-1. **Initial Setup**: Parent opens Girokonto Junior
-2. **Parental Transfers**: Parent sends pocket money (weekly/monthly)
-3. **Allowance Scheduling**: Parents can set up automatic weekly transfers
-4. **Gift Money**: Relatives can also transfer to the account
+### Warum diese Trennung?
 
-### What Juniors CAN Do with Real Money
+1. **Sicherheit**: Minderjährige sollten kein uneingeschränktes Online-Banking haben
+2. **Lernen**: Virtuelles Geld ermöglicht risikofreies Experimentieren
+3. **Eltern-Ruhe**: Echtes Geld wird von Eltern kontrolliert
+4. **Rechtliche Compliance**: Minderjährige haben begrenzte Vertragsfähigkeit
 
-| Action | Allowed | Notes |
+---
+
+## Echtes Geld (Taschengeld)
+
+### Was ist Echtes Geld?
+
+Echtes Geld sind tatsächliche Euros, die Eltern auf das Junior-Konto überweisen. Das ist im Wesentlichen digitalisiertes Taschengeld.
+
+### Wie Juniors Echtes Geld erhalten
+
+1. **Ersteinrichtung**: Elternteil eröffnet Girokonto Junior
+2. **Eltern-Überweisungen**: Eltern senden Taschengeld (wöchentlich/monatlich)
+3. **Taschengeld-Planung**: Eltern können automatische wöchentliche Überweisungen einrichten
+4. **Geschenkgeld**: Verwandte können auch auf das Konto überweisen
+
+### Was Juniors mit Echtem Geld TUN KÖNNEN
+
+| Aktion | Erlaubt | Hinweise |
+|--------|---------|----------|
+| Im Laden mit Karte zahlen | ✅ Ja | Physische Kartenzahlungen |
+| Kontaktlos zahlen (Apple/Google Pay) | ✅ Ja | Mit Eltern-Einrichtung |
+| Kontostand prüfen | ✅ Ja | Via App jederzeit |
+| Transaktionshistorie sehen | ✅ Ja | Volle Transparenz |
+| Überweisungen empfangen | ✅ Ja | Von Eltern/Verwandten |
+
+### Was Juniors mit Echtem Geld NICHT TUN KÖNNEN
+
+| Aktion | Erlaubt | Grund |
 |--------|---------|-------|
-| Pay in stores with card | ✅ Yes | Physical card payments |
-| Pay contactless (Apple/Google Pay) | ✅ Yes | With parental setup |
-| Check balance | ✅ Yes | Via app anytime |
-| See transaction history | ✅ Yes | Full transparency |
-| Receive transfers | ✅ Yes | From parents/relatives |
+| Geld online senden | ❌ Nein | Minderjährige können keine Überweisungen tätigen |
+| Online zahlen (E-Commerce) | ❌ Nein | Zu riskant für Minderjährige |
+| Am Geldautomat abheben | ⚠️ Begrenzt | Nur mit Eltern-Genehmigung |
+| Lastschrift einrichten | ❌ Nein | Erfordert Geschäftsfähigkeit |
+| Aktien mit echtem Geld kaufen | ❌ Nein | Dafür ist virtuell da |
+| Dienste abonnieren | ❌ Nein | Rechtsfähigkeitsprobleme |
 
-### What Juniors CANNOT Do with Real Money
+### Junior Karten-Limits
 
-| Action | Allowed | Reason |
-|--------|---------|--------|
-| Send money online | ❌ No | Minors can't do bank transfers |
-| Pay online (e-commerce) | ❌ No | Too risky for minors |
-| Withdraw at ATM | ⚠️ Limited | Only with parental approval |
-| Direct debit setup | ❌ No | Requires legal capacity |
-| Buy stocks with real money | ❌ No | That's what virtual is for |
-| Subscribe to services | ❌ No | Legal capacity issues |
-
-### Junior Card Limits
-
-| Limit Type | Default | Can Parent Adjust? |
-|------------|---------|-------------------|
-| Daily spending | €50 | Yes, €20-€100 |
-| Single transaction | €30 | Yes, €10-€50 |
-| Weekly total | €100 | Yes, up to €200 |
-| Contactless per tap | €50 | System limit |
+| Limit-Typ | Standard | Können Eltern anpassen? |
+|-----------|----------|------------------------|
+| Tägliches Ausgeben | €50 | Ja, €20-€100 |
+| Einzeltransaktion | €30 | Ja, €10-€50 |
+| Wöchentlich gesamt | €100 | Ja, bis zu €200 |
+| Kontaktlos pro Tap | €50 | Systemlimit |
 
 ---
 
-## Virtual Money (Learning Money)
+## Virtuelles Geld (Lerngeld)
 
-### What Is Virtual Money?
+### Was ist Virtuelles Geld?
 
-Virtual money is fake currency used ONLY for learning. It has NO real value and CANNOT be spent anywhere real.
+Virtuelles Geld ist Spielwährung die NUR zum Lernen verwendet wird. Es hat KEINEN echten Wert und KANN NICHT irgendwo echt ausgegeben werden.
 
-### The Virtual Economy
+### Die Virtuelle Wirtschaft
 
 ```
 ┌─────────────────────────────────────┐
 │  💰 Dein Virtuelles Geld            │
 │                                     │
-│  Kontostand: V€2,450.00            │
+│  Kontostand: V€2.450,00            │
 │  (Nur zum Lernen - kein echtes €)  │
 │                                     │
 │  ──── Diese Woche ────              │
@@ -104,22 +104,22 @@ Virtual money is fake currency used ONLY for learning. It has NO real value and 
 └─────────────────────────────────────┘
 ```
 
-### How Virtual Money Works
+### Wie Virtuelles Geld funktioniert
 
-#### Weekly "Salary" System
+#### Wöchentliches "Gehalts"-System
 
-Every Monday at 9:00 AM, Leo delivers the weekly virtual salary:
+Jeden Montag um 9:00 Uhr liefert Leo das wöchentliche virtuelle Gehalt:
 
 ```
 Leo: "💰 Gehaltstag! Dein virtuelles Gehalt ist da!
 
-Brutto: V€200.00
+Brutto: V€200,00
 ─────────────────
-Einkommensteuer: -V€30.00
-Sozialabgaben: -V€15.00
-Krankenversicherung: -V€10.00
+Einkommensteuer: -V€30,00
+Sozialabgaben: -V€15,00
+Krankenversicherung: -V€10,00
 ─────────────────
-Netto: V€145.00 ✓
+Netto: V€145,00 ✓
 
 So funktioniert das bei echten Jobs! 
 Möchtest du mehr über Steuern lernen?
@@ -127,26 +127,26 @@ Möchtest du mehr über Steuern lernen?
 [Quiz starten +50 XP]"
 ```
 
-#### Why Weekly Salary?
+#### Warum Wöchentliches Gehalt?
 
-- Simulates real-world income
-- Teaches budgeting over time
-- Creates anticipation (gamification)
-- Demonstrates tax/deduction concepts
+- Simuliert echtes Einkommen
+- Lehrt Budgetierung über Zeit
+- Erzeugt Vorfreude (Gamification)
+- Demonstriert Steuer/Abzugs-Konzepte
 
-#### Starting Balance
+#### Startguthaben
 
-New Junior users start with V€1,000 - enough to make first investments but not infinite.
+Neue Junior Nutzer starten mit V€1.000 - genug für erste Investments aber nicht unendlich.
 
-#### NO RESET!
+#### KEIN RESET!
 
-**Critical Design Decision**: Virtual money CANNOT be reset.
+**Kritische Design-Entscheidung**: Virtuelles Geld KANN NICHT zurückgesetzt werden.
 
-If a junior loses virtual money through bad investments:
-- They must wait for more weekly "salary"
-- Leo uses this as a teaching moment
-- Simulates real consequences
-- Prevents gambling mentality
+Wenn ein Junior virtuelles Geld durch schlechte Investments verliert:
+- Sie müssen auf mehr wöchentliches "Gehalt" warten
+- Leo nutzt das als Lehrmoment
+- Simuliert echte Konsequenzen
+- Verhindert Glücksspiel-Mentalität
 
 ```
 Leo: "Dein Portfolio ist auf V€234 gefallen. Ich weiß, das fühlt 
@@ -162,34 +162,34 @@ analysieren, was passiert ist.
 [Fehleranalyse starten]"
 ```
 
-### What Juniors CAN Do with Virtual Money
+### Was Juniors mit Virtuellem Geld TUN KÖNNEN
 
-| Action | Allowed | Notes |
+| Aktion | Erlaubt | Hinweise |
+|--------|---------|----------|
+| Virtuelle Aktien kaufen | ✅ Ja | Mit echten Marktpreisen |
+| Virtuelle Aktien verkaufen | ✅ Ja | Verkauf simulieren |
+| Virtuelles Portfolio aufbauen | ✅ Ja | Performance verfolgen |
+| Dividenden simulieren | ✅ Ja | Wenn besessene Aktien zahlen |
+| Verluste erfahren | ✅ Ja | Lernmöglichkeit |
+| Quizze absolvieren | ✅ Ja | Bonus V€ verdienen |
+
+### Was Juniors mit Virtuellem Geld NICHT TUN KÖNNEN
+
+| Aktion | Erlaubt | Grund |
 |--------|---------|-------|
-| Buy virtual stocks | ✅ Yes | With real market prices |
-| Sell virtual stocks | ✅ Yes | Simulate selling |
-| Build virtual portfolio | ✅ Yes | Track performance |
-| Simulate dividends | ✅ Yes | When owned stocks pay |
-| Experience losses | ✅ Yes | Learning opportunity |
-| Complete quizzes | ✅ Yes | Earn bonus V€ |
-
-### What Juniors CANNOT Do with Virtual Money
-
-| Action | Allowed | Reason |
-|--------|---------|--------|
-| Convert to real money | ❌ No | Never real |
-| Send to others | ❌ No | No peer transfers |
-| Reset when losing | ❌ No | Teaches consequences |
-| Use for subscriptions | ❌ No | Not real |
-| Pay in stores | ❌ No | Clearly separated |
+| In echtes Geld umwandeln | ❌ Nein | Niemals echt |
+| An andere senden | ❌ Nein | Keine Peer-Transfers |
+| Bei Verlust zurücksetzen | ❌ Nein | Lehrt Konsequenzen |
+| Für Abos nutzen | ❌ Nein | Nicht echt |
+| Im Laden zahlen | ❌ Nein | Klar getrennt |
 
 ---
 
-## Card Usage Rules
+## Kartennutzungs-Regeln
 
-### ING Junior Debit Card
+### ING Junior Debitkarte
 
-The physical debit card is for real-world purchases only:
+Die physische Debitkarte ist nur für reale Käufe:
 
 ```
 ┌─────────────────────────────────────┐
@@ -202,34 +202,34 @@ The physical debit card is for real-world purchases only:
 └─────────────────────────────────────┘
 ```
 
-### Where the Card Works
+### Wo die Karte funktioniert
 
-| Location | Works? | Notes |
-|----------|--------|-------|
-| Supermarket | ✅ | Up to daily limit |
-| Restaurant | ✅ | Up to daily limit |
-| Cinema | ✅ | Up to daily limit |
-| Online shops | ❌ | Blocked for Juniors |
-| ATM | ⚠️ | Only with parent approval |
-| Vending machines | ✅ | Up to limit |
-| Streaming services | ❌ | No recurring payments |
-| In-app purchases | ❌ | Blocked |
-| Gaming purchases | ❌ | Blocked |
+| Ort | Funktioniert? | Hinweise |
+|-----|---------------|----------|
+| Supermarkt | ✅ | Bis zum Tageslimit |
+| Restaurant | ✅ | Bis zum Tageslimit |
+| Kino | ✅ | Bis zum Tageslimit |
+| Online-Shops | ❌ | Für Juniors gesperrt |
+| Geldautomat | ⚠️ | Nur mit Eltern-Genehmigung |
+| Automaten | ✅ | Bis zum Limit |
+| Streaming-Dienste | ❌ | Keine wiederkehrenden Zahlungen |
+| In-App-Käufe | ❌ | Gesperrt |
+| Gaming-Käufe | ❌ | Gesperrt |
 
-### First-Month Trial Period
+### Erster Monat Probezeitraum
 
-New Junior accounts get a 1-month trial:
-- All features unlocked
-- After trial, subscription may be needed (ING policy)
-- Parents decide on continuation
+Neue Junior-Konten bekommen 1-Monats-Test:
+- Alle Features freigeschaltet
+- Nach Test evtl. Abo nötig (ING-Richtlinie)
+- Eltern entscheiden über Fortsetzung
 
 ---
 
-## Parent Controls
+## Elternkontrolle
 
-### Parent Dashboard Features
+### Eltern-Dashboard Funktionen
 
-Parents have a dedicated view to monitor and control:
+Eltern haben eine dedizierte Ansicht zum Überwachen und Kontrollieren:
 
 ```
 ┌─────────────────────────────────────┐
@@ -237,73 +237,73 @@ Parents have a dedicated view to monitor and control:
 │  Kind: Max Mustermann (15 Jahre)   │
 │                                     │
 │  ──── Echtes Geld ────              │
-│  Kontostand: €45.20                 │
-│  Diesen Monat ausgegeben: €54.80   │
+│  Kontostand: €45,20                 │
+│  Diesen Monat ausgegeben: €54,80   │
 │                                     │
 │  [+ Taschengeld senden]            │
 │  [Limits anpassen]                  │
 │                                     │
 │  ──── Virtuelles Lernen ────        │
-│  Virtuelles Geld: V€2,450          │
-│  Portfolio-Wert: V€1,240            │
-│  Quizzes diese Woche: 5            │
+│  Virtuelles Geld: V€2.450          │
+│  Portfolio-Wert: V€1.240            │
+│  Quizze diese Woche: 5             │
 │  XP-Level: 7                        │
 │                                     │
 │  [Lernfortschritt ansehen]         │
 │                                     │
 │  ──── Letzte Aktivitäten ────       │
-│  Heute 15:32 - Rewe €12.50         │
+│  Heute 15:32 - Rewe €12,50         │
 │  Gestern - Quiz "ETFs" bestanden   │
 │  Gestern - V€175 in Apple inv.     │
 └─────────────────────────────────────┘
 ```
 
-### What Parents Can Control
+### Was Eltern kontrollieren können
 
-| Setting | Options | Default |
-|---------|---------|---------|
-| Daily spend limit | €20-€100 | €50 |
-| Single transaction limit | €10-€50 | €30 |
-| ATM access | On/Off | Off |
-| Contactless payments | On/Off | On |
-| Spending notifications | Instant/Daily/Off | Instant |
-| Weekly allowance | €0-€100 | Manual |
+| Einstellung | Optionen | Standard |
+|-------------|----------|----------|
+| Tägliches Ausgabelimit | €20-€100 | €50 |
+| Einzeltransaktions-Limit | €10-€50 | €30 |
+| Geldautomat-Zugang | An/Aus | Aus |
+| Kontaktlose Zahlungen | An/Aus | An |
+| Ausgaben-Benachrichtigungen | Sofort/Täglich/Aus | Sofort |
+| Wöchentliches Taschengeld | €0-€100 | Manuell |
 
-### What Parents Can See
+### Was Eltern sehen können
 
-- ✅ Real money balance
-- ✅ Transaction history (real purchases)
-- ✅ Virtual portfolio overview (not details)
-- ✅ Quiz progress and XP level
-- ✅ Learning milestones achieved
-- ❌ Chat conversations with Leo (privacy)
-- ❌ Individual virtual trades (too detailed)
+- ✅ Kontostand mit echtem Geld
+- ✅ Transaktionshistorie (echte Käufe)
+- ✅ Virtuelles Portfolio Übersicht (nicht Details)
+- ✅ Quiz-Abschlussraten
+- ✅ XP und Level-Fortschritt
+- ❌ Chat-Konversationen mit Leo (Privatsphäre)
+- ❌ Einzelne virtuelle Trades (zu detailliert)
 
-### Parent Notifications
+### Eltern-Benachrichtigungen
 
-| Event | Notification |
-|-------|--------------|
-| Large purchase (>€20) | "Max hat €22 bei MediaMarkt ausgegeben" |
-| Low balance (<€10) | "Max hat nur noch €8 auf dem Konto" |
-| Weekly summary | "Max's Woche: €45 ausgegeben, 3 Quizzes" |
-| Badge earned | "Max hat 'Spar-Fuchs' Badge erreicht! 🏆" |
+| Ereignis | Benachrichtigung |
+|----------|------------------|
+| Großer Kauf (>€20) | "Max hat €22 bei MediaMarkt ausgegeben" |
+| Niedriger Kontostand (<€10) | "Max hat nur noch €8 auf dem Konto" |
+| Wochenzusammenfassung | "Max' Woche: €45 ausgegeben, 3 Quizze" |
+| Badge verdient | "Max hat 'Spar-Fuchs' Badge erreicht! 🏆" |
 
 ---
 
-## Transition to Adult
+## Übergang zum Erwachsenen
 
-### What Happens at 18
+### Was passiert mit 18
 
-When a Junior user turns 18:
+Wenn ein Junior-Nutzer 18 wird:
 
-#### Automatic Changes
-1. Profile switches from Junior to Adult
-2. Full banking features unlock
-3. Real investment options appear
-4. Transfer capabilities enabled
-5. All restrictions lifted
+#### Automatische Änderungen
+1. Profil wechselt von Junior zu Adult
+2. Vollständige Banking-Features entsperrt
+3. Echte Investment-Optionen erscheinen
+4. Überweisungsfähigkeiten aktiviert
+5. Alle Einschränkungen aufgehoben
 
-#### Celebrations & Transitions
+#### Feier & Übergänge
 
 ```
 Leo: "🎉 HERZLICHEN GLÜCKWUNSCH ZUM 18. GEBURTSTAG!
@@ -318,7 +318,7 @@ Hier ist was sich ändert:
 ✅ Alle App-Features verfügbar
 
 Dein Lernfortschritt:
-• 15,234 XP gesammelt
+• 15.234 XP gesammelt
 • Level 8 erreicht
 • 24 Badges verdient
 • €85 Bonus auf dein Konto! 🎁
@@ -332,61 +332,61 @@ Bereit für echtes Investieren?
 [Mein erstes echtes Investment]"
 ```
 
-#### XP → Money Conversion
+#### XP → Geld Umwandlung
 
-Virtual achievements convert to real welcome bonus:
+Virtuelle Achievements werden zu echtem Willkommensbonus:
 
-| XP Reached | Bonus |
-|------------|-------|
-| 5,000+ | €5 |
-| 15,000+ | €20 |
-| 35,000+ | €40 |
-| 75,000+ | €80 |
-| 150,000+ | €150 + 0.1% bonus interest |
+| XP erreicht | Bonus |
+|-------------|-------|
+| 5.000+ | €5 |
+| 15.000+ | €20 |
+| 35.000+ | €40 |
+| 75.000+ | €80 |
+| 150.000+ | €150 + 0,1% Zinsbonus |
 
-#### Virtual Portfolio Insights
+#### Virtuelle Portfolio Erkenntnisse
 
-Leo provides insights from virtual trading history:
+Leo liefert Erkenntnisse aus virtueller Trading-Historie:
 - "Du hast Tech-Aktien bevorzugt. Möchtest du echte kaufen?"
 - "Dein virtuelles Portfolio war gut diversifiziert. Lass uns das mit echtem Geld wiederholen."
 - "Du hast bei volatilen Aktien oft verkauft. Bei echtem Geld empfehle ich mehr Geduld."
 
 ---
 
-## UI Display Specifications
+## UI Anzeige Spezifikationen
 
-### Balance Display - Clear Separation
+### Kontostand Anzeige - Klare Trennung
 
 ```
 ┌─────────────────────────────────────┐
 │  💳 Echtes Geld (Taschengeld)       │
 │  ──────────────────────────         │
-│  €45.20                             │
+│  €45,20                             │
 │  Für Einkäufe mit deiner Karte      │
 │                                     │
 │  [Letzte Käufe ansehen]             │
 ├─────────────────────────────────────┤
 │  🎮 Virtuelles Geld (Lernen)        │
 │  ──────────────────────────         │
-│  V€2,450.00                         │
+│  V€2.450,00                         │
 │  Für virtuelles Investieren         │
 │                                     │
 │  [Zum Portfolio]                    │
 └─────────────────────────────────────┘
 ```
 
-### Color Coding
+### Farbkodierung
 
-| Element | Real Money | Virtual Money |
-|---------|------------|---------------|
-| Background | White | Light purple/blue |
-| Icon | 💳 or € symbol | 🎮 or V€ symbol |
+| Element | Echtes Geld | Virtuelles Geld |
+|---------|-------------|-----------------|
+| Hintergrund | Weiß | Helles Lila/Blau |
+| Icon | 💳 oder € Symbol | 🎮 oder V€ Symbol |
 | Badge | "ECHT" | "VIRTUELL" |
-| Border | Orange (ING) | Purple |
+| Rahmen | Orange (ING) | Lila |
 
-### Warning Messages
+### Warnmeldungen
 
-When user might confuse the two:
+Wenn Nutzer die beiden verwechseln könnte:
 
 ```
 ⚠️ Hinweis: Das ist virtuelles Geld (V€)!
@@ -398,4 +398,4 @@ Es ist nur zum Lernen und Üben da.
 
 ---
 
-*Last Updated: November 2025*
+*Zuletzt aktualisiert: November 2025*

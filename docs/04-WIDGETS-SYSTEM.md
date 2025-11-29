@@ -1,70 +1,36 @@
-# Widgets System - Complete Specification
+# Widgets System - Vollständige Spezifikation
 
-> This document details all interactive widgets that appear in Leo's chat interface and throughout the app, with specifications for each widget type.
-
----
-
-## Table of Contents
-1. [Widget Architecture](#widget-architecture)
-2. [Core Widgets](#core-widgets)
-3. [Financial Widgets](#financial-widgets)
-4. [Educational Widgets](#educational-widgets)
-5. [Action Widgets](#action-widgets)
-6. [Future Widget Ideas](#future-widget-ideas)
-7. [Technical Implementation](#technical-implementation)
+> Dieses Dokument beschreibt alle interaktiven Widgets die in Leos Chat-Interface und in der gesamten App erscheinen.
 
 ---
 
-## Widget Architecture
-
-### Widget Types
-
-Widgets in LEO serve four purposes:
-1. **Display Information**: Show data in visual format (charts, cards)
-2. **Enable Actions**: Quick transactions without leaving chat
-3. **Educate Users**: Interactive learning components
-4. **Celebrate Achievements**: Gamification feedback
-
-### Widget Rendering
-
-```typescript
-interface Widget {
-  type: WidgetType;
-  data: WidgetData;
-  actions?: WidgetAction[];
-  interactive: boolean;
-  size: 'small' | 'medium' | 'large';
-}
-
-type WidgetType = 
-  | 'stock'
-  | 'transfer'
-  | 'quiz'
-  | 'quiz_question'
-  | 'achievement'
-  | 'savings_goal'
-  | 'spending_chart'
-  | 'portfolio_summary'
-  | 'news_card'
-  | 'comparison_table'
-  | 'budget_tracker'
-  | 'subscription_card'
-  | 'tip_card'
-  | 'countdown_timer'
-  | 'poll'
-  | 'calendar_event'
-  | 'document_preview'
-  | 'voice_player'
-  | 'image_carousel';
-```
+## Inhaltsverzeichnis
+1. [Widget-Architektur](#widget-architektur)
+2. [Kern-Widgets](#kern-widgets)
+3. [Finanz-Widgets](#finanz-widgets)
+4. [Bildungs-Widgets](#bildungs-widgets)
+5. [Aktions-Widgets](#aktions-widgets)
+6. [Zukünftige Widget-Ideen](#zukünftige-widget-ideen)
 
 ---
 
-## Core Widgets
+## Widget-Architektur
 
-### 1. Stock Widget
+### Widget-Typen
 
-**Purpose**: Display stock information inline in chat
+Widgets in LEO dienen vier Zwecken:
+1. **Information anzeigen**: Daten in visuellem Format zeigen (Charts, Karten)
+2. **Aktionen ermöglichen**: Schnelle Transaktionen ohne Chat zu verlassen
+3. **Nutzer bilden**: Interaktive Lernkomponenten
+4. **Achievements feiern**: Gamification-Feedback
+
+---
+
+## Kern-Widgets
+
+### 1. Aktien-Widget
+
+**Zweck**: Aktieninformationen inline im Chat anzeigen
 
 ```
 ┌─────────────────────────────────────┐
@@ -72,10 +38,10 @@ type WidgetType =
 │ │ 📈 │  Apple Inc.                  │
 │ └────┘                              │
 │                                     │
-│ €178.50        ▲ +2.3% (+€4.02)    │
+│ €178,50        ▲ +2,3% (+€4,02)    │
 │                                     │
 │ ┌─────────────────────────────┐    │
-│ │ [Sparkline chart - 7 days]   │    │
+│ │ [Sparkline Chart - 7 Tage]   │    │
 │ └─────────────────────────────┘    │
 │                                     │
 │ Leo: "Starke Woche für Apple.      │
@@ -85,30 +51,9 @@ type WidgetType =
 └─────────────────────────────────────┘
 ```
 
-**Props:**
-```typescript
-interface StockWidgetProps {
-  symbol: string;
-  name: string;
-  price: number;
-  change: number;
-  changePercent: number;
-  chartData?: number[];
-  leoAnalysis?: string;
-  actions: ('buy' | 'sell' | 'watchlist')[];
-}
-```
+### 2. Überweisungs-Widget
 
-**Variants:**
-- **Compact**: Just price and change
-- **Standard**: With chart and analysis
-- **Detailed**: Full metrics grid included
-
----
-
-### 2. Transfer Widget
-
-**Purpose**: Quick money transfer directly from chat
+**Zweck**: Schnelle Geldüberweisung direkt aus dem Chat
 
 ```
 ┌─────────────────────────────────────┐
@@ -118,7 +63,7 @@ interface StockWidgetProps {
 │ │ 👤 │  DE89 3704 •••• 0130 00     │
 │ └────┘                              │
 │                                     │
-│           €800.00                   │
+│           €800,00                   │
 │       ─────────────────            │
 │       Verwendungszweck:             │
 │       Miete Dezember 🏠             │
@@ -131,44 +76,9 @@ interface StockWidgetProps {
 └─────────────────────────────────────┘
 ```
 
-**After Successful Transfer:**
-```
-┌─────────────────────────────────────┐
-│           ✅ Gesendet!              │
-│                                     │
-│        €800.00 an Max              │
-│     Miete Dezember                  │
-│                                     │
-│  Leo: "Erledigt! Soll ich dich     │
-│  nächsten Monat wieder erinnern?"   │
-│                                     │
-│  [Ja, monatlich erinnern]          │
-│  [Nein danke]                       │
-└─────────────────────────────────────┘
-```
+### 3. Quiz-Widget (Vorschau-Karte)
 
-**Props:**
-```typescript
-interface TransferWidgetProps {
-  recipient: {
-    name: string;
-    iban: string;
-    avatar?: string;
-  };
-  amount: number;
-  reference?: string;
-  isRecurring?: boolean;
-  status: 'pending' | 'sent' | 'failed';
-  onConfirm: () => void;
-  onCancel: () => void;
-}
-```
-
----
-
-### 3. Quiz Widget (Preview Card)
-
-**Purpose**: Show quiz invitation before starting
+**Zweck**: Quiz-Einladung vor dem Start zeigen
 
 ```
 ┌─────────────────────────────────────┐
@@ -191,11 +101,9 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
+### 4. Quiz-Frage Widget (Aktives Quiz)
 
-### 4. Quiz Question Widget (Active Quiz)
-
-**Purpose**: Display interactive quiz question
+**Zweck**: Interaktive Quiz-Frage anzeigen
 
 ```
 ┌─────────────────────────────────────┐
@@ -212,44 +120,16 @@ interface TransferWidgetProps {
 │  └─────────────────────────────┘   │
 │                                     │
 │  ┌─────────────────────────────┐   │
-│  │ B) Automatische Streuung    │   │ ← selected
-│  └─────────────────────────────┘   │
-│                                     │
-│  ┌─────────────────────────────┐   │
-│  │ C) Keine Gebühren           │   │
-│  └─────────────────────────────┘   │
-│                                     │
-│  ┌─────────────────────────────┐   │
-│  │ D) Immer steuerfrei         │   │
+│  │ B) Automatische Streuung    │   │ ← ausgewählt
 │  └─────────────────────────────┘   │
 │                                     │
 │  🏆 Aktuell: 15 Punkte             │
 └─────────────────────────────────────┘
 ```
 
-**Answer Feedback:**
-```
-┌─────────────────────────────────────┐
-│  ✅ Richtig!            +20 Punkte │
-│                                     │
-│  B) Automatische Streuung          │
-│                                     │
-│  Leo erklärt:                       │
-│  "Genau! ETFs investieren in viele │
-│  verschiedene Aktien auf einmal.   │
-│  Das reduziert dein Risiko, weil   │
-│  nicht alles von einer Firma       │
-│  abhängt."                          │
-│                                     │
-│  [Weiter →]                         │
-└─────────────────────────────────────┘
-```
+### 5. Achievement-Widget
 
----
-
-### 5. Achievement Widget
-
-**Purpose**: Celebrate badge unlocks and milestones
+**Zweck**: Badge-Freischaltungen und Meilensteine feiern
 
 ```
 ┌─────────────────────────────────────┐
@@ -257,8 +137,8 @@ interface TransferWidgetProps {
 │                                     │
 │           ┌─────────┐              │
 │           │   💎    │              │
-│           │ Diamond │              │
-│           │  Hands  │              │
+│           │ Diamant │              │
+│           │  Hände  │              │
 │           └─────────┘              │
 │                                     │
 │  Du hast durch einen 20% Rückgang  │
@@ -273,51 +153,45 @@ interface TransferWidgetProps {
 
 ---
 
-## Financial Widgets
+## Finanz-Widgets
 
-### 6. Portfolio Summary Widget
-
-**Purpose**: Quick portfolio overview in chat
+### 6. Portfolio-Zusammenfassung Widget
 
 ```
 ┌─────────────────────────────────────┐
 │  📊 Dein Portfolio                  │
 │                                     │
-│  Gesamtwert:     €12,450.67        │
-│  Heute:          +€234.50 (+1.9%)  │
-│  Diese Woche:    +€567.80 (+4.7%)  │
+│  Gesamtwert:     €12.450,67        │
+│  Heute:          +€234,50 (+1,9%)  │
+│  Diese Woche:    +€567,80 (+4,7%)  │
 │                                     │
 │  ┌─────────────────────────────┐   │
-│  │ [Pie chart of allocation]   │   │
+│  │ [Kreisdiagramm Verteilung]  │   │
 │  │  Tech: 45% ████████░░       │   │
 │  │  ETFs: 30% ██████░░░░       │   │
 │  │  Bank: 15% ███░░░░░░░       │   │
 │  │  Andere: 10% ██░░░░░░░      │   │
 │  └─────────────────────────────┘   │
 │                                     │
-│  Top Performer: AAPL (+5.2%)       │
-│  Schlechtester: TSLA (-2.1%)       │
+│  Top Performer: AAPL (+5,2%)       │
+│  Schlechtester: TSLA (-2,1%)       │
 │                                     │
 │  [Portfolio öffnen]                │
 └─────────────────────────────────────┘
 ```
 
----
-
-### 7. Spending Chart Widget
-
-**Purpose**: Show spending analysis visually
+### 7. Ausgaben-Chart Widget
 
 ```
 ┌─────────────────────────────────────┐
 │  💳 Ausgabenanalyse                 │
 │  November 2025                      │
 │                                     │
-│  Gesamt: €2,145.67                 │
-│  vs. Oktober: ▼ -€234 (-9.8%)      │
+│  Gesamt: €2.145,67                 │
+│  vs. Oktober: ▼ -€234 (-9,8%)      │
 │                                     │
 │  ┌─────────────────────────────┐   │
-│  │ [Horizontal bar chart]      │   │
+│  │ [Horizontales Balkendiagramm]│   │
 │  │                             │   │
 │  │ Wohnen  ████████████ €850  │   │
 │  │ Essen   ██████░░░░░ €420   │   │
@@ -335,22 +209,18 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
-
-### 8. Savings Goal Widget
-
-**Purpose**: Show progress toward a savings goal
+### 8. Sparziel-Widget
 
 ```
 ┌─────────────────────────────────────┐
 │  🎯 Sparziel: Urlaub 2026          │
 │                                     │
 │  ┌─────────────────────────────┐   │
-│  │ 🏖️ [Goal image]             │   │
+│  │ 🏖️ [Zielbild]               │   │
 │  └─────────────────────────────┘   │
 │                                     │
-│  €850 / €2,000                     │
-│  ████████░░░░░░░░░░░░░░░   42.5%  │
+│  €850 / €2.000                     │
+│  ████████░░░░░░░░░░░░░░░   42,5%  │
 │                                     │
 │  📅 Zieldatum: August 2026         │
 │  💰 Empfohlen: €115/Monat          │
@@ -364,11 +234,7 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
-
-### 9. Subscription Card Widget
-
-**Purpose**: Display subscription with AI analysis
+### 9. Abo-Karte Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -376,13 +242,13 @@ interface TransferWidgetProps {
 │                                     │
 │  ┌────┐  Netflix                   │
 │  │ 🎬 │  Premium                    │
-│  └────┘  €17.99/Monat              │
+│  └────┘  €17,99/Monat              │
 │                                     │
 │  ⚠️ Nicht genutzt seit 45 Tagen   │
 │                                     │
-│  Bisherige Kosten: €215.88         │
+│  Bisherige Kosten: €215,88         │
 │  Bei Kündigung sparst du:          │
-│  €215.88/Jahr                       │
+│  €215,88/Jahr                       │
 │                                     │
 │  Leo: "Du zahlst für Netflix, aber │
 │  schaust nichts. Soll ich für dich │
@@ -392,11 +258,7 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
-
-### 10. Budget Tracker Widget
-
-**Purpose**: Real-time budget status
+### 10. Budget-Tracker Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -424,15 +286,13 @@ interface TransferWidgetProps {
 
 ---
 
-## Educational Widgets
+## Bildungs-Widgets
 
-### 11. Tip Card Widget
-
-**Purpose**: Show financial tips and explanations
+### 11. Tipp-Karte Widget
 
 ```
 ┌─────────────────────────────────────┐
-│  💡 Leo's Tipp                      │
+│  💡 Leos Tipp                       │
 │                                     │
 │  Wusstest du?                       │
 │                                     │
@@ -451,11 +311,7 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
-
-### 12. Comparison Table Widget
-
-**Purpose**: Compare financial products
+### 12. Vergleichstabelle Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -469,7 +325,7 @@ interface TransferWidgetProps {
 │  Aufwand │ 📉 Gering│ 📈 Mehr      │
 │  Rendite │ 📊 Markt │ 📊 Variabel │
 │                                     │
-│  Leo's Empfehlung für Anfänger:    │
+│  Leos Empfehlung für Anfänger:    │
 │  "Starte mit einem ETF auf den     │
 │  MSCI World. Das ist wie ein       │
 │  Obstkorb statt nur ein Apfel!"    │
@@ -480,11 +336,9 @@ interface TransferWidgetProps {
 
 ---
 
-## Action Widgets
+## Aktions-Widgets
 
-### 13. Poll Widget
-
-**Purpose**: Quick user feedback in chat
+### 13. Umfrage-Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -493,7 +347,7 @@ interface TransferWidgetProps {
 │  Wie viel sparst du monatlich?     │
 │                                     │
 │  [  ] Unter €50                    │
-│  [✓] €50 - €200                    │ ← selected
+│  [✓] €50 - €200                    │ ← ausgewählt
 │  [  ] €200 - €500                  │
 │  [  ] Über €500                    │
 │  [  ] Ich spare (noch) nicht       │
@@ -504,30 +358,7 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
-**After Voting:**
-```
-┌─────────────────────────────────────┐
-│  📊 Ergebnisse                      │
-│                                     │
-│  Unter €50    ████░░░░░░  18%     │
-│  €50-200      █████████░  42% ←Du │
-│  €200-500     █████░░░░░  28%     │
-│  Über €500    █░░░░░░░░░   7%     │
-│  Nichts       █░░░░░░░░░   5%     │
-│                                     │
-│  Leo: "Du bist im Durchschnitt!    │
-│  Mit €150/Monat könntest du in     │
-│  10 Jahren €25.000 haben."         │
-│                                     │
-│  [Rechner öffnen]                   │
-└─────────────────────────────────────┘
-```
-
----
-
-### 14. Calendar Event Widget
-
-**Purpose**: Schedule financial reminders
+### 14. Kalender-Event Widget
 
 ```
 ┌─────────────────────────────────────┐
@@ -546,27 +377,23 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
----
-
-### 15. Document Preview Widget
-
-**Purpose**: Show scanned/uploaded document analysis
+### 15. Dokument-Vorschau Widget
 
 ```
 ┌─────────────────────────────────────┐
 │  📄 Dokument analysiert            │
 │                                     │
 │  ┌─────────────────────────────┐   │
-│  │ [Document thumbnail]         │   │
+│  │ [Dokument Thumbnail]         │   │
 │  │ Stromrechnung_Nov.pdf       │   │
 │  └─────────────────────────────┘   │
 │                                     │
 │  Erkannt: Stromrechnung            │
 │  Anbieter: Stadtwerke München      │
-│  Betrag: €127.50                    │
+│  Betrag: €127,50                    │
 │  Fällig: 15.12.2025                │
 │                                     │
-│  Leo: "€127.50 ist 15% mehr als    │
+│  Leo: "€127,50 ist 15% mehr als    │
 │  letzten Monat. Heizung an? ❄️"    │
 │                                     │
 │  [Überweisung vorbereiten]         │
@@ -577,9 +404,9 @@ interface TransferWidgetProps {
 
 ---
 
-## Future Widget Ideas
+## Zukünftige Widget-Ideen
 
-### 16. Voice Player Widget (Future)
+### 16. Sprachspieler Widget (Zukunft)
 ```
 ┌─────────────────────────────────────┐
 │  🔊 Leo spricht...                  │
@@ -590,15 +417,15 @@ interface TransferWidgetProps {
 └─────────────────────────────────────┘
 ```
 
-### 17. AR Portfolio Widget (Future)
+### 17. AR Portfolio Widget (Zukunft)
 ```
-Concept: Augmented Reality view of portfolio
-- Point phone at table
-- See 3D pie chart of holdings
-- Tap stocks for details
+Konzept: Augmented Reality Ansicht des Portfolios
+- Handy auf Tisch richten
+- 3D Kreisdiagramm der Anlagen sehen
+- Aktien antippen für Details
 ```
 
-### 18. Social Comparison Widget (Future - with consent)
+### 18. Sozialer Vergleich Widget (Zukunft - mit Einwilligung)
 ```
 ┌─────────────────────────────────────┐
 │  👥 Vergleich (anonym)             │
@@ -616,162 +443,25 @@ Concept: Augmented Reality view of portfolio
 └─────────────────────────────────────┘
 ```
 
-### 19. Bill Splitting Widget (Future)
+### 19. Rechnungsteilen Widget (Zukunft)
 ```
 ┌─────────────────────────────────────┐
 │  🧾 Rechnung teilen                │
 │                                     │
 │  Restaurant Le Petit               │
-│  Gesamt: €120.00                   │
+│  Gesamt: €120,00                   │
 │                                     │
 │  Teilen mit:                        │
 │  ┌──────────────────────────┐      │
-│  │ 👤 Du        €40.00     │      │
-│  │ 👤 Anna      €40.00     │      │
-│  │ 👤 Max       €40.00     │      │
+│  │ 👤 Du        €40,00     │      │
+│  │ 👤 Anna      €40,00     │      │
+│  │ 👤 Max       €40,00     │      │
 │  └──────────────────────────┘      │
 │                                     │
 │  [Anfrage senden]                   │
 └─────────────────────────────────────┘
 ```
 
-### 20. Crypto Price Widget (Future - if ING adds crypto)
-```
-┌─────────────────────────────────────┐
-│  ₿ Bitcoin                          │
-│                                     │
-│  €41,234.56     ▲ +3.2%            │
-│                                     │
-│  ⚠️ Krypto ist sehr volatil!       │
-│                                     │
-│  Leo: "Investiere nur Geld, das    │
-│  du zu verlieren bereit bist."     │
-│                                     │
-│  [Mehr über Krypto lernen]         │
-└─────────────────────────────────────┘
-```
-
 ---
 
-## Technical Implementation
-
-### Widget Component Structure
-
-```typescript
-// Base widget wrapper
-interface WidgetProps {
-  type: WidgetType;
-  data: any;
-  size: 'small' | 'medium' | 'large';
-  onAction?: (action: string, data?: any) => void;
-}
-
-// Widget registry
-const WIDGET_COMPONENTS: Record<WidgetType, React.ComponentType> = {
-  stock: StockWidget,
-  transfer: TransferWidget,
-  quiz: QuizWidget,
-  quiz_question: QuizQuestionWidget,
-  achievement: AchievementWidget,
-  savings_goal: SavingsGoalWidget,
-  spending_chart: SpendingChartWidget,
-  portfolio_summary: PortfolioSummaryWidget,
-  news_card: NewsCardWidget,
-  comparison_table: ComparisonTableWidget,
-  budget_tracker: BudgetTrackerWidget,
-  subscription_card: SubscriptionCardWidget,
-  tip_card: TipCardWidget,
-  countdown_timer: CountdownTimerWidget,
-  poll: PollWidget,
-  calendar_event: CalendarEventWidget,
-  document_preview: DocumentPreviewWidget,
-  voice_player: VoicePlayerWidget,
-  image_carousel: ImageCarouselWidget,
-};
-
-// Render widget from AI response
-function renderWidget(widget: Widget): React.ReactNode {
-  const Component = WIDGET_COMPONENTS[widget.type];
-  if (!Component) return null;
-  
-  return (
-    <WidgetWrapper size={widget.size}>
-      <Component {...widget.data} onAction={widget.onAction} />
-    </WidgetWrapper>
-  );
-}
-```
-
-### AI Widget Generation
-
-GPT-4 can generate widgets based on conversation context:
-
-```typescript
-// System prompt for widget generation
-const WIDGET_SYSTEM_PROMPT = `
-You are Leo, a financial AI assistant. When appropriate, you can display 
-interactive widgets in your responses.
-
-Available widgets:
-- stock: Show stock price and info
-- transfer: Quick money transfer
-- quiz: Start a financial quiz
-- achievement: Celebrate unlocked badge
-- savings_goal: Show progress toward goal
-- spending_chart: Visualize spending
-- portfolio_summary: Show portfolio overview
-- tip_card: Display financial tip
-
-To include a widget, add a JSON block:
-\`\`\`widget
-{
-  "type": "stock",
-  "data": {
-    "symbol": "AAPL",
-    "price": 178.50,
-    "change": 2.3
-  }
-}
-\`\`\`
-
-Only show widgets when they add value to the conversation.
-`;
-```
-
-### Widget Animation System
-
-```typescript
-// Framer Motion variants for widget animations
-const widgetVariants = {
-  initial: { opacity: 0, y: 20, scale: 0.95 },
-  animate: { 
-    opacity: 1, 
-    y: 0, 
-    scale: 1,
-    transition: { type: "spring", damping: 20, stiffness: 300 }
-  },
-  exit: { 
-    opacity: 0, 
-    scale: 0.9,
-    transition: { duration: 0.2 }
-  }
-};
-
-// Achievement celebration animation
-const celebrationVariants = {
-  initial: { scale: 0, rotate: -180 },
-  animate: { 
-    scale: [0, 1.2, 1], 
-    rotate: 0,
-    transition: { 
-      type: "spring",
-      damping: 10,
-      stiffness: 200
-    }
-  }
-};
-```
-
----
-
-*Last Updated: November 2025*
+*Zuletzt aktualisiert: November 2025*

@@ -1,247 +1,248 @@
-# Gamification System - Complete Specification
+# Gamification System - Vollständige Spezifikation
 
-> This document details the gamification system for both Junior and Adult profiles, with emphasis on Kahoot-style challenges, leaderboards, and user engagement mechanisms.
+> Dieses Dokument beschreibt das Gamification-System für Junior und Adult Profile mit Schwerpunkt auf Kahoot-ähnlichen Challenges, Ranglisten und Nutzer-Engagement.
 
 ---
 
-## Table of Contents
-1. [Points System](#points-system)
+## Inhaltsverzeichnis
+1. [Punkte-System](#punkte-system)
 2. [Achievements & Badges](#achievements--badges)
-3. [Leaderboards](#leaderboards)
+3. [Ranglisten](#ranglisten)
 4. [Kahoot-Style Challenges](#kahoot-style-challenges)
-5. [School Championships](#school-championships)
-6. [User Stories for Demo Sidebar](#user-stories-for-demo-sidebar)
+5. [Schulmeisterschaften](#schulmeisterschaften)
+6. [User Stories für Demo Sidebar](#user-stories-für-demo-sidebar)
 
 ---
 
-## Points System
+## Punkte-System
 
-### XP (Experience Points) Economy
+### XP (Erfahrungspunkte) Wirtschaft
 
-#### Earning XP - Junior Profile
+#### XP verdienen - Junior Profil
 
-| Action | XP Awarded | Frequency Limit |
-|--------|-----------|-----------------|
-| **Daily Login** | 10 XP | Once/day |
-| **Streak Bonus (7 days)** | 50 XP bonus | Weekly |
-| **Streak Bonus (30 days)** | 200 XP bonus | Monthly |
-| **Complete Quiz (Easy)** | 25-50 XP | Per quiz |
-| **Complete Quiz (Medium)** | 50-100 XP | Per quiz |
-| **Complete Quiz (Hard)** | 100-200 XP | Per quiz |
-| **Perfect Quiz Score** | +50% bonus XP | Per quiz |
-| **First Virtual Trade** | 100 XP | Once |
-| **Complete Learning Module** | 50-150 XP | Per module |
-| **Watch Educational Video** | 20 XP | 5/day max |
-| **Read News Article** | 10 XP | 10/day max |
-| **Add Stock to Watchlist** | 15 XP | 10/day max |
-| **Make Virtual Trade** | 20 XP | 5/day max |
-| **Achieve Portfolio Milestone** | 100-500 XP | Per milestone |
-| **Win Weekly Challenge** | 500 XP | Once/week |
-| **Refer Friend** | 200 XP | Per friend |
-| **Complete Daily Challenge** | 30-75 XP | Once/day |
-| **Help Classmate (explain feature)** | 25 XP | 3/day max |
+| Aktion | XP Vergabe | Frequenz-Limit |
+|--------|-----------|----------------|
+| **Täglicher Login** | 10 XP | Einmal/Tag |
+| **Streak Bonus (7 Tage)** | 50 XP Bonus | Wöchentlich |
+| **Streak Bonus (30 Tage)** | 200 XP Bonus | Monatlich |
+| **Quiz abgeschlossen (Leicht)** | 25-50 XP | Pro Quiz |
+| **Quiz abgeschlossen (Mittel)** | 50-100 XP | Pro Quiz |
+| **Quiz abgeschlossen (Schwer)** | 100-200 XP | Pro Quiz |
+| **Perfekte Quiz-Punktzahl** | +50% Bonus XP | Pro Quiz |
+| **Erster virtueller Trade** | 100 XP | Einmalig |
+| **Lernmodul abgeschlossen** | 50-150 XP | Pro Modul |
+| **Lernvideo angesehen** | 20 XP | 5/Tag max |
+| **Nachrichtenartikel gelesen** | 10 XP | 10/Tag max |
+| **Aktie zur Watchlist hinzugefügt** | 15 XP | 10/Tag max |
+| **Virtueller Trade durchgeführt** | 20 XP | 5/Tag max |
+| **Portfolio-Meilenstein erreicht** | 100-500 XP | Pro Meilenstein |
+| **Wochen-Challenge gewonnen** | 500 XP | Einmal/Woche |
+| **Freund empfohlen** | 200 XP | Pro Freund |
+| **Tägliche Challenge abgeschlossen** | 30-75 XP | Einmal/Tag |
+| **Mitschüler geholfen (Feature erklärt)** | 25 XP | 3/Tag max |
 
-#### XP Multipliers
+#### XP Multiplikatoren
 
-| Condition | Multiplier |
-|-----------|------------|
-| 7-day streak | 1.5x |
-| 14-day streak | 1.75x |
-| 30-day streak | 2x |
-| 60-day streak | 2.5x |
-| Weekend bonus | 1.25x |
-| Perfect quiz | 1.5x |
-| First attempt | 1.2x |
+| Bedingung | Multiplikator |
+|-----------|--------------|
+| 7-Tage Streak | 1,5x |
+| 14-Tage Streak | 1,75x |
+| 30-Tage Streak | 2x |
+| 60-Tage Streak | 2,5x |
+| Wochenend-Bonus | 1,25x |
+| Perfektes Quiz | 1,5x |
+| Erster Versuch | 1,2x |
 
-### Level System
+### Level-System
 
-| Level | XP Required | Title | Unlocks |
-|-------|-------------|-------|---------|
-| 1 | 0 | Finanz-Anfänger | Basic features |
-| 2 | 500 | Geld-Lerner | First badge slot |
-| 3 | 1,200 | Spar-Fuchs | Custom avatar color |
-| 4 | 2,500 | Budget-Held | Second badge slot |
-| 5 | 5,000 | Finanz-Entdecker | Hard quizzes unlock |
-| 6 | 8,500 | Aktien-Kenner | Advanced stocks |
-| 7 | 13,000 | Portfolio-Profi | Third badge slot |
-| 8 | 20,000 | Investment-Guru | Custom title |
-| 9 | 30,000 | Finanz-Meister | Special badge frame |
-| 10 | 50,000 | Leo's Champion | All features + VIP status |
+| Level | Benötigte XP | Titel | Freischaltungen |
+|-------|-------------|-------|-----------------|
+| 1 | 0 | Finanz-Anfänger | Basis-Features |
+| 2 | 500 | Geld-Lerner | Erster Badge-Slot |
+| 3 | 1.200 | Spar-Fuchs | Custom Avatar-Farbe |
+| 4 | 2.500 | Budget-Held | Zweiter Badge-Slot |
+| 5 | 5.000 | Finanz-Entdecker | Schwere Quizze freigeschaltet |
+| 6 | 8.500 | Aktien-Kenner | Fortgeschrittene Aktien |
+| 7 | 13.000 | Portfolio-Profi | Dritter Badge-Slot |
+| 8 | 20.000 | Investment-Guru | Custom Titel |
+| 9 | 30.000 | Finanz-Meister | Spezieller Badge-Rahmen |
+| 10 | 50.000 | Leos Champion | Alle Features + VIP-Status |
 
-### Real Financial Rewards (No Physical Gifts!)
+### Echte Finanzbelohnungen (Keine physischen Geschenke!)
 
-**Junior Profile - Accumulated at Age 18:**
+**Junior Profil - Angesammelt bis Alter 18:**
 
-| XP Milestone | Reward at 18 |
-|--------------|--------------|
-| 5,000 XP | €5 account bonus |
-| 15,000 XP | €15 account bonus |
-| 35,000 XP | €35 account bonus |
-| 75,000 XP | €75 account bonus |
-| 150,000 XP | €150 account bonus + 0.1% interest bonus (1 year) |
+| XP Meilenstein | Belohnung mit 18 |
+|----------------|------------------|
+| 5.000 XP | €5 Kontobonus |
+| 15.000 XP | €15 Kontobonus |
+| 35.000 XP | €35 Kontobonus |
+| 75.000 XP | €75 Kontobonus |
+| 150.000 XP | €150 Kontobonus + 0,1% Zinsbonus (1 Jahr) |
 
-**Adult Profile - Immediate Rewards:**
+**Adult Profil - Sofortige Belohnungen:**
 
-| Achievement | Reward |
-|-------------|--------|
-| Complete Financial Health checkup | €5 account credit |
-| First investment | Free trade |
-| 6-month active user | 0.1% interest bonus |
-| Refer 3 friends | €25 account credit |
+| Leistung | Belohnung |
+|----------|-----------|
+| Finanz-Gesundheitscheck abgeschlossen | €5 Kontoguthaben |
+| Erstes Investment | Kostenloser Trade |
+| 6-Monate aktiver Nutzer | 0,1% Zinsbonus |
+| 3 Freunde empfohlen | €25 Kontoguthaben |
 
 ---
 
 ## Achievements & Badges
 
-### Badge Categories
+### Badge-Kategorien
 
-#### 🎓 Learning Badges (Education)
+#### 🎓 Lern-Badges (Bildung)
 
-| Badge | Criteria | XP Bonus |
+| Badge | Kriterien | XP Bonus |
 |-------|----------|----------|
-| **Quiz Newbie** | Complete first quiz | 25 XP |
-| **Quiz Regular** | Complete 10 quizzes | 100 XP |
-| **Quiz Master** | Complete 50 quizzes | 500 XP |
-| **Perfect 10** | Get 10 perfect quiz scores | 250 XP |
-| **ETF Expert** | Complete all ETF quizzes | 200 XP |
-| **Tax Whiz** | Complete all tax quizzes | 200 XP |
-| **Insurance Insider** | Complete all insurance quizzes | 200 XP |
-| **Stock Scholar** | Complete all stock quizzes | 200 XP |
-| **Know-It-All** | 90%+ average across all quizzes | 1000 XP |
+| **Quiz Neuling** | Erstes Quiz abgeschlossen | 25 XP |
+| **Quiz Stammgast** | 10 Quizze abgeschlossen | 100 XP |
+| **Quiz Meister** | 50 Quizze abgeschlossen | 500 XP |
+| **Perfekte 10** | 10 perfekte Quiz-Ergebnisse | 250 XP |
+| **ETF Experte** | Alle ETF-Quizze abgeschlossen | 200 XP |
+| **Steuer-Profi** | Alle Steuer-Quizze abgeschlossen | 200 XP |
+| **Versicherungs-Insider** | Alle Versicherungs-Quizze abgeschlossen | 200 XP |
+| **Aktien-Gelehrter** | Alle Aktien-Quizze abgeschlossen | 200 XP |
+| **Allwissend** | 90%+ Durchschnitt über alle Quizze | 1000 XP |
 
-#### 📈 Investment Badges (Trading)
+#### 📈 Investment-Badges (Trading)
 
-| Badge | Criteria | XP Bonus |
+| Badge | Kriterien | XP Bonus |
 |-------|----------|----------|
-| **First Trade** | Execute first virtual trade | 50 XP |
-| **Trader in Training** | Execute 10 trades | 100 XP |
-| **Active Trader** | Execute 50 trades | 300 XP |
-| **Diversifier** | Own 5 different stocks | 150 XP |
-| **Sector Spreader** | Own stocks from 3 sectors | 200 XP |
-| **Global Investor** | Own international stocks | 150 XP |
-| **ETF Enthusiast** | Own 3 different ETFs | 200 XP |
-| **Diamond Hands 💎** | Hold through 20% drop | 300 XP |
-| **Paper Hands (shame!)** | Panic sell (learn from it!) | 0 XP |
-| **Beat the Market** | Outperform DAX for 1 month | 500 XP |
+| **Erster Trade** | Ersten virtuellen Trade ausgeführt | 50 XP |
+| **Trader in Ausbildung** | 10 Trades ausgeführt | 100 XP |
+| **Aktiver Trader** | 50 Trades ausgeführt | 300 XP |
+| **Diversifizierer** | 5 verschiedene Aktien besitzen | 150 XP |
+| **Sektor-Spreizer** | Aktien aus 3 Sektoren besitzen | 200 XP |
+| **Globaler Investor** | Internationale Aktien besitzen | 150 XP |
+| **ETF Enthusiast** | 3 verschiedene ETFs besitzen | 200 XP |
+| **Diamant Hände 💎** | Durch 20% Rückgang gehalten | 300 XP |
+| **Papier Hände (Schande!)** | Panikverkauf (lerne daraus!) | 0 XP |
+| **Markt geschlagen** | DAX für 1 Monat übertroffen | 500 XP |
 
-#### 🔥 Consistency Badges (Streaks)
+#### 🔥 Beständigkeits-Badges (Streaks)
 
-| Badge | Criteria | XP Bonus |
+| Badge | Kriterien | XP Bonus |
 |-------|----------|----------|
-| **Week Warrior** | 7-day streak | 75 XP |
-| **Fortnight Fighter** | 14-day streak | 150 XP |
-| **Month Master** | 30-day streak | 400 XP |
-| **Quarter Champion** | 90-day streak | 1000 XP |
-| **Year Legend** | 365-day streak | 5000 XP |
+| **Wochen-Krieger** | 7-Tage Streak | 75 XP |
+| **Zwei-Wochen-Kämpfer** | 14-Tage Streak | 150 XP |
+| **Monats-Meister** | 30-Tage Streak | 400 XP |
+| **Quartals-Champion** | 90-Tage Streak | 1000 XP |
+| **Jahres-Legende** | 365-Tage Streak | 5000 XP |
 
-#### 💰 Savings Badges (Goals)
+#### 💰 Spar-Badges (Ziele)
 
-| Badge | Criteria | XP Bonus |
+| Badge | Kriterien | XP Bonus |
 |-------|----------|----------|
-| **First Goal** | Set first savings goal | 25 XP |
-| **Goal Getter** | Achieve first savings goal | 100 XP |
-| **Serial Saver** | Achieve 5 savings goals | 300 XP |
-| **Dream Funded** | Save €1,000 toward a goal | 200 XP |
-| **Money Mountain** | €5,000 total saved | 500 XP |
+| **Erstes Ziel** | Erstes Sparziel gesetzt | 25 XP |
+| **Ziel-Erreicher** | Erstes Sparziel erreicht | 100 XP |
+| **Serien-Sparer** | 5 Sparziele erreicht | 300 XP |
+| **Traum finanziert** | €1.000 für ein Ziel gespart | 200 XP |
+| **Geld-Berg** | €5.000 insgesamt gespart | 500 XP |
 
-#### 🏆 Competition Badges (Social)
+#### 🏆 Wettbewerbs-Badges (Sozial)
 
-| Badge | Criteria | XP Bonus |
+| Badge | Kriterien | XP Bonus |
 |-------|----------|----------|
-| **Top 100** | Rank in weekly top 100 | 50 XP |
-| **Top 10** | Rank in weekly top 10 | 200 XP |
-| **Weekly Champion** | #1 for the week | 500 XP |
-| **Class Leader** | #1 in school leaderboard | 300 XP |
-| **School Pride** | Help school reach top 50 | 200 XP |
-| **School Champion** | School wins monthly championship | 500 XP |
+| **Top 100** | In wöchentlicher Top 100 platziert | 50 XP |
+| **Top 10** | In wöchentlicher Top 10 platziert | 200 XP |
+| **Wochen-Champion** | #1 für die Woche | 500 XP |
+| **Klassen-Anführer** | #1 in Schul-Rangliste | 300 XP |
+| **Schul-Stolz** | Schule in Top 50 geholfen | 200 XP |
+| **Schul-Champion** | Schule gewinnt Monatsmeisterschaft | 500 XP |
 
-### Badge Display System
+### Badge-Anzeige System
 
 ```
 ┌─────────────────────────────────────┐
-│  🏆 My Badges (24/48)               │
+│  🏆 Meine Badges (24/48)            │
 │                                     │
-│  ──── EQUIPPED (3 slots) ────       │
-│  [💎 Diamond Hands]                 │
-│  [🔥 Month Master]                  │
-│  [📈 Beat the Market]               │
+│  ──── AUSGERÜSTET (3 Slots) ────    │
+│  [💎 Diamant Hände]                 │
+│  [🔥 Monats-Meister]                │
+│  [📈 Markt geschlagen]              │
 │                                     │
-│  ──── EARNED ────                   │
-│  🎓🎓🎓🎓🎓 Learning (5)            │
+│  ──── VERDIENT ────                 │
+│  🎓🎓🎓🎓🎓 Lernen (5)              │
 │  📈📈📈 Trading (3)                 │
 │  🔥🔥🔥🔥 Streaks (4)               │
-│  💰💰 Savings (2)                   │
-│  🏆🏆🏆 Competition (3)             │
+│  💰💰 Sparen (2)                    │
+│  🏆🏆�� Wettbewerb (3)              │
 │                                     │
-│  ──── LOCKED ────                   │
-│  ⬜⬜⬜⬜ (24 more to unlock)        │
+│  ──── GESPERRT ────                 │
+│  ⬜⬜⬜⬜ (24 weitere freischaltbar) │
 │                                     │
-│  🎯 Next: "Quiz Master" (45/50)    │
-│     [View all badges →]             │
+│  🎯 Nächstes: "Quiz Meister" (45/50)│
+│     [Alle Badges ansehen →]         │
 └─────────────────────────────────────┘
 ```
 
 ---
 
-## Leaderboards
+## Ranglisten
 
-### Leaderboard Types
+### Ranglisten-Typen
 
-#### 1. Weekly Leaderboard (Global)
-- Resets every Sunday at midnight
-- Shows XP earned that week only
-- Top 10 winners announced Monday morning
-- Prizes for top 3 (€25, €15, €10 bonus at age 18)
+#### 1. Wochen-Rangliste (Global)
+- Setzt sich jeden Sonntag Mitternacht zurück
+- Zeigt nur in dieser Woche verdiente XP
+- Top 10 Gewinner werden Montag früh bekannt gegeben
+- Preise für Top 3 (€25, €15, €10 Bonus mit 18)
 
-#### 2. All-Time Leaderboard (Global)
-- Cumulative XP from account creation
-- Shows rank and total XP
-- Special flair for top 100 all-time
+#### 2. Allzeit-Rangliste (Global)
+- Kumulative XP seit Kontoerstellung
+- Zeigt Rang und Gesamt-XP
+- Spezielle Flair für Allzeit Top 100
 
-#### 3. School Leaderboard
-- Aggregate XP from all students at school
-- Requires 5+ students from same school
-- Monthly school championships with prizes
+#### 3. Schul-Rangliste
+- Aggregierte XP von allen Schülern einer Schule
+- Erfordert 5+ Schüler von derselben Schule
+- Monatliche Schulmeisterschaften mit Preisen
 
-#### 4. Friends Leaderboard
-- Compare only with added friends
-- Encourages friendly competition
-- No prizes, just bragging rights
+#### 4. Freunde-Rangliste
+- Vergleich nur mit hinzugefügten Freunden
+- Ermutigt freundschaftlichen Wettbewerb
+- Keine Preise, nur Angeberrechte
 
-#### 5. Class Leaderboard (Kahoot-style)
-- Real-time during live quiz sessions
-- Teacher-created challenges
-- Live updates after each question
+#### 5. Klassen-Rangliste (Kahoot-Style)
+- Echtzeit während Live-Quiz-Sessions
+- Vom Lehrer erstellte Challenges
+- Live-Updates nach jeder Frage
 
-### Leaderboard UI Specification
+### Ranglisten UI Spezifikation
 
 ```
 ┌─────────────────────────────────────┐
-│  🏆 Weekly Leaderboard              │
-│  Resets in: 2d 14h 32m              │
+│  🏆 Wochen-Rangliste                │
+│  Setzt sich zurück in: 2T 14h 32m   │
 │                                     │
-│  ┌─────────────────────────────┐   │
-│  │ 🥈    🥇    🥉               │   │
-│  │ [2]  [1]   [3]               │   │
-│  │ Max  Lisa  Tom               │   │
-│  │ 2.2k 2.5k  2.1k              │   │
-│  └─────────────────────────────┘   │
+│  ┌─────────────────────────────┐    │
+│  │ 🥈    🥇    🥉              │    │
+│  │ [2]  [1]   [3]              │    │
+│  │ Max  Lisa  Tom              │    │
+│  │ 2,2k 2,5k  2,1k             │    │
+│  └─────────────────────────────┘    │
 │                                     │
-│  4. Sarah         1,980 XP    ▲2   │
-│  5. Michael       1,875 XP    ▼1   │
-│  6. Emma          1,820 XP    ▲5   │
-│  7. Felix         1,790 XP    ─    │
-│  8. Anna          1,755 XP    ▲3   │
-│  ...                               │
-│  ─────────────────────────────     │
-│  42. You (MoneyLearner)            │
-│      840 XP    ▲15                 │
-│      Need 60 XP to pass Emma       │
-│  ─────────────────────────────     │
+│  4. Sarah         1.980 XP    ▲2    │
+│  5. Michael       1.875 XP    ▼1    │
+│  6. Emma          1.820 XP    ▲5    │
+│  7. Felix         1.790 XP    ─     │
+│  8. Anna          1.755 XP    ▲3    │
+│  ...                                │
+│  ─────────────────────────────      │
+│  42. Du (GeldLerner)               │
+│      840 XP    ▲15                  │
+│      Brauchst 60 XP um Emma zu      │
+│      überholen                      │
+│  ─────────────────────────────      │
 │                                     │
-│  🎁 This week's prize:             │
-│  1st: €25  2nd: €15  3rd: €10     │
-│  (credited at age 18)              │
+│  🎁 Diese Woche Preis:              │
+│  1.: €25  2.: €15  3.: €10          │
+│  (gutgeschrieben mit 18)            │
 └─────────────────────────────────────┘
 ```
 
@@ -249,41 +250,41 @@
 
 ## Kahoot-Style Challenges
 
-### Overview
+### Übersicht
 
-Leo can host live, multiplayer quiz sessions similar to Kahoot! These are designed for:
-1. **Classroom use**: Teachers create sessions for students
-2. **Friend challenges**: Users invite friends to compete
-3. **School championships**: Monthly inter-class competitions
-4. **Global events**: ING-sponsored special quizzes
+Leo kann Live-Multiplayer-Quiz-Sessions ähnlich wie Kahoot! hosten. Diese sind konzipiert für:
+1. **Klassenraum-Nutzung**: Lehrer erstellen Sessions für Schüler
+2. **Freunde-Challenges**: Nutzer laden Freunde zum Wettbewerb ein
+3. **Schulmeisterschaften**: Monatliche Klassen-Wettbewerbe
+4. **Globale Events**: ING-gesponserte Spezial-Quizze
 
-### Creating a Challenge (Teacher/Host Flow)
+### Challenge erstellen (Lehrer/Host Ablauf)
 
 ```
-Leo: "Ready to host a quiz challenge? 🎮"
+Leo: "Bereit ein Quiz-Challenge zu hosten? 🎮"
 
-Step 1: Select topic
-[ ] ETFs & Funds
-[ ] Stock Basics  
-[ ] Taxes 101
-[ ] Insurance Explained
-[ ] Mixed Topics
-[ ] Custom (create your own)
+Schritt 1: Thema wählen
+[ ] ETFs & Fonds
+[ ] Aktien Grundlagen  
+[ ] Steuern 101
+[ ] Versicherungen erklärt
+[ ] Gemischte Themen
+[ ] Individuell (eigene erstellen)
 
-Step 2: Settings
-• Number of questions: [5] [10] [15] [20]
-• Time per question: [10s] [15s] [20s] [30s]
-• Difficulty: [Easy] [Medium] [Hard] [Mixed]
-• Points: [Standard] [Speed bonus] [Streak bonus]
+Schritt 2: Einstellungen
+• Anzahl Fragen: [5] [10] [15] [20]
+• Zeit pro Frage: [10s] [15s] [20s] [30s]
+• Schwierigkeit: [Leicht] [Mittel] [Schwer] [Gemischt]
+• Punkte: [Standard] [Geschwindigkeitsbonus] [Streak-Bonus]
 
-Step 3: Share code
-"Your game code: FINANZ-2847"
-Share this code with participants!
+Schritt 3: Code teilen
+"Dein Spiel-Code: FINANZ-2847"
+Teile diesen Code mit Teilnehmern!
 
-[Start when ready] [Wait for more players]
+[Start wenn bereit] [Auf mehr Spieler warten]
 
-Lobby shows:
-"8 players joined (waiting for more...)"
+Lobby zeigt:
+"8 Spieler beigetreten (warten auf mehr...)"
 👤 Max
 👤 Lisa  
 👤 Tom
@@ -291,31 +292,31 @@ Lobby shows:
 ...
 ```
 
-### Playing a Challenge (Participant Flow)
+### An Challenge teilnehmen (Teilnehmer Ablauf)
 
 ```
-Leo: "Join a quiz challenge! 🎮"
+Leo: "Nimm an einer Quiz-Challenge teil! 🎮"
 
-Enter game code: [FINANZ-2847]
-                 [Join Game]
+Gib Spiel-Code ein: [FINANZ-2847]
+                    [Spiel beitreten]
 
 ─────────────────────────────────
 
-Waiting in lobby...
-"Game: Stock Basics Quiz"
+Wartet in Lobby...
+"Spiel: Aktien Grundlagen Quiz"
 "Host: Frau Müller"
-"Players: 24/30"
+"Spieler: 24/30"
 
-Your avatar: 🦁 MoneyLearner
-Ready! Waiting for host to start...
+Dein Avatar: 🦁 GeldLerner
+Bereit! Warten auf Host zum Starten...
 
 ─────────────────────────────────
 
-[GAME STARTS]
+[SPIEL STARTET]
 
-Question 1/10                    ⏱️ 15s
+Frage 1/10                       ⏱️ 15s
 
-"What does IPO stand for?"
+"Wofür steht IPO?"
 
 ┌─────────┐  ┌─────────┐
 │    A    │  │    B    │
@@ -326,302 +327,302 @@ Question 1/10                    ⏱️ 15s
 ┌─────────┐  ┌─────────┐
 │    C    │  │    D    │
 │ Instant │  │ Inter-  │
-│ Profit  │  │ national│
+│ Profit  │  │national │
 │ Order   │  │ Purchase│
 └─────────┘  └─────────┘
 
-[Tap your answer!]
+[Tippe deine Antwort!]
 
 ─────────────────────────────────
 
-[AFTER ANSWER]
+[NACH ANTWORT]
 
-✅ Correct! +100 points (+20 speed bonus)
+✅ Richtig! +100 Punkte (+20 Geschwindigkeitsbonus)
 
-Current standings:
-1. 🥇 Max      1,250
-2. 🥈 Lisa     1,180  
-3. 🥉 Tom      1,120
-→ 4. You       1,100 (▲2)
+Aktuelle Platzierungen:
+1. 🥇 Max      1.250
+2. 🥈 Lisa     1.180  
+3. 🥉 Tom      1.120
+→ 4. Du        1.100 (▲2)
 
 ─────────────────────────────────
 
-[FINAL RESULTS]
+[ENDERGEBNISSE]
 
-🏆 Game Over! 🏆
+🏆 Spiel vorbei! 🏆
 
-Final Standings:
-🥇 Lisa       2,450 (+250 XP)
-🥈 Max        2,380 (+150 XP)
-🥉 You        2,290 (+100 XP)
+Endplatzierungen:
+🥇 Lisa       2.450 (+250 XP)
+🥈 Max        2.380 (+150 XP)
+🥉 Du         2.290 (+100 XP)
 
-Your stats:
-• 8/10 correct answers
-• Best streak: 5 in a row
-• Fastest answer: Q3 (2.1s)
-• +100 XP earned
+Deine Statistiken:
+• 8/10 richtige Antworten
+• Bester Streak: 5 in Folge
+• Schnellste Antwort: F3 (2,1s)
+• +100 XP verdient
 
-[Play Again] [Back to Home]
+[Nochmal spielen] [Zurück zur Startseite]
 ```
 
-### Real-Time Scoring Mechanics
+### Echtzeit-Punktesystem
 
-| Factor | Points |
+| Faktor | Punkte |
 |--------|--------|
-| Correct answer | 100 base |
-| Speed bonus (0-20 points) | Faster = more |
-| Streak bonus (2+ correct in a row) | +10 per question in streak |
-| Perfect game bonus | +100 |
-| First to answer correctly | +25 |
+| Richtige Antwort | 100 Basis |
+| Geschwindigkeitsbonus (0-20 Punkte) | Schneller = mehr |
+| Streak-Bonus (2+ richtig in Folge) | +10 pro Frage im Streak |
+| Perfektes Spiel Bonus | +100 |
+| Erster mit richtiger Antwort | +25 |
 
-### Sound & Visual Effects
+### Sound & Visuelle Effekte
 
-- **Question appears**: Dramatic reveal animation, countdown sound
-- **Answer submitted**: Lock-in sound, button highlights
-- **Correct answer**: Confetti, success sound, green flash
-- **Wrong answer**: Gentle buzz, red flash, "Next time!" message
-- **Leaderboard update**: Swoosh sound, animated position changes
-- **Final results**: Victory fanfare for winner, celebration for all
-
----
-
-## School Championships
-
-### Monthly Championship Structure
-
-**Week 1-3**: Qualification Phase
-- Students earn XP through regular activities
-- School's total XP aggregated
-- Top 50 schools qualify for finals
-
-**Week 4**: Championship Week
-- Special championship quizzes unlocked
-- 3x XP multiplier on all activities
-- Live inter-school challenge on Friday
-
-**Prizes**:
-- 1st place school: €1,000 to school's financial literacy program
-- 2nd place: €500
-- 3rd place: €250
-- Top 10: Recognition on ING website
-- All participants: Digital certificate
-
-### School Registration Flow
-
-```
-Teacher/Admin Portal:
-
-1. Register school
-   School name: [Gymnasium Musterstadt]
-   School code: Will be generated
-   Admin email: [teacher@school.de]
-
-2. Students join
-   Students enter school code in app
-   OR teacher sends invite link
-
-3. Class management
-   Create class groups
-   Track class progress
-   Set up class challenges
-
-4. Parent consent
-   Automatic consent flow for parents
-   Required for competition participation
-```
+- **Frage erscheint**: Dramatische Enthüllungsanimation, Countdown-Sound
+- **Antwort abgegeben**: Sperr-Sound, Button leuchtet auf
+- **Richtige Antwort**: Konfetti, Erfolgs-Sound, grüner Blitz
+- **Falsche Antwort**: Sanfter Buzz, roter Blitz, "Beim nächsten Mal!" Nachricht
+- **Ranglisten-Update**: Swoosh-Sound, animierte Positionswechsel
+- **Endergebnisse**: Sieges-Fanfare für Gewinner, Feier für alle
 
 ---
 
-## User Stories for Demo Sidebar
+## Schulmeisterschaften
 
-### Story 1: Daily Challenge Completion
-```yaml
-ID: gamification_daily_challenge
-Name: "Daily Challenge"
-Description: "Complete today's Leo challenge"
-Category: junior
-Duration: ~1 minute
+### Monatliche Meisterschaftsstruktur
 
-Flow:
-1. Leo notification: "Your daily challenge is ready! 🎯"
-2. User opens app to see challenge card
-3. Challenge: "Answer 3 questions about ETFs"
-4. User completes quick quiz (3 questions)
-5. Leo: "Awesome! +75 XP and 🔥 streak extended!"
-6. Show updated XP bar and streak counter
-7. Tease tomorrow's challenge
+**Woche 1-3**: Qualifikationsphase
+- Schüler verdienen XP durch reguläre Aktivitäten
+- Gesamt-XP der Schule aggregiert
+- Top 50 Schulen qualifizieren sich für Finals
 
-Demo Messages:
-- Leo: "Here's your daily challenge! 3 ETF questions - ready?"
-- User: "Let's do it!"
-- Leo: [Quiz Widget with 3 questions]
-- [After completion]
-- Leo: "🎉 Perfect! +75 XP earned. You're on fire with a 7-day streak!"
-- Leo: [Achievement Widget: "Week Warrior" badge unlocked]
+**Woche 4**: Meisterschaftswoche
+- Spezielle Meisterschafts-Quizze freigeschaltet
+- 3x XP Multiplikator auf alle Aktivitäten
+- Live Inter-Schul-Challenge am Freitag
+
+**Preise**:
+- 1. Platz Schule: €1.000 für Finanzbildungsprogramm der Schule
+- 2. Platz: €500
+- 3. Platz: €250
+- Top 10: Anerkennung auf ING Website
+- Alle Teilnehmer: Digitales Zertifikat
+
+### Schulregistrierungs-Ablauf
+
 ```
+Lehrer/Admin Portal:
 
-### Story 2: Leaderboard Climb
-```yaml
-ID: gamification_leaderboard_climb
-Name: "Leaderboard Climb"
-Description: "See your weekly ranking and compete"
-Category: junior
-Duration: ~45 seconds
+1. Schule registrieren
+   Schulname: [Gymnasium Musterstadt]
+   Schulcode: Wird generiert
+   Admin E-Mail: [lehrer@schule.de]
 
-Flow:
-1. User opens leaderboard
-2. See current position (#42)
-3. Leo: "You're 60 XP away from passing Emma!"
-4. Quick quiz suggestion to earn points
-5. Complete quiz, watch rank animate up
+2. Schüler beitreten
+   Schüler geben Schulcode in App ein
+   ODER Lehrer sendet Einladungslink
 
-Demo Messages:
-- Leo: "Let's check the leaderboard! You're doing great this week."
-- [Show leaderboard with user at #42]
-- Leo: "Emma is just 60 XP ahead. One quiz could change that!"
-- User: "Show me a quick quiz"
-- Leo: [Quiz Widget: 5 questions]
-- [After quiz - earned 85 XP]
-- Leo: "BOOM! 💥 You passed Emma AND Felix! New rank: #40"
-- [Animated leaderboard showing climb]
-```
+3. Klassenverwaltung
+   Klassengruppen erstellen
+   Klassenfortschritt verfolgen
+   Klassen-Challenges einrichten
 
-### Story 3: Achievement Unlock
-```yaml
-ID: gamification_achievement_unlock
-Name: "Badge Unlocked!"
-Description: "Unlock a new achievement badge"
-Category: junior
-Duration: ~30 seconds
-
-Flow:
-1. User completes 10th quiz
-2. Screen flash, celebration animation
-3. Leo: "NEW BADGE UNLOCKED! 🏆"
-4. Badge reveal animation
-5. Show badge added to collection
-6. Hint at next badge to earn
-
-Demo Messages:
-- [After quiz completion]
-- Leo: "Wait... is that your 10th quiz? 👀"
-- [Dramatic pause]
-- Leo: "🎉 NEW BADGE UNLOCKED!"
-- [Achievement Widget: "Quiz Regular" with celebration animation]
-- Leo: "Add it to your profile! You're 40 quizzes away from 'Quiz Master'"
-```
-
-### Story 4: Kahoot-Style Class Challenge
-```yaml
-ID: gamification_class_kahoot
-Name: "Class Quiz Challenge"
-Description: "Join a live classroom quiz competition"
-Category: junior
-Duration: ~3 minutes
-
-Flow:
-1. User enters game code from teacher
-2. Join lobby, see classmates
-3. Host starts game
-4. 10 rapid-fire questions
-5. Live leaderboard between questions
-6. Final results and XP awards
-
-Demo Messages:
-- Leo: "Ready for the class challenge? Enter the code your teacher shared!"
-- User: "FINANZ-2847"
-- Leo: "Joining 'Frau Müller's Stock Quiz'... 18 players in lobby"
-- [Lobby animation showing players joining]
-- Leo: "Game starting in 3... 2... 1... GO!"
-- [Simulated Kahoot-style quiz with 5 questions]
-- [After each question: leaderboard update]
-- Leo: "FINAL RESULTS: You came in 3rd! 🥉 +100 XP"
-- Leo: "Great job! Your class average was 72% - better than yesterday!"
-```
-
-### Story 5: School Championship Entry
-```yaml
-ID: gamification_school_championship
-Name: "School Championship"
-Description: "Compete for your school in the monthly championship"
-Category: junior
-Duration: ~2 minutes
-
-Flow:
-1. Leo announces championship week
-2. Show school's current rank
-3. Special championship quiz available
-4. Complete quiz with 3x XP multiplier
-5. Watch school rank improve
-6. Team celebration moment
-
-Demo Messages:
-- Leo: "🏆 CHAMPIONSHIP WEEK IS HERE!"
-- Leo: "Your school (Gymnasium Musterstadt) is ranked #23. Can you help climb higher?"
-- Leo: "Championship quizzes earn 3x XP this week!"
-- [Show special Championship Quiz Widget]
-- User: "Let's do this!"
-- [Quiz with 10 harder questions]
-- Leo: "Incredible! +450 XP (with 3x bonus)"
-- Leo: "Your school jumped to #21! 2 spots closer to the top 20!"
-- [Animation showing school climbing leaderboard]
-```
-
-### Story 6: Weekly Winner Announcement
-```yaml
-ID: gamification_weekly_winner
-Name: "Weekly Winner"
-Description: "See who won this week's competition"
-Category: junior
-Duration: ~1 minute
-
-Flow:
-1. Monday morning notification
-2. Leo reveals weekly winners
-3. Show prizes awarded
-4. New week starts
-5. Encourage user to compete
-
-Demo Messages:
-- Leo: "📣 Last week's results are in!"
-- Leo: "🥇 Lisa (2,450 XP) - €25 bonus"
-- Leo: "🥈 Max (2,380 XP) - €15 bonus"  
-- Leo: "🥉 Tom (2,290 XP) - €10 bonus"
-- Leo: "You finished #42 with 840 XP - your best week yet!"
-- Leo: "New week, fresh start! First quiz of the week earns 2x XP 🎁"
-- User: "Let's aim for top 10 this week!"
-- Leo: "That's the spirit! Here's your first quiz..."
-```
-
-### Story 7: Streak Save Reminder
-```yaml
-ID: gamification_streak_reminder
-Name: "Save Your Streak!"
-Description: "Urgent reminder to maintain streak"
-Category: junior
-Duration: ~30 seconds
-
-Flow:
-1. Evening notification (streak about to expire)
-2. Leo shows streak status
-3. Quick action to save streak
-4. Streak extended celebration
-
-Demo Messages:
-- Leo: "⚠️ Your 12-day streak expires in 2 hours!"
-- Leo: "Just one quick question to keep it alive?"
-- User: "Yes, quick!"
-- Leo: [Single quiz question]
-- [User answers correctly]
-- Leo: "🔥 STREAK SAVED! Day 13 begins tomorrow!"
-- Leo: "Fun fact: You're in the top 5% of streak holders!"
+4. Eltern-Einwilligung
+   Automatischer Einwilligungs-Flow für Eltern
+   Erforderlich für Wettbewerbsteilnahme
 ```
 
 ---
 
-## Technical Implementation Notes
+## User Stories für Demo Sidebar
 
-### Points & XP Storage
+### Story 1: Tägliche Challenge Abschluss
+```yaml
+ID: gamification_taegliche_challenge
+Name: "Tägliche Challenge"
+Beschreibung: "Schließe Leos heutige Challenge ab"
+Kategorie: junior
+Dauer: ~1 Minute
+
+Ablauf:
+1. Leo Benachrichtigung: "Deine tägliche Challenge ist bereit! 🎯"
+2. Nutzer öffnet App um Challenge-Karte zu sehen
+3. Challenge: "Beantworte 3 Fragen über ETFs"
+4. Nutzer schließt schnelles Quiz ab (3 Fragen)
+5. Leo: "Super! +75 XP und 🔥 Streak verlängert!"
+6. Zeige aktualisierte XP-Leiste und Streak-Zähler
+7. Teaser für morgige Challenge
+
+Demo Nachrichten:
+- Leo: "Hier ist deine tägliche Challenge! 3 ETF Fragen - bereit?"
+- Nutzer: "Los geht's!"
+- Leo: [Quiz Widget mit 3 Fragen]
+- [Nach Abschluss]
+- Leo: "🎉 Perfekt! +75 XP verdient. Du bist on fire mit einem 7-Tage Streak!"
+- Leo: [Achievement Widget: "Wochen-Krieger" Badge freigeschaltet]
+```
+
+### Story 2: Ranglisten-Aufstieg
+```yaml
+ID: gamification_ranglisten_aufstieg
+Name: "Ranglisten-Aufstieg"
+Beschreibung: "Sieh deinen wöchentlichen Rang und konkurriere"
+Kategorie: junior
+Dauer: ~45 Sekunden
+
+Ablauf:
+1. Nutzer öffnet Rangliste
+2. Sieht aktuelle Position (#42)
+3. Leo: "Du bist nur 60 XP davon entfernt, Emma zu überholen!"
+4. Schnelles Quiz-Vorschlag um Punkte zu verdienen
+5. Quiz abgeschlossen, Rang animiert nach oben
+
+Demo Nachrichten:
+- Leo: "Lass uns die Rangliste checken! Du machst das super diese Woche."
+- [Zeige Rangliste mit Nutzer auf #42]
+- Leo: "Emma ist nur 60 XP voraus. Ein Quiz könnte das ändern!"
+- Nutzer: "Zeig mir ein schnelles Quiz"
+- Leo: [Quiz Widget: 5 Fragen]
+- [Nach Quiz - 85 XP verdient]
+- Leo: "BOOM! 💥 Du hast Emma UND Felix überholt! Neuer Rang: #40"
+- [Animierte Rangliste zeigt Aufstieg]
+```
+
+### Story 3: Achievement Freischaltung
+```yaml
+ID: gamification_achievement_freischaltung
+Name: "Badge freigeschaltet!"
+Beschreibung: "Schalte einen neuen Achievement-Badge frei"
+Kategorie: junior
+Dauer: ~30 Sekunden
+
+Ablauf:
+1. Nutzer schließt 10. Quiz ab
+2. Screen-Blitz, Feier-Animation
+3. Leo: "NEUER BADGE FREIGESCHALTET! 🏆"
+4. Badge-Enthüllungs-Animation
+5. Zeige Badge in Sammlung hinzugefügt
+6. Hinweis auf nächsten freischaltbaren Badge
+
+Demo Nachrichten:
+- [Nach Quiz-Abschluss]
+- Leo: "Moment... ist das dein 10. Quiz? 👀"
+- [Dramatische Pause]
+- Leo: "🎉 NEUER BADGE FREIGESCHALTET!"
+- [Achievement Widget: "Quiz Stammgast" mit Feier-Animation]
+- Leo: "Füge ihn deinem Profil hinzu! Du bist 40 Quizze von 'Quiz Meister' entfernt"
+```
+
+### Story 4: Kahoot-Style Klassen-Challenge
+```yaml
+ID: gamification_klassen_kahoot
+Name: "Klassen Quiz Challenge"
+Beschreibung: "Nimm an Live-Klassenraum Quiz-Wettbewerb teil"
+Kategorie: junior
+Dauer: ~3 Minuten
+
+Ablauf:
+1. Nutzer gibt Spiel-Code vom Lehrer ein
+2. Tritt Lobby bei, sieht Mitschüler
+3. Host startet Spiel
+4. 10 Schnellfeuer-Fragen
+5. Live-Rangliste zwischen Fragen
+6. Endergebnisse und XP-Vergabe
+
+Demo Nachrichten:
+- Leo: "Bereit für die Klassen-Challenge? Gib den Code ein, den dein Lehrer geteilt hat!"
+- Nutzer: "FINANZ-2847"
+- Leo: "Trete 'Frau Müllers Aktien-Quiz' bei... 18 Spieler in Lobby"
+- [Lobby-Animation zeigt beitretende Spieler]
+- Leo: "Spiel startet in 3... 2... 1... LOS!"
+- [Simuliertes Kahoot-Style Quiz mit 5 Fragen]
+- [Nach jeder Frage: Ranglisten-Update]
+- Leo: "ENDERGEBNISSE: Du bist 3. geworden! 🥉 +100 XP"
+- Leo: "Gut gemacht! Dein Klassendurchschnitt war 72% - besser als gestern!"
+```
+
+### Story 5: Schulmeisterschafts-Eintritt
+```yaml
+ID: gamification_schulmeisterschaft
+Name: "Schulmeisterschaft"
+Beschreibung: "Tritt für deine Schule bei der Monatsmeisterschaft an"
+Kategorie: junior
+Dauer: ~2 Minuten
+
+Ablauf:
+1. Leo kündigt Meisterschaftswoche an
+2. Zeige aktuellen Schulrang
+3. Spezielles Meisterschafts-Quiz verfügbar
+4. Quiz mit 3x XP Multiplikator abschließen
+5. Schulrang verbessern beobachten
+6. Team-Feier-Moment
+
+Demo Nachrichten:
+- Leo: "🏆 MEISTERSCHAFTSWOCHE IST DA!"
+- Leo: "Deine Schule (Gymnasium Musterstadt) ist auf Rang #23. Kannst du helfen höher zu klettern?"
+- Leo: "Meisterschafts-Quizze verdienen 3x XP diese Woche!"
+- [Zeige spezielles Meisterschafts-Quiz Widget]
+- Nutzer: "Lass uns das machen!"
+- [Quiz mit 10 schwierigeren Fragen]
+- Leo: "Unglaublich! +450 XP (mit 3x Bonus)"
+- Leo: "Deine Schule ist auf #21 gesprungen! 2 Plätze näher an den Top 20!"
+- [Animation zeigt Schule klettert Rangliste hoch]
+```
+
+### Story 6: Wochen-Gewinner Ankündigung
+```yaml
+ID: gamification_wochen_gewinner
+Name: "Wochen-Gewinner"
+Beschreibung: "Sieh wer den Wettbewerb dieser Woche gewonnen hat"
+Kategorie: junior
+Dauer: ~1 Minute
+
+Ablauf:
+1. Montag Morgen Benachrichtigung
+2. Leo enthüllt Wochen-Gewinner
+3. Zeige vergebene Preise
+4. Neue Woche startet
+5. Ermutigt Nutzer mitzumachen
+
+Demo Nachrichten:
+- Leo: "📣 Die Ergebnisse der letzten Woche sind da!"
+- Leo: "🥇 Lisa (2.450 XP) - €25 Bonus"
+- Leo: "🥈 Max (2.380 XP) - €15 Bonus"  
+- Leo: "🥉 Tom (2.290 XP) - €10 Bonus"
+- Leo: "Du hast #42 mit 840 XP erreicht - deine beste Woche bisher!"
+- Leo: "Neue Woche, frischer Start! Erstes Quiz der Woche verdient 2x XP 🎁"
+- Nutzer: "Lass uns diese Woche auf Top 10 zielen!"
+- Leo: "So ist es richtig! Hier ist dein erstes Quiz..."
+```
+
+### Story 7: Streak-Rettungs-Erinnerung
+```yaml
+ID: gamification_streak_erinnerung
+Name: "Rette deinen Streak!"
+Beschreibung: "Dringende Erinnerung um Streak zu halten"
+Kategorie: junior
+Dauer: ~30 Sekunden
+
+Ablauf:
+1. Abend-Benachrichtigung (Streak läuft bald ab)
+2. Leo zeigt Streak-Status
+3. Schnelle Aktion um Streak zu retten
+4. Streak verlängert Feier
+
+Demo Nachrichten:
+- Leo: "⚠️ Dein 12-Tage Streak läuft in 2 Stunden ab!"
+- Leo: "Nur eine schnelle Frage um ihn am Leben zu halten?"
+- Nutzer: "Ja, schnell!"
+- Leo: [Einzelne Quiz-Frage]
+- [Nutzer antwortet richtig]
+- Leo: "🔥 STREAK GERETTET! Tag 13 beginnt morgen!"
+- Leo: "Fun Fact: Du bist in den Top 5% der Streak-Halter!"
+```
+
+---
+
+## Technische Implementierungshinweise
+
+### Punkte & XP Speicherung
 
 ```typescript
 interface UserGamification {
@@ -640,10 +641,10 @@ interface UserGamification {
 }
 ```
 
-### Leaderboard Query
+### Ranglisten-Abfrage
 
 ```sql
--- Weekly leaderboard
+-- Wochen-Rangliste
 SELECT 
   user_id,
   username,
@@ -655,10 +656,10 @@ ORDER BY weekly_xp DESC
 LIMIT 100;
 ```
 
-### Real-Time Kahoot Events
+### Echtzeit-Kahoot Events
 
 ```typescript
-// WebSocket events for live quiz
+// WebSocket Events für Live-Quiz
 socket.on('game:join', { gameCode, userId });
 socket.on('game:start', { questions });
 socket.on('answer:submit', { questionId, answer, timestamp });
@@ -668,4 +669,4 @@ socket.on('game:end', { finalResults });
 
 ---
 
-*Last Updated: November 2025*
+*Zuletzt aktualisiert: November 2025*
