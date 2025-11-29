@@ -1,39 +1,39 @@
-# LEO Documentation
+# LEO Dokumentation
 
-This folder contains modular documentation for the LEO AI Financial Assistant project.
+Dieser Ordner enthält die modulare Dokumentation für das LEO AI Finanzassistent-Projekt.
 
-## Document Index
+## Dokumentenübersicht
 
-| Document | Description | Priority |
-|----------|-------------|----------|
-| [01-AI-FIRST-PHILOSOPHY.md](./01-AI-FIRST-PHILOSOPHY.md) | Core AI-first principles for both Junior and Adult profiles | High |
-| [02-GAMIFICATION-SYSTEM.md](./02-GAMIFICATION-SYSTEM.md) | Points, badges, leaderboards, and Kahoot-style challenges | High |
-| [03-NEWS-INSIGHTS-FEED.md](./03-NEWS-INSIGHTS-FEED.md) | Perplexity-style personalized news and For You page | Medium |
-| [04-WIDGETS-SYSTEM.md](./04-WIDGETS-SYSTEM.md) | All interactive widgets with specifications | High |
-| [05-JUNIOR-MONEY-SYSTEM.md](./05-JUNIOR-MONEY-SYSTEM.md) | Real vs virtual money, card usage rules, parent controls | High |
-| [06-FUTURE-VISION.md](./06-FUTURE-VISION.md) | Roadmap, future features, personalized UI vision | Medium |
-| [07-IMPLEMENTATION-GUIDE.md](./07-IMPLEMENTATION-GUIDE.md) | Specific changes for the ing-app codebase | High |
+| Dokument | Beschreibung | Priorität |
+|----------|--------------|-----------|
+| [01-AI-FIRST-PHILOSOPHY.md](./01-AI-FIRST-PHILOSOPHY.md) | KI-First Prinzipien für Junior und Adult Profile | Hoch |
+| [02-GAMIFICATION-SYSTEM.md](./02-GAMIFICATION-SYSTEM.md) | Punkte, Badges, Ranglisten und Kahoot-ähnliche Challenges | Hoch |
+| [03-NEWS-INSIGHTS-FEED.md](./03-NEWS-INSIGHTS-FEED.md) | Perplexity-ähnliche personalisierte News und Für-Dich-Seite | Mittel |
+| [04-WIDGETS-SYSTEM.md](./04-WIDGETS-SYSTEM.md) | Alle interaktiven Widgets mit Spezifikationen | Hoch |
+| [05-JUNIOR-MONEY-SYSTEM.md](./05-JUNIOR-MONEY-SYSTEM.md) | Echtes vs. virtuelles Geld, Kartenregeln, Elternkontrolle | Hoch |
+| [06-FUTURE-VISION.md](./06-FUTURE-VISION.md) | Roadmap, zukünftige Features, personalisierte UI Vision | Mittel |
+| [07-IMPLEMENTATION-GUIDE.md](./07-IMPLEMENTATION-GUIDE.md) | Konkrete Änderungen für die ing-app Codebasis | Hoch |
 
-## Quick Start
+## Schnellstart
 
-1. **Understand the philosophy**: Start with `01-AI-FIRST-PHILOSOPHY.md`
-2. **For UI developers**: Focus on `04-WIDGETS-SYSTEM.md` and `07-IMPLEMENTATION-GUIDE.md`
-3. **For feature design**: See `02-GAMIFICATION-SYSTEM.md` and `03-NEWS-INSIGHTS-FEED.md`
-4. **For Junior profile**: Read `05-JUNIOR-MONEY-SYSTEM.md`
+1. **Philosophie verstehen**: Beginne mit `01-AI-FIRST-PHILOSOPHY.md`
+2. **Für UI-Entwickler**: Fokus auf `04-WIDGETS-SYSTEM.md` und `07-IMPLEMENTATION-GUIDE.md`
+3. **Für Feature-Design**: Siehe `02-GAMIFICATION-SYSTEM.md` und `03-NEWS-INSIGHTS-FEED.md`
+4. **Für Junior-Profil**: Lies `05-JUNIOR-MONEY-SYSTEM.md`
 
 ## Demo Sidebar User Stories
 
-User stories for the AI Demo Sidebar are documented in multiple files:
+User Stories für die KI Demo Sidebar sind in mehreren Dateien dokumentiert:
 
-- **AI-First demos**: `01-AI-FIRST-PHILOSOPHY.md` → Demo Sidebar User Stories section
-- **Gamification demos**: `02-GAMIFICATION-SYSTEM.md` → User Stories section
-- **News demos**: `03-NEWS-INSIGHTS-FEED.md` → User Stories section
-- **Implementation**: `07-IMPLEMENTATION-GUIDE.md` → Demo Sidebar User Stories section
+- **KI-First Demos**: `01-AI-FIRST-PHILOSOPHY.md` → Demo Sidebar User Stories Abschnitt
+- **Gamification Demos**: `02-GAMIFICATION-SYSTEM.md` → User Stories Abschnitt
+- **News Demos**: `03-NEWS-INSIGHTS-FEED.md` → User Stories Abschnitt
+- **Implementierung**: `07-IMPLEMENTATION-GUIDE.md` → Demo Sidebar User Stories Abschnitt
 
-## Main Document
+## Hauptdokument
 
-The main project documentation remains at `/LEO_PROJECT_DESCRIPTION.md` in the repository root. It provides the executive summary and references these detailed documents.
+Die Hauptprojektdokumentation befindet sich unter `/LEO_PROJECT_DESCRIPTION.md` im Repository-Root. Sie enthält die Zusammenfassung und verweist auf diese detaillierten Dokumente.
 
 ---
 
-*Last Updated: November 2025*
+*Zuletzt aktualisiert: November 2025*

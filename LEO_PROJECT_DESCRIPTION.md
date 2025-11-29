@@ -1,53 +1,53 @@
-# LEO - AI Financial Assistant for ING
-## Comprehensive Project Documentation
-#### Single Source of Truth for DFC2025 Challenge
+# LEO - KI Finanzassistent für ING
+## Umfassende Projektdokumentation
+#### Zentrale Informationsquelle für DFC2025 Challenge
 
 ---
 
-## 📁 Modular Documentation
+## 📁 Modulare Dokumentation
 
-This project uses modular documentation. For detailed specifications, see the `/docs` folder:
+Dieses Projekt verwendet modulare Dokumentation. Für detaillierte Spezifikationen siehe den `/docs` Ordner:
 
-| Document | Description |
-|----------|-------------|
-| [docs/01-AI-FIRST-PHILOSOPHY.md](./docs/01-AI-FIRST-PHILOSOPHY.md) | Core AI-first principles, demo user stories |
-| [docs/02-GAMIFICATION-SYSTEM.md](./docs/02-GAMIFICATION-SYSTEM.md) | Points, badges, leaderboards, Kahoot-style challenges |
-| [docs/03-NEWS-INSIGHTS-FEED.md](./docs/03-NEWS-INSIGHTS-FEED.md) | Perplexity-style personalized news feed |
-| [docs/04-WIDGETS-SYSTEM.md](./docs/04-WIDGETS-SYSTEM.md) | All interactive widgets with specifications |
-| [docs/05-JUNIOR-MONEY-SYSTEM.md](./docs/05-JUNIOR-MONEY-SYSTEM.md) | Real vs virtual money, card rules, parent controls |
-| [docs/06-FUTURE-VISION.md](./docs/06-FUTURE-VISION.md) | Roadmap, future features, personalized UI vision |
-| [docs/07-IMPLEMENTATION-GUIDE.md](./docs/07-IMPLEMENTATION-GUIDE.md) | Specific changes for the ing-app codebase |
-
----
-
-## Table of Contents
-1. [Executive Summary](#executive-summary)
-2. [AI-First Philosophy](#ai-first-philosophy)
-3. [Project Context & Challenge](#project-context--challenge)
-4. [Target User Profiles](#target-user-profiles)
-5. [Core Features Overview](#core-features-overview)
-6. [UI Creator Specifications](#ui-creator-specifications)
-7. [Detailed Screen Descriptions](#detailed-screen-descriptions)
-8. [AI Agent "Leo" Specifications](#ai-agent-leo-specifications)
-9. [Design System & UI Guidelines](#design-system--ui-guidelines)
-10. [Legal & Compliance Considerations](#legal--compliance-considerations)
-11. [Technical Architecture](#technical-architecture)
-12. [Answered Questions & Decisions](#answered-questions--decisions)
-13. [Mockups & Visual References](#mockups--visual-references)
-14. [Roadmap & Implementation Phases](#roadmap--implementation-phases)
-15. [Presentation Strategy](#presentation-strategy)
-16. [Issue References](#issue-references)
+| Dokument | Beschreibung |
+|----------|--------------|
+| [docs/01-AI-FIRST-PHILOSOPHY.md](./docs/01-AI-FIRST-PHILOSOPHY.md) | KI-First Prinzipien, Demo User Stories |
+| [docs/02-GAMIFICATION-SYSTEM.md](./docs/02-GAMIFICATION-SYSTEM.md) | Punkte, Badges, Ranglisten, Kahoot-Style Challenges |
+| [docs/03-NEWS-INSIGHTS-FEED.md](./docs/03-NEWS-INSIGHTS-FEED.md) | Perplexity-ähnlicher personalisierter News-Feed |
+| [docs/04-WIDGETS-SYSTEM.md](./docs/04-WIDGETS-SYSTEM.md) | Alle interaktiven Widgets mit Spezifikationen |
+| [docs/05-JUNIOR-MONEY-SYSTEM.md](./docs/05-JUNIOR-MONEY-SYSTEM.md) | Echtes vs. virtuelles Geld, Kartenregeln, Elternkontrolle |
+| [docs/06-FUTURE-VISION.md](./docs/06-FUTURE-VISION.md) | Roadmap, zukünftige Features, personalisierte UI Vision |
+| [docs/07-IMPLEMENTATION-GUIDE.md](./docs/07-IMPLEMENTATION-GUIDE.md) | Konkrete Änderungen für die ing-app Codebasis |
 
 ---
 
-## Executive Summary
+## Inhaltsverzeichnis
+1. [Zusammenfassung](#zusammenfassung)
+2. [KI-First Philosophie](#ki-first-philosophie)
+3. [Projektkontext & Challenge](#projektkontext--challenge)
+4. [Zielgruppenprofile](#zielgruppenprofile)
+5. [Übersicht Kernfunktionen](#übersicht-kernfunktionen)
+6. [UI Creator Spezifikationen](#ui-creator-spezifikationen)
+7. [Detaillierte Screen-Beschreibungen](#detaillierte-screen-beschreibungen)
+8. [KI-Agent "Leo" Spezifikationen](#ki-agent-leo-spezifikationen)
+9. [Design System & UI Richtlinien](#design-system--ui-richtlinien)
+10. [Rechtliche & Compliance Überlegungen](#rechtliche--compliance-überlegungen)
+11. [Technische Architektur](#technische-architektur)
+12. [Beantwortete Fragen & Entscheidungen](#beantwortete-fragen--entscheidungen)
+13. [Mockups & Visuelle Referenzen](#mockups--visuelle-referenzen)
+14. [Roadmap & Implementierungsphasen](#roadmap--implementierungsphasen)
+15. [Präsentationsstrategie](#präsentationsstrategie)
+16. [Issue-Referenzen](#issue-referenzen)
 
-**LEO** is an AI-powered financial assistant designed to be integrated into the existing ING Germany banking app. The project aims to address financial literacy gaps among young users (ages 13-29) through personalized guidance, interactive learning experiences, and intelligent financial insights.
+---
 
-### Key Value Propositions
-- **Personalized Financial Education**: AI-generated quizzes and learning paths adapted to individual user knowledge levels
-- **Investment Simulator**: Virtual money trading with real market data for risk-free learning (ING Junior Profile)
-- **Smart Financial Insights**: Transaction analysis, subscription optimization, and savings recommendations
+## Zusammenfassung
+
+**LEO** ist ein KI-gestützter Finanzassistent, der in die bestehende ING Deutschland Banking-App integriert werden soll. Das Projekt zielt darauf ab, Finanzwissenslücken bei jungen Nutzern (13-29 Jahre) durch personalisierte Beratung, interaktive Lernerfahrungen und intelligente Finanzeinblicke zu schließen.
+
+### Hauptwertversprechen
+- **Personalisierte Finanzbildung**: KI-generierte Quizze und Lernpfade angepasst an individuelles Wissensniveau
+- **Investment Simulator**: Virtueller Handel mit echten Marktdaten für risikofreies Lernen (ING Junior Profil)
+- **Smarte Finanzeinblicke**: Transaktionsanalyse, Abo-Optimierung und Sparempfehlungen
 - **Emotional Intelligence**: Empathetic AI that explains financial concepts in simple, non-judgmental terms
 - **Seamless Integration**: Built on top of the existing ING app, not a standalone application
 
